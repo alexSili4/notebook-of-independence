@@ -8,7 +8,6 @@ export default defineConfig({
     alias: {
       '@': '/src',
       '@GeneralComponents': '/src/components/General',
-      '@ErrorPageComponents': '/src/components/ErrorPage',
       '@MainPageComponents': '/src/components/MainPage',
       // animations
       '@AnimatedMainPageComponents': '/src/components/Animated/MainPage',

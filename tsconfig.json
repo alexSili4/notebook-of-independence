@@ -3,7 +3,6 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"],
-      "@ErrorPageComponents/*": ["./src/components/ErrorPage/*"],
       "@GeneralComponents/*": ["./src/components/General/*"],
       "@MainPageComponents/*": ["./src/components/MainPage/*"],
       // animations

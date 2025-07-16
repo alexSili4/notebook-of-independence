@@ -3,6 +3,10 @@ declare module '@emotion/react' {
 }
 
 interface ITheme {
+  colors: {
+    white: string;
+  };
+  fontFamily: { inter: string };
   padding: {
     container: number;
   };
@@ -15,8 +19,12 @@ interface ITheme {
 }
 
 const theme: ITheme = {
-  // colors: {  },
-  // fontFamily: {  },
+  colors: {
+    white: '#ffffff',
+  },
+  fontFamily: {
+    inter: 'Inter',
+  },
   // fontWeight: {  },
   // fontSize: {  },
   padding: {
