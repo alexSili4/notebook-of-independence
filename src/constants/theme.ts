@@ -6,7 +6,7 @@ interface ITheme {
   colors: {
     white: string;
   };
-  fontFamily: { inter: string };
+  fontFamily: { inter: string; gogol: string };
   padding: {
     container: number;
   };
@@ -24,6 +24,7 @@ const theme: ITheme = {
   },
   fontFamily: {
     inter: 'Inter',
+    gogol: 'Gogol',
   },
   // fontWeight: {  },
   // fontSize: {  },

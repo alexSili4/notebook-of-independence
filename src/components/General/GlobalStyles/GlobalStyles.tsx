@@ -1,12 +1,19 @@
 import { FC } from 'react';
 import { Global, css } from '@emotion/react';
 import 'modern-normalize';
-import { interBold, interRegular } from '@/fonts';
+import { interBold, interRegular, gogolRegular } from '@/fonts';
 import { theme } from '@/constants';
 
 const GlobalStyles: FC = () => (
   <Global
     styles={css`
+      @font-face {
+        font-family: ${theme.fontFamily.gogol};
+        src: local(${theme.fontFamily.gogol}),
+          url(${gogolRegular}) format('truetype');
+        font-weight: 400;
+      }
+
       @font-face {
         font-family: ${theme.fontFamily.inter};
         src: local(${theme.fontFamily.inter}),

@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import sectionBg from '@/images/about/section-bg.jpg';
+import sectionBg from '@/images/about/section-preview-bg.jpg';
 
 export const Background = styled.div`
   height: 100%;
