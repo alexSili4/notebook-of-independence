@@ -2,35 +2,77 @@ import { FC } from 'react';
 import {
   Container,
   PhotoBottomLeft,
-  PhotoBottomLeftBtn,
   PhotoBottomLeftText,
   PhotoWrap,
   PhotoTopLeft,
-  PhotoTopLeftBtn,
   PhotoTopLeftText,
-  PhotoTopRightBtn,
   PhotoTopRight,
   PhotoTopRightText,
-  PhotoBottomCenterBtn,
   PhotoBottomCenter,
   PhotoBottomCenterText,
-  PhotoBottomRightBtn,
   PhotoBottomRight,
   PhotoBottomRightText,
+  PhotoTopLeftMarker,
+  PhotoTopLeftBtnWrap,
+  Button,
+  PhotoBottomLeftBtnWrap,
+  PhotoTopRightBtnWrap,
+  PhotoBottomRightBtnWrap,
+  PhotoBottomCenterBtnWrap,
+  PhotoBottomLeftMarker,
+  PhotoTopRightMarker,
+  PhotoBottomCenterMarker,
+  PhotoBottomRightMarker,
 } from './AboutSectionContentImages.styled';
 import photoTopLeft from '@/images/about/photo-top-left.png';
 import photoBottomLeft from '@/images/about/photo-bottom-left.png';
 import photoTopRight from '@/images/about/photo-top-right.png';
 import photoBottomCenter from '@/images/about/photo-bottom-center.png';
 import photoBottomRight from '@/images/about/photo-bottom-right.png';
+import { IProps } from './AboutSectionContentImages.types';
+import AboutSectionContentImagesMarker from '@MainPageComponents/AboutSectionContentImagesMarker';
 
-const AboutSectionContentImages: FC = () => {
+const AboutSectionContentImages: FC<IProps> = ({
+  incrementCurrentStep,
+  currentStep,
+}) => {
+  const isFirstStep = currentStep === 1;
+  const isSecondStep = currentStep === 2;
+  const isThirdStep = currentStep === 3;
+  const isFourthStep = currentStep === 4;
+  const isFifthStep = currentStep === 5;
+
+  const onFirstBtnMouseEnter = () => {
+    incrementCurrentStep(isFirstStep);
+  };
+
+  const onSecondBtnMouseEnter = () => {
+    incrementCurrentStep(isSecondStep);
+  };
+
+  const onThirdBtnMouseEnter = () => {
+    incrementCurrentStep(isThirdStep);
+  };
+
+  const onFourthBtnMouseEnter = () => {
+    incrementCurrentStep(isFourthStep);
+  };
+
+  const onFifthBtnMouseEnter = () => {
+    incrementCurrentStep(isFifthStep);
+  };
+
   return (
     <Container>
       <PhotoWrap>
-        <PhotoTopLeftBtn type='button'>
-          <PhotoTopLeft src={photoTopLeft} alt='' />
-        </PhotoTopLeftBtn>
+        <PhotoTopLeftBtnWrap>
+          <Button type='button' onMouseEnter={onThirdBtnMouseEnter}>
+            <PhotoTopLeft src={photoTopLeft} alt='' />
+          </Button>
+          <PhotoTopLeftMarker>
+            <AboutSectionContentImagesMarker isCurrentStep={isThirdStep} />
+          </PhotoTopLeftMarker>
+        </PhotoTopLeftBtnWrap>
         <PhotoTopLeftText>
           У 1961-му за створення підпільної партії його засудили до розстрілу:
           72 доби провів у камері смертників. Потім вирок замінили на 15 років
@@ -42,9 +84,14 @@ const AboutSectionContentImages: FC = () => {
         </PhotoTopLeftText>
       </PhotoWrap>
       <PhotoWrap>
-        <PhotoBottomLeftBtn type='button'>
-          <PhotoBottomLeft src={photoBottomLeft} alt='' />
-        </PhotoBottomLeftBtn>
+        <PhotoBottomLeftBtnWrap>
+          <Button type='button' onMouseEnter={onFourthBtnMouseEnter}>
+            <PhotoBottomLeft src={photoBottomLeft} alt='' />
+          </Button>
+          <PhotoBottomLeftMarker>
+            <AboutSectionContentImagesMarker isCurrentStep={isFourthStep} />
+          </PhotoBottomLeftMarker>
+        </PhotoBottomLeftBtnWrap>
         <PhotoBottomLeftText>
           У 1990-му став народним депутатом. У серпні 1991 року саме його рукою
           був написаний текст Акта проголошення незалежності України.
@@ -57,9 +104,14 @@ const AboutSectionContentImages: FC = () => {
         </PhotoBottomLeftText>
       </PhotoWrap>
       <PhotoWrap>
-        <PhotoTopRightBtn type='button'>
-          <PhotoTopRight src={photoTopRight} alt='' />
-        </PhotoTopRightBtn>
+        <PhotoTopRightBtnWrap>
+          <Button type='button' onMouseEnter={onFifthBtnMouseEnter}>
+            <PhotoTopRight src={photoTopRight} alt='' />
+          </Button>
+          <PhotoTopRightMarker>
+            <AboutSectionContentImagesMarker isCurrentStep={isFifthStep} />
+          </PhotoTopRightMarker>
+        </PhotoTopRightBtnWrap>
         <PhotoTopRightText>
           «Якби моє життя закінчилось прямо зараз, я б знав, що прожив його не
           марно», — сказав він в день ухвалення незалежності.
@@ -72,9 +124,14 @@ const AboutSectionContentImages: FC = () => {
         </PhotoTopRightText>
       </PhotoWrap>
       <PhotoWrap>
-        <PhotoBottomCenterBtn type='button'>
-          <PhotoBottomCenter src={photoBottomCenter} alt='' />
-        </PhotoBottomCenterBtn>
+        <PhotoBottomCenterBtnWrap>
+          <Button type='button' onMouseEnter={onFirstBtnMouseEnter}>
+            <PhotoBottomCenter src={photoBottomCenter} alt='' />
+          </Button>
+          <PhotoBottomCenterMarker>
+            <AboutSectionContentImagesMarker isCurrentStep={isFirstStep} />
+          </PhotoBottomCenterMarker>
+        </PhotoBottomCenterBtnWrap>
         <PhotoBottomCenterText>
           Левко Лук’яненко — автор Акта проголошення незалежності України.
           <br />
@@ -85,9 +142,14 @@ const AboutSectionContentImages: FC = () => {
         </PhotoBottomCenterText>
       </PhotoWrap>
       <PhotoWrap>
-        <PhotoBottomRightBtn type='button'>
-          <PhotoBottomRight src={photoBottomRight} alt='' />
-        </PhotoBottomRightBtn>
+        <PhotoBottomRightBtnWrap>
+          <Button type='button' onMouseEnter={onSecondBtnMouseEnter}>
+            <PhotoBottomRight src={photoBottomRight} alt='' />
+          </Button>
+          <PhotoBottomRightMarker>
+            <AboutSectionContentImagesMarker isCurrentStep={isSecondStep} />
+          </PhotoBottomRightMarker>
+        </PhotoBottomRightBtnWrap>
         <PhotoBottomRightText>
           Ще в юності присягнув боротися за незалежну Україну. «Я тоді став і
           поклявся перед небом», — згадував Лук’яненко. кладовищі.

@@ -33,7 +33,6 @@ export const PhotoWrap = styled.div`
 `;
 
 export const Button = styled.button`
-  position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -43,7 +42,8 @@ export const Button = styled.button`
   pointer-events: all;
 `;
 
-export const PhotoTopLeftBtn = styled(Button)`
+export const PhotoTopLeftBtnWrap = styled.div`
+  position: absolute;
   top: 9.5vh;
   left: 16.7vw;
 `;
@@ -59,7 +59,14 @@ export const PhotoTopLeftText = styled(Text)`
   width: 501px;
 `;
 
-export const PhotoBottomLeftBtn = styled(Button)`
+export const PhotoTopLeftMarker = styled.div`
+  position: absolute;
+  top: 121px;
+  left: 11px;
+`;
+
+export const PhotoBottomLeftBtnWrap = styled.div`
+  position: absolute;
   bottom: -6.3vh;
   left: 2.7vw;
 `;
@@ -75,7 +82,14 @@ export const PhotoBottomLeftText = styled(Text)`
   width: 506px;
 `;
 
-export const PhotoTopRightBtn = styled(Button)`
+export const PhotoBottomLeftMarker = styled.div`
+  position: absolute;
+  top: 46px;
+  left: 40px;
+`;
+
+export const PhotoTopRightBtnWrap = styled.div`
+  position: absolute;
   top: 5.5vh;
   left: 76.6vw;
 `;
@@ -91,7 +105,14 @@ export const PhotoTopRightText = styled(Text)`
   width: 506px;
 `;
 
-export const PhotoBottomCenterBtn = styled(Button)`
+export const PhotoTopRightMarker = styled.div`
+  position: absolute;
+  right: 66px;
+  bottom: -3px;
+`;
+
+export const PhotoBottomCenterBtnWrap = styled.div`
+  position: absolute;
   bottom: 2.9vh;
   left: 16.8vw;
 `;
@@ -107,7 +128,14 @@ export const PhotoBottomCenterText = styled(Text)`
   width: 501px;
 `;
 
-export const PhotoBottomRightBtn = styled(Button)`
+export const PhotoBottomCenterMarker = styled.div`
+  position: absolute;
+  top: 40px;
+  right: 32px;
+`;
+
+export const PhotoBottomRightBtnWrap = styled.div`
+  position: absolute;
   bottom: 25.1vh;
   left: 34.9vw;
 `;
@@ -121,4 +149,10 @@ export const PhotoBottomRightText = styled(Text)`
   left: 54.7vw;
   bottom: 41.5vh;
   width: 506px;
+`;
+
+export const PhotoBottomRightMarker = styled.div`
+  position: absolute;
+  bottom: 44px;
+  right: 2px;
 `;
