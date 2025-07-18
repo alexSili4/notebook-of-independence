@@ -1,9 +1,15 @@
 import { FC, useState } from 'react';
 import GeneralContainer from '@GeneralComponents/GeneralContainer';
-import { Background, Container } from './AboutSectionContent.styled';
+import {
+  Background,
+  Content,
+  Container,
+  DecorativeShape,
+} from './AboutSectionContent.styled';
 import AboutSectionContentText from '@MainPageComponents/AboutSectionContentText';
 import AboutSectionContentImages from '@MainPageComponents/AboutSectionContentImages';
 import AboutSectionContentNavLink from '@MainPageComponents/AboutSectionContentNavLink';
+import AboutSectionContentVideo from '@MainPageComponents/AboutSectionContentVideo';
 
 const AboutSectionContent: FC = () => {
   const [currentStep, setCurrentStep] = useState<number>(1);
@@ -18,16 +24,20 @@ const AboutSectionContent: FC = () => {
 
   return (
     <GeneralContainer>
-      <Background>
-        <Container>
-          <AboutSectionContentImages
-            incrementCurrentStep={incrementCurrentStep}
-            currentStep={currentStep}
-          />
-          <AboutSectionContentText />
-          <AboutSectionContentNavLink />
-        </Container>
-      </Background>
+      <Container>
+        <DecorativeShape></DecorativeShape>
+        <Background>
+          <Content>
+            <AboutSectionContentImages
+              incrementCurrentStep={incrementCurrentStep}
+              currentStep={currentStep}
+            />
+            <AboutSectionContentText />
+            <AboutSectionContentNavLink />
+            <AboutSectionContentVideo />
+          </Content>
+        </Background>
+      </Container>
     </GeneralContainer>
   );
 };

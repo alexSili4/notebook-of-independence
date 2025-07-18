@@ -1,6 +1,13 @@
 import { FC, useRef } from 'react';
 import HTMLFlipBook from 'react-pageflip';
-import { Container, Image } from './NewHistorySectionNotebook.styled';
+import {
+  BuyLink,
+  Container,
+  Image,
+  NotebookWrap,
+  BuyLinkTitle,
+  BuyLinkLineIcon,
+} from './NewHistorySectionNotebook.styled';
 import page1 from '@/images/newHistory/notebook/page-1.jpg';
 import page2 from '@/images/newHistory/notebook/page-2.jpg';
 import page3 from '@/images/newHistory/notebook/page-3.jpg';
@@ -10,6 +17,7 @@ import page6 from '@/images/newHistory/notebook/page-6.jpg';
 import { BtnClickEvent, PageFlipOrNull } from '@/types/types';
 import NewHistorySectionNotebookControls from '@MainPageComponents/NewHistorySectionNotebookControls';
 import { makeBlur } from '@/utils';
+import { ExternalLinks } from '@/constants';
 
 const NewHistorySectionNotebook: FC = () => {
   const bookRef = useRef<PageFlipOrNull>(null);
@@ -29,43 +37,53 @@ const NewHistorySectionNotebook: FC = () => {
 
   return (
     <Container>
-      <NewHistorySectionNotebookControls
-        onNextPageBtnClick={onNextPageBtnClick}
-        onPrevPageBtnClick={onPrevPageBtnClick}
-      />
-      <HTMLFlipBook
-        ref={bookRef}
-        style={{}}
-        className=''
-        width={innerWidth * 0.43}
-        minWidth={1}
-        maxWidth={innerWidth * 0.43}
-        height={innerHeight * 0.92}
-        minHeight={1}
-        maxHeight={innerHeight * 0.92}
-        startPage={0}
-        size='stretch'
-        flippingTime={800}
-        startZIndex={0}
-        maxShadowOpacity={1}
-        swipeDistance={30}
-        showCover={false}
-        disableFlipByClick={false}
-        showPageCorners
-        drawShadow
-        usePortrait
-        mobileScrollSupport
-        autoSize
-        useMouseEvents
-        clickEventForward
+      <NotebookWrap>
+        <NewHistorySectionNotebookControls
+          onNextPageBtnClick={onNextPageBtnClick}
+          onPrevPageBtnClick={onPrevPageBtnClick}
+        />
+        <HTMLFlipBook
+          ref={bookRef}
+          style={{}}
+          className=''
+          width={innerWidth * 0.4}
+          minWidth={1}
+          maxWidth={innerWidth * 0.4}
+          height={innerHeight * 0.85}
+          minHeight={1}
+          maxHeight={innerHeight * 0.85}
+          startPage={0}
+          size='stretch'
+          flippingTime={800}
+          startZIndex={0}
+          maxShadowOpacity={1}
+          swipeDistance={30}
+          showCover={false}
+          disableFlipByClick={false}
+          showPageCorners
+          drawShadow
+          usePortrait
+          mobileScrollSupport
+          autoSize
+          useMouseEvents
+          clickEventForward
+        >
+          <Image src={page1} alt='' />
+          <Image src={page2} alt='' />
+          <Image src={page3} alt='' />
+          <Image src={page4} alt='' />
+          <Image src={page5} alt='' />
+          <Image src={page6} alt='' />
+        </HTMLFlipBook>
+      </NotebookWrap>
+      <BuyLink
+        href={ExternalLinks.buyNotebook}
+        target='_blank'
+        rel='noopener noreferrer'
       >
-        <Image src={page1} alt='' />
-        <Image src={page2} alt='' />
-        <Image src={page3} alt='' />
-        <Image src={page4} alt='' />
-        <Image src={page5} alt='' />
-        <Image src={page6} alt='' />
-      </HTMLFlipBook>
+        <BuyLinkTitle>Купити</BuyLinkTitle>
+        <BuyLinkLineIcon />
+      </BuyLink>
     </Container>
   );
 };

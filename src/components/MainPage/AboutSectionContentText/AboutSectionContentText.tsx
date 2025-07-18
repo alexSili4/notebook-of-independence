@@ -5,6 +5,8 @@ import {
   TextLeftWrap,
   TextRight,
   TextRightWrap,
+  AccentLineLeftIcon,
+  AccentLineRightIcon,
 } from './AboutSectionContentText.styled';
 
 const AboutSectionContentText: FC = () => {
@@ -15,11 +17,11 @@ const AboutSectionContentText: FC = () => {
           Все життя я бачив себе однією з ланок у ланцюжку боротьби за
           незалежність України.
         </TextLeft>
-        {/* TODO: decorative line */}
+        <AccentLineLeftIcon />
       </TextLeftWrap>
       <TextRightWrap>
         <TextRight>Корені сучасних проблем лежать у минулому.</TextRight>
-        {/* TODO: decorative line */}
+        <AccentLineRightIcon />
       </TextRightWrap>
     </Container>
   );

@@ -1,4 +1,6 @@
 import styled from '@emotion/styled';
+import AccentLineLeft from '@/icons/about/accent-line-left.svg?react';
+import AccentLineRight from '@/icons/about/accent-line-right.svg?react';
 
 export const Container = styled.div`
   position: relative;
@@ -22,6 +24,14 @@ export const TextLeft = styled.p`
   text-align: left;
 `;
 
+export const AccentLineLeftIcon = styled(AccentLineLeft)`
+  position: absolute;
+  top: 52px;
+  left: 60px;
+  width: 193px;
+  height: 5px;
+`;
+
 export const TextRightWrap = styled.div`
   position: absolute;
   top: 7.6vh;
@@ -36,4 +46,12 @@ export const TextRight = styled.p`
   font-weight: 400;
   line-height: 1.09;
   text-align: left;
+`;
+
+export const AccentLineRightIcon = styled(AccentLineRight)`
+  position: absolute;
+  top: 30px;
+  left: 124px;
+  width: 155px;
+  height: 26px;
 `;
