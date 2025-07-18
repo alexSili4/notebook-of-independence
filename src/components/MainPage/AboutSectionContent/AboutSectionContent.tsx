@@ -3,6 +3,7 @@ import GeneralContainer from '@GeneralComponents/GeneralContainer';
 import { Background, Container } from './AboutSectionContent.styled';
 import AboutSectionContentText from '@MainPageComponents/AboutSectionContentText';
 import AboutSectionContentImages from '@MainPageComponents/AboutSectionContentImages';
+import AboutSectionContentNavLink from '@MainPageComponents/AboutSectionContentNavLink';
 
 const AboutSectionContent: FC = () => {
   const [currentStep, setCurrentStep] = useState<number>(1);
@@ -24,6 +25,7 @@ const AboutSectionContent: FC = () => {
             currentStep={currentStep}
           />
           <AboutSectionContentText />
+          <AboutSectionContentNavLink />
         </Container>
       </Background>
     </GeneralContainer>

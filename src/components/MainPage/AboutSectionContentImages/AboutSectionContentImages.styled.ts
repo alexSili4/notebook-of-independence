@@ -156,3 +156,35 @@ export const PhotoBottomRightMarker = styled.div`
   bottom: 44px;
   right: 2px;
 `;
+
+export const DecorativeLines = styled.img`
+  position: absolute;
+  top: 6.9vh;
+  left: -22px;
+  width: 206px;
+  height: 250px;
+`;
+
+export const DecorativeBackground = styled.img`
+  position: absolute;
+  top: -2px;
+  left: 7.6vw;
+  width: 454px;
+  height: 297px;
+`;
+
+export const DecorativeStar = styled.img`
+  position: absolute;
+  top: 3vh;
+  left: 10.1vw;
+  width: 126px;
+  height: 126px;
+`;
+
+export const DecorativePhoto = styled.img`
+  position: absolute;
+  top: -136px;
+  left: 77.6vw;
+  width: 383px;
+  height: 424px;
+`;

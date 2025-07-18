@@ -23,6 +23,10 @@ import {
   PhotoTopRightMarker,
   PhotoBottomCenterMarker,
   PhotoBottomRightMarker,
+  DecorativeBackground,
+  DecorativeLines,
+  DecorativeStar,
+  DecorativePhoto,
 } from './AboutSectionContentImages.styled';
 import photoTopLeft from '@/images/about/photo-top-left.png';
 import photoBottomLeft from '@/images/about/photo-bottom-left.png';
@@ -31,6 +35,10 @@ import photoBottomCenter from '@/images/about/photo-bottom-center.png';
 import photoBottomRight from '@/images/about/photo-bottom-right.png';
 import { IProps } from './AboutSectionContentImages.types';
 import AboutSectionContentImagesMarker from '@MainPageComponents/AboutSectionContentImagesMarker';
+import decorativeBackground from '@/images/about/decorative-background.png';
+import decorativeLines from '@/images/about/decorative-lines.png';
+import decorativeStar from '@/images/about/decorative-star.png';
+import decorativePhoto from '@/images/about/decorative-photo.png';
 
 const AboutSectionContentImages: FC<IProps> = ({
   incrementCurrentStep,
@@ -64,6 +72,12 @@ const AboutSectionContentImages: FC<IProps> = ({
 
   return (
     <Container>
+      <PhotoWrap>
+        <DecorativeBackground src={decorativeBackground} alt='' />
+        <DecorativeLines src={decorativeLines} alt='' />
+        <DecorativeStar src={decorativeStar} alt='' />
+        <DecorativePhoto src={decorativePhoto} alt='' />
+      </PhotoWrap>
       <PhotoWrap>
         <PhotoTopLeftBtnWrap>
           <Button type='button' onMouseEnter={onThirdBtnMouseEnter}>
