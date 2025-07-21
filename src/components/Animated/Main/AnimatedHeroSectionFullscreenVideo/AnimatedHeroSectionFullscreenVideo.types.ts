@@ -4,3 +4,9 @@ export interface IProps {
   isFullScreen: boolean;
   animationDuration: number;
 }
+
+export interface IStyledContainerProps {
+  inView: boolean;
+  animationDelay: number;
+  isFullScreen: boolean;
+}

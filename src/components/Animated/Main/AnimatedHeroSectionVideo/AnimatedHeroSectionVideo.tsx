@@ -20,7 +20,7 @@ const AnimatedHeroSectionVideo: FC<IProps> = ({
   const transition: Transition = {
     type: 'spring',
     duration: animationDuration,
-    bounce: 0.6,
+    bounce: 0,
   };
 
   const elementVariants: Variants = {
@@ -32,7 +32,7 @@ const AnimatedHeroSectionVideo: FC<IProps> = ({
       y: 0,
       transition: {
         ...transition,
-        delay: animationDelay,
+        // delay: animationDelay,
       },
     },
   };

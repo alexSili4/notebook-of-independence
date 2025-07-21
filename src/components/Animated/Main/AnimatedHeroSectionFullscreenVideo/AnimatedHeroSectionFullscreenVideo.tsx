@@ -27,7 +27,7 @@ const HeroSectionVideo: FC<IProps> = ({
   const transition: Transition = {
     type: 'spring',
     duration: animationDuration,
-    bounce: 0.6,
+    bounce: 0,
   };
 
   const elementVariants: Variants = {
@@ -47,8 +47,8 @@ const HeroSectionVideo: FC<IProps> = ({
       transition,
     },
     initial: {
-      // y: 0,
-      y: '31.5vh',
+      y: '50vh',
+      width: '41.4vw',
       height: 0,
       transition: {
         ...transition,
