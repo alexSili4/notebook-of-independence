@@ -8,7 +8,7 @@ export const Text = styled.p`
   font-weight: 400;
   line-height: 1.08;
   opacity: 0;
-  transition: opacity ${({ theme }) => theme.transitionDurationAndFunc};
+  transition: opacity ${({ theme }) => theme.transitionDurationAndFunc.all};
 
   div:has(button:is(:hover, :focus)) > & {
     opacity: 1;

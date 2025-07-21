@@ -1,31 +1,49 @@
 import GeneralContainer from '@GeneralComponents/GeneralContainer';
-import { FC } from 'react';
-import {
-  Section,
-  Container,
-  Desc,
-  PersonalSignatureIcon,
-  TextWrap,
-  Title,
-  Background,
-} from './HeroSection.styled';
+import { FC, useRef } from 'react';
+import { Section, Container, TextWrap, Background } from './HeroSection.styled';
+import AnimatedHeroSectionTitle from '@AnimatedMainPageComponents/AnimatedHeroSectionTitle';
+import { IProps } from './HeroSection.types';
+import AnimatedHeroSectionVideo from '@AnimatedMainPageComponents/AnimatedHeroSectionVideo';
+import AnimatedHeroSectionText from '@AnimatedMainPageComponents/AnimatedHeroSectionText';
+import { useInView } from 'framer-motion';
+import AnimatedHeroSectionPersonalSignatureIcon from '@AnimatedMainPageComponents/AnimatedHeroSectionPersonalSignatureIcon';
 
-const HeroSection: FC = () => {
+const HeroSection: FC<IProps> = ({
+  animationDelay,
+  animationDuration,
+  isFullScreen,
+}) => {
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const inView = useInView(sectionRef);
+
   return (
-    <Section>
+    <Section ref={sectionRef}>
       <GeneralContainer>
         <Background>
           <Container>
-            {/* TODO: video */}
-            <Title>Незалежність</Title>
+            <AnimatedHeroSectionTitle
+              animationDuration={animationDuration}
+              animationDelay={animationDelay}
+              inView={inView}
+            />
             <TextWrap>
-              <Desc>
-                У серпні 1991 року Левко Лукʼяненко написав чернетку Акта
-                проголошення незалежності України. Він зробив це за півтори
-                години, а йшов до цього все життя.
-              </Desc>
-              <PersonalSignatureIcon />
+              <AnimatedHeroSectionText
+                inView={inView}
+                animationDelay={animationDelay}
+                animationDuration={animationDuration}
+              />
+              <AnimatedHeroSectionPersonalSignatureIcon
+                inView={inView}
+                animationDelay={animationDelay}
+                animationDuration={animationDuration}
+              />
             </TextWrap>
+            <AnimatedHeroSectionVideo
+              animationDuration={10}
+              animationDelay={animationDelay}
+              inView={inView}
+              isFullScreen={isFullScreen}
+            />
           </Container>
         </Background>
       </GeneralContainer>

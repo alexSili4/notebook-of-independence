@@ -14,7 +14,10 @@ interface ITheme {
     desktop: number;
     mobile: number;
   };
-  transitionDurationAndFunc: string;
+  transitionDurationAndFunc: {
+    all: string;
+    video: string;
+  };
   spacing: (value?: number) => number;
 }
 
@@ -37,7 +40,10 @@ const theme: ITheme = {
     mobile: 375,
   },
   // shadows: {  },
-  transitionDurationAndFunc: '400ms cubic-bezier(0.4, 0, 0.2, 1)',
+  transitionDurationAndFunc: {
+    all: '400ms cubic-bezier(0.4, 0, 0.2, 1)',
+    video: '1000ms cubic-bezier(0.4, 0, 0.2, 1)',
+  },
   spacing: (value = 1) => value * 4,
 };
 

@@ -1,8 +1,13 @@
 import styled from '@emotion/styled';
-import PersonalSignature from '@/icons/hero/personal-signature.svg?react';
 import independenceBg from '@/images/hero/independence-bg.jpg';
 
-export const Section = styled.section``;
+export const Section = styled.section`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+`;
 
 export const Background = styled.div`
   height: 100%;
@@ -13,6 +18,7 @@ export const Background = styled.div`
 `;
 
 export const Container = styled.div`
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -22,34 +28,7 @@ export const Container = styled.div`
   padding-bottom: 16.9vh;
 `;
 
-export const Title = styled.h1`
-  color: #6983d0;
-  font-family: ${({ theme }) => theme.fontFamily.inter};
-  font-size: 165.9px;
-  font-weight: 700;
-  line-height: 1;
-  letter-spacing: -6.1px;
-  text-align: left;
-  text-transform: uppercase;
-`;
-
 export const TextWrap = styled.div`
   position: relative;
   width: 545px;
-`;
-
-export const Desc = styled.p`
-  color: #2f2f2f;
-  font-family: ${({ theme }) => theme.fontFamily.inter};
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.4;
-  text-align: center;
-`;
-
-export const PersonalSignatureIcon = styled(PersonalSignature)`
-  position: absolute;
-  top: 27px;
-  left: 50%;
-  transform: translateX(-50%);
 `;

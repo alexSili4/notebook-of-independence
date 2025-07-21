@@ -25,7 +25,7 @@ export const Button = styled.button`
 `;
 
 export const Image = styled.img`
-  transition: opacity ${({ theme }) => theme.transitionDurationAndFunc};
+  transition: opacity ${({ theme }) => theme.transitionDurationAndFunc.all};
 
   button:is(:hover, :focus) > & {
     opacity: 0.7;

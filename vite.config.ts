@@ -10,7 +10,7 @@ export default defineConfig({
       '@GeneralComponents': '/src/components/General',
       '@MainPageComponents': '/src/components/MainPage',
       // animations
-      '@AnimatedMainPageComponents': '/src/components/Animated/MainPage',
+      '@AnimatedMainPageComponents': '/src/components/Animated/Main',
       '@AnimatedGeneralComponents': '/src/components/Animated/General',
     },
   },

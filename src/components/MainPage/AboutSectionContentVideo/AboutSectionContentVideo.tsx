@@ -1,4 +1,4 @@
-import { FC, useEffect, useRef, useState } from 'react';
+import { FC, useState } from 'react';
 import {
   Container,
   Content,
@@ -6,12 +6,14 @@ import {
   PlayVideoBtn,
   PlayVideoBtnLineIcon,
   PlayVideoBtnTitle,
+  StyledReactPlayer,
   VideoWrap,
+  VideoBg,
 } from './AboutSectionContentVideo.styled';
 import { BtnClickEvent } from '@/types/types';
 import { makeBlur } from '@/utils';
 import aboutVideo from '@/video/about.mp4';
-import ReactPlayer from 'react-player';
+import videoBgPaper from '@/images/about/video-bg-paper.jpg';
 
 const AboutSectionContentVideo: FC = () => {
   const [play, setPlay] = useState<boolean>(false);
@@ -29,8 +31,9 @@ const AboutSectionContentVideo: FC = () => {
   return (
     <Container>
       <Content>
+        <VideoBg src={videoBgPaper} alt='' />
         <VideoWrap>
-          <ReactPlayer
+          <StyledReactPlayer
             src={aboutVideo}
             playing={play}
             onEnded={onVideoEnded}

@@ -7,7 +7,7 @@
       "@MainPageComponents/*": ["./src/components/MainPage/*"],
       // animations
       "@AnimatedGeneralComponents/*": ["./src/components/Animated/General/*"],
-      "@AnimatedMainPageComponents/*": ["./src/components/Animated/MainPage/*"]
+      "@AnimatedMainPageComponents/*": ["./src/components/Animated/Main/*"]
     },
     "target": "ES2020",
     "useDefineForClassFields": true,

@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 import PlayVideoBtnLine from '@/icons/about/play-video-btn-line.svg?react';
 import videoBg from '@/images/about/video-bg.png';
+import ReactPlayer from 'react-player';
 
 export const Container = styled.div`
   position: absolute;
@@ -15,11 +16,16 @@ export const Container = styled.div`
   height: 100%;
 `;
 
-export const Content = styled.div``;
+export const Content = styled.div`
+  position: relative;
+`;
 
 export const VideoWrap = styled.div`
+  position: relative;
   display: flex;
   flex-direction: column;
+  height: 80.6vh;
+  aspect-ratio: 967 / 645;
   gap: ${({ theme }) => theme.spacing(3)}px;
   padding-top: ${({ theme }) => theme.spacing(12)}px;
   padding-right: ${({ theme }) => theme.spacing(21)}px;
@@ -29,6 +35,23 @@ export const VideoWrap = styled.div`
   background-position: 0 0;
   background-size: 100% 100%;
   background-repeat: no-repeat;
+  rotate: -2.49deg;
+`;
+
+export const StyledReactPlayer = styled(ReactPlayer)`
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+`;
+
+export const VideoBg = styled.img`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 68.3vh;
+  aspect-ratio: 954 / 546;
+  translate: -50% -50%;
+  rotate: 2.13deg;
 `;
 
 export const Desc = styled.p`
@@ -40,6 +63,7 @@ export const Desc = styled.p`
 `;
 
 export const PlayVideoBtn = styled.button`
+  flex-shrink: 0;
   position: relative;
   display: flex;
   align-items: center;
@@ -69,7 +93,7 @@ export const PlayVideoBtnLineIcon = styled(PlayVideoBtnLine)`
   height: 58px;
   translate: -50% -50%;
   opacity: 0;
-  transition: opacity ${({ theme }) => theme.transitionDurationAndFunc};
+  transition: opacity ${({ theme }) => theme.transitionDurationAndFunc.all};
 
   button:is(:hover, :focus) & {
     opacity: 1;
