@@ -39,7 +39,7 @@ const HeroSection: FC<IProps> = ({
               />
             </TextWrap>
             <AnimatedHeroSectionVideo
-              animationDuration={10}
+              animationDuration={animationDuration}
               animationDelay={animationDelay}
               inView={inView}
               isFullScreen={isFullScreen}
