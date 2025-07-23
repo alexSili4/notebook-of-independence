@@ -3,9 +3,6 @@ import wayLink from '@/images/about/way-link.png';
 import { Link } from 'react-router-dom';
 
 export const StyledLink = styled(Link)`
-  position: absolute;
-  right: 0;
-  bottom: 0;
   display: flex;
 `;
 
@@ -40,7 +37,7 @@ export const ArrowImg = styled.img`
   left: 94px;
   width: 30px;
   height: 37px;
-  transition: rotate ${({ theme }) => theme.transitionDurationAndFunc.all};
+  transition: rotate ${({ theme }) => theme.transitionDurationAndFunc};
   transform-origin: top right;
 
   a:is(:hover, :focus) & {

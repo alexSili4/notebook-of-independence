@@ -8,7 +8,7 @@ const AnimatedHeroSectionVideo: FC<IProps> = ({
   animationDelay,
   inView,
   animationDuration,
-  isFullScreen,
+  videoInView,
 }) => {
   const animate: VariantLabels = inView ? 'visible' : 'hidden';
 
@@ -30,10 +30,7 @@ const AnimatedHeroSectionVideo: FC<IProps> = ({
     },
     visible: {
       y: 0,
-      transition: {
-        ...transition,
-        // delay: animationDelay,
-      },
+      transition,
     },
   };
 
@@ -43,7 +40,7 @@ const AnimatedHeroSectionVideo: FC<IProps> = ({
         <AnimatedHeroSectionFullscreenVideo
           inView={inView}
           animationDelay={animationDelay}
-          isFullScreen={isFullScreen}
+          videoInView={videoInView}
           animationDuration={animationDuration}
         />
       </Element>

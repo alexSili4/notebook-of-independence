@@ -7,14 +7,16 @@ import {
 import heroVideo from '@/video/hero.mp4';
 import { IProps } from './AnimatedHeroSectionFullscreenVideo.types';
 import { Transition, VariantLabels, Variants } from 'framer-motion';
+import { useIsFirsRender } from '@/hooks';
 
 const HeroSectionVideo: FC<IProps> = ({
   animationDelay,
-  isFullScreen,
+  videoInView,
   animationDuration,
   inView,
 }) => {
-  const animate: VariantLabels = isFullScreen
+  const { isFirstRender, updateIsFirsRender } = useIsFirsRender();
+  const animate: VariantLabels = videoInView
     ? 'visible'
     : inView
     ? 'hidden'
@@ -37,7 +39,7 @@ const HeroSectionVideo: FC<IProps> = ({
       height: '40vh',
       transition: {
         ...transition,
-        delay: animationDelay,
+        delay: isFirstRender ? animationDelay : 0,
       },
     },
     visible: {
@@ -58,7 +60,12 @@ const HeroSectionVideo: FC<IProps> = ({
   };
 
   return (
-    <Container animate={animate} variants={containerVariants} initial='initial'>
+    <Container
+      animate={animate}
+      variants={containerVariants}
+      initial='initial'
+      onAnimationComplete={updateIsFirsRender}
+    >
       <Element variants={elementVariants}>
         <StyledReactPlayer src={heroVideo} muted loop playing />
       </Element>

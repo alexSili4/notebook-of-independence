@@ -1,48 +1,44 @@
 import GeneralContainer from '@GeneralComponents/GeneralContainer';
-import { FC, useRef } from 'react';
+import { FC } from 'react';
 import { Section, Container, TextWrap, Background } from './HeroSection.styled';
 import AnimatedHeroSectionTitle from '@AnimatedMainPageComponents/AnimatedHeroSectionTitle';
 import { IProps } from './HeroSection.types';
 import AnimatedHeroSectionVideo from '@AnimatedMainPageComponents/AnimatedHeroSectionVideo';
 import AnimatedHeroSectionText from '@AnimatedMainPageComponents/AnimatedHeroSectionText';
-import { useInView } from 'framer-motion';
 import AnimatedHeroSectionPersonalSignatureIcon from '@AnimatedMainPageComponents/AnimatedHeroSectionPersonalSignatureIcon';
 
 const HeroSection: FC<IProps> = ({
   animationDelay,
   animationDuration,
-  isFullScreen,
+  videoInView,
 }) => {
-  const sectionRef = useRef<HTMLDivElement>(null);
-  const inView = useInView(sectionRef);
-
   return (
-    <Section ref={sectionRef}>
+    <Section>
       <GeneralContainer>
         <Background>
           <Container>
             <AnimatedHeroSectionTitle
               animationDuration={animationDuration}
               animationDelay={animationDelay}
-              inView={inView}
+              inView
             />
             <TextWrap>
               <AnimatedHeroSectionText
-                inView={inView}
                 animationDelay={animationDelay}
                 animationDuration={animationDuration}
+                inView
               />
               <AnimatedHeroSectionPersonalSignatureIcon
-                inView={inView}
                 animationDelay={animationDelay}
                 animationDuration={animationDuration}
+                inView
               />
             </TextWrap>
             <AnimatedHeroSectionVideo
               animationDuration={animationDuration}
               animationDelay={animationDelay}
-              inView={inView}
-              isFullScreen={isFullScreen}
+              videoInView={videoInView}
+              inView
             />
           </Container>
         </Background>

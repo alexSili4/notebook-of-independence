@@ -2,16 +2,11 @@ import styled from '@emotion/styled';
 import BuyLinkLine from '@/icons/newHistory/buy-link-line.svg?react';
 
 export const Container = styled.div`
-  position: absolute;
-  /* top: 56.9vh; */
-  top: 0;
-  left: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
-  height: 100vh;
+  height: 100%;
   padding-top: ${({ theme }) => theme.spacing(5)}px;
   padding-bottom: ${({ theme }) => theme.spacing(6)}px;
 `;
@@ -56,7 +51,7 @@ export const BuyLinkLineIcon = styled(BuyLinkLine)`
   left: 50%;
   translate: -50% -50%;
   opacity: 0;
-  transition: opacity ${({ theme }) => theme.transitionDurationAndFunc.all};
+  transition: opacity ${({ theme }) => theme.transitionDurationAndFunc};
 
   a:is(:hover, :focus) & {
     opacity: 1;

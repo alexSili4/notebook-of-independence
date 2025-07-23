@@ -3,6 +3,7 @@ import independenceBg from '@/images/hero/independence-bg.jpg';
 
 export const Section = styled.section`
   position: fixed;
+
   top: 0;
   left: 0;
   width: 100%;

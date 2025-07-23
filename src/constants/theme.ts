@@ -14,10 +14,11 @@ interface ITheme {
     desktop: number;
     mobile: number;
   };
-  transitionDurationAndFunc: {
-    all: string;
-    video: string;
+  zIndex: {
+    header: number;
+    heroVideo: number;
   };
+  transitionDurationAndFunc: string;
   spacing: (value?: number) => number;
 }
 
@@ -39,11 +40,11 @@ const theme: ITheme = {
     desktop: 1376,
     mobile: 375,
   },
-  // shadows: {  },
-  transitionDurationAndFunc: {
-    all: '400ms cubic-bezier(0.4, 0, 0.2, 1)',
-    video: '2000ms cubic-bezier(0.4, 0, 0.2, 1)',
+  zIndex: {
+    header: 10,
+    heroVideo: 100,
   },
+  transitionDurationAndFunc: '400ms cubic-bezier(0.4, 0, 0.2, 1)',
   spacing: (value = 1) => value * 4,
 };
 

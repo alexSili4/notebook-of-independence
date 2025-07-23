@@ -1,11 +1,12 @@
 import styled from '@emotion/styled';
 import DecorativeAccent from '@/icons/newHistory/decorative-accent.svg?react';
 
-export const TextWrap = styled.div`
+export const Container = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
   gap: ${({ theme }) => theme.spacing(5)}px;
+  padding-top: 9.8vh;
 `;
 
 export const Title = styled.h2`

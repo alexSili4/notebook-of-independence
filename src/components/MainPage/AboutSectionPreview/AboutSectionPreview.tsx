@@ -4,38 +4,34 @@ import {
   Background,
   StarImg,
   Container,
-  PhotoLeft,
-  PhotoRight,
   BookImg,
-  Title,
-  TitlePart,
-  PhotoLeftWrap,
-  PhotoRightWrap,
   TitleWrap,
 } from './AboutSectionPreview.styled';
-import photoLeft from '@/images/about/photo-left.png';
-import photoRight from '@/images/about/photo-right.png';
 import book from '@/images/about/book.png';
 import star from '@/images/about/star.png';
+import AnimatedAboutSectionPreviewPhoto from '@AnimatedMainPageComponents/AnimatedAboutSectionPreviewPhoto';
+import { IProps } from './AboutSectionPreview.types';
+import AnimatedAboutSectionPreviewTitle from '@AnimatedMainPageComponents/AnimatedAboutSectionPreviewTitle';
 
-const AboutSectionPreview: FC = () => {
+const AboutSectionPreview: FC<IProps> = ({
+  animationDuration,
+  sectionInView,
+}) => {
   return (
     <GeneralContainer>
       <Background>
         <Container>
           <TitleWrap>
-            <Title>
-              <TitlePart>Хто такий</TitlePart>
-              <TitlePart>Левко Лукʼяненко?</TitlePart>
-            </Title>
-            <PhotoRightWrap>
-              <BookImg src={book} alt='' />
-              <PhotoRight src={photoRight} alt='' />
-            </PhotoRightWrap>
-            <PhotoLeftWrap>
-              <StarImg src={star} alt='' />
-              <PhotoLeft src={photoLeft} alt='' />
-            </PhotoLeftWrap>
+            <AnimatedAboutSectionPreviewTitle
+              animationDuration={animationDuration}
+              inView={sectionInView}
+            />
+            <AnimatedAboutSectionPreviewPhoto
+              animationDuration={animationDuration}
+              inView={sectionInView}
+            />
+            <StarImg src={star} alt='' />
+            <BookImg src={book} alt='' />
           </TitleWrap>
         </Container>
       </Background>

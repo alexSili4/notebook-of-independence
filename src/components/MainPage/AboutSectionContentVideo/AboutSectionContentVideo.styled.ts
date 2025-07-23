@@ -4,9 +4,6 @@ import videoBg from '@/images/about/video-bg.png';
 import ReactPlayer from 'react-player';
 
 export const Container = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -93,7 +90,7 @@ export const PlayVideoBtnLineIcon = styled(PlayVideoBtnLine)`
   height: 58px;
   translate: -50% -50%;
   opacity: 0;
-  transition: opacity ${({ theme }) => theme.transitionDurationAndFunc.all};
+  transition: opacity ${({ theme }) => theme.transitionDurationAndFunc};
 
   button:is(:hover, :focus) & {
     opacity: 1;

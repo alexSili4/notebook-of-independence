@@ -21,7 +21,7 @@ export const BackgroundImg = styled.img`
   top: 0;
   left: 50%;
   width: 107.9vw;
-  height: 129.4vh;
+  height: 132vh;
   opacity: 0.15;
   transform: translateX(-50%);
 `;

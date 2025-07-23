@@ -20,13 +20,3 @@ export const Content = styled.div`
   height: 100%;
   overflow: hidden;
 `;
-
-export const DecorativeShape = styled.div`
-  position: absolute;
-  top: 0;
-  left: -1vw;
-  width: 50.5vw;
-  height: 100%;
-  background-color: #f1cc7d;
-  rotate: 2.07deg;
-`;

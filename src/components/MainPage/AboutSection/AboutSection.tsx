@@ -1,13 +1,26 @@
 import { FC } from 'react';
 import { Section } from './AboutSection.styled';
-// import AboutSectionPreview from '@MainPageComponents/AboutSectionPreview';
-import AboutSectionContent from '@MainPageComponents/AboutSectionContent';
+import AboutSectionPreview from '@MainPageComponents/AboutSectionPreview';
+import AnimatedAboutSectionContent from '@AnimatedMainPageComponents/AnimatedAboutSectionContent';
+import { IProps } from './AboutSection.types';
 
-const AboutSection: FC = () => {
+const AboutSection: FC<IProps> = ({
+  contentInView,
+  animationDuration,
+  sectionInView,
+  videoInView,
+}) => {
   return (
     <Section>
-      {/* <AboutSectionPreview /> */}
-      <AboutSectionContent />
+      <AboutSectionPreview
+        animationDuration={animationDuration}
+        sectionInView={sectionInView}
+      />
+      <AnimatedAboutSectionContent
+        inView={contentInView}
+        animationDuration={4}
+        videoInView={videoInView}
+      />
     </Section>
   );
 };

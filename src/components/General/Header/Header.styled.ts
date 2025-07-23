@@ -2,12 +2,7 @@ import styled from '@emotion/styled';
 import Silpo from '@/icons/header/silpo.svg?react';
 import Logo from '@/icons/header/logo.svg?react';
 
-export const StyledHeader = styled.header`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-`;
+export const StyledHeader = styled.header``;
 
 export const Container = styled.div`
   display: flex;

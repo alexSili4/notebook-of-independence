@@ -1,44 +1,47 @@
-import { FC, useState } from 'react';
+import { FC } from 'react';
 import GeneralContainer from '@GeneralComponents/GeneralContainer';
-import {
-  Background,
-  Content,
-  Container,
-  DecorativeShape,
-} from './AboutSectionContent.styled';
-import AboutSectionContentText from '@MainPageComponents/AboutSectionContentText';
-import AboutSectionContentImages from '@MainPageComponents/AboutSectionContentImages';
-import AboutSectionContentNavLink from '@MainPageComponents/AboutSectionContentNavLink';
-import AboutSectionContentVideo from '@MainPageComponents/AboutSectionContentVideo';
+import { Background, Content, Container } from './AboutSectionContent.styled';
+import AnimatedAboutSectionContentDecorativeShape from '@AnimatedMainPageComponents/AnimatedAboutSectionContentDecorativeShape';
+import AnimatedAboutSectionContentText from '@AnimatedMainPageComponents/AnimatedAboutSectionContentText';
+import AnimatedAboutSectionContentImages from '@AnimatedMainPageComponents/AnimatedAboutSectionContentImages';
+import AnimatedAboutSectionContentNavLink from '@AnimatedMainPageComponents/AnimatedAboutSectionContentNavLink';
+import AnimatedAboutSectionContentVideo from '@AnimatedMainPageComponents/AnimatedAboutSectionContentVideo';
+import { IProps } from './AboutSectionContent.types';
 
-const AboutSectionContent: FC = () => {
-  const [currentStep, setCurrentStep] = useState<number>(1);
-
-  const incrementCurrentStep = (isCurrentStep: boolean) => {
-    if (!isCurrentStep) {
-      return;
-    }
-
-    setCurrentStep((prevState) => (prevState += 1));
-  };
-
+const AboutSectionContent: FC<IProps> = ({
+  decorativeShapeInView,
+  animationDuration,
+  videoInView,
+}) => {
   return (
-    <GeneralContainer>
-      <Container>
-        <DecorativeShape></DecorativeShape>
+    <Container>
+      <AnimatedAboutSectionContentDecorativeShape
+        animationDuration={animationDuration}
+        inView={decorativeShapeInView}
+      />
+      <GeneralContainer>
         <Background>
           <Content>
-            <AboutSectionContentImages
-              incrementCurrentStep={incrementCurrentStep}
-              currentStep={currentStep}
+            <AnimatedAboutSectionContentImages
+              animationDuration={animationDuration}
+              inView={!videoInView}
             />
-            <AboutSectionContentText />
-            <AboutSectionContentNavLink />
-            <AboutSectionContentVideo />
+            <AnimatedAboutSectionContentText
+              animationDuration={animationDuration}
+              inView={!videoInView}
+            />
+            <AnimatedAboutSectionContentNavLink
+              animationDuration={animationDuration}
+              inView={!videoInView}
+            />
+            <AnimatedAboutSectionContentVideo
+              animationDuration={animationDuration}
+              inView={videoInView}
+            />
           </Content>
         </Background>
-      </Container>
-    </GeneralContainer>
+      </GeneralContainer>
+    </Container>
   );
 };
 

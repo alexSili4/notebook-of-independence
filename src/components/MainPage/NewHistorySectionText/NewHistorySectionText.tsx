@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import {
-  TextWrap,
+  Container,
   DecorativeAccentIcon,
   Desc,
   DescPart,
@@ -10,7 +10,7 @@ import {
 
 const NewHistorySectionText: FC = () => {
   return (
-    <TextWrap>
+    <Container>
       <Title>Пиши історію далі</Title>
       <DescWrap>
         <Desc>
@@ -30,7 +30,7 @@ const NewHistorySectionText: FC = () => {
         </Desc>
         <DecorativeAccentIcon />
       </DescWrap>
-    </TextWrap>
+    </Container>
   );
 };
 
