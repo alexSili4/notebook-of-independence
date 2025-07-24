@@ -9,8 +9,13 @@ const AnimatedAboutSection: FC<IProps> = ({
   inView,
   contentInView,
   videoInView,
+  nextSectionInView,
 }) => {
-  const animate: VariantLabels = inView ? 'visible' : 'hidden';
+  const animate: VariantLabels = nextSectionInView
+    ? 'exit'
+    : inView
+    ? 'visible'
+    : 'hidden';
 
   const containerVariants: Variants = {
     hidden: {},
@@ -26,10 +31,17 @@ const AnimatedAboutSection: FC<IProps> = ({
   const elementVariants: Variants = {
     hidden: {
       y: '100vh',
+      x: 0,
       transition,
     },
     visible: {
       y: 0,
+      x: 0,
+      transition,
+    },
+    exit: {
+      y: 0,
+      x: '-100%',
       transition,
     },
   };

@@ -18,28 +18,32 @@ export default defineConfig({
     emptyOutDir: true,
     rollupOptions: {
       output: {
-        chunkFileNames: 'js/[name].js',
-        entryFileNames: 'js/[name].js',
+        chunkFileNames: 'dist/js/[name].js',
+        entryFileNames: 'dist/js/[name].js',
         assetFileNames: (assetInfo) => {
           const fileName = assetInfo.name || '';
 
+          if (fileName.endsWith('.js')) {
+            return 'dist/js/[name][extname]';
+          }
+
           if (fileName.endsWith('.css')) {
-            return 'css/[name][extname]';
+            return 'dist/css/[name][extname]';
           }
 
           if (fileName.endsWith('.ttf')) {
-            return 'fonts/[name][extname]';
+            return 'dist/fonts/[name][extname]';
           }
 
           if (fileName.endsWith('.mp4')) {
-            return 'video/[name][extname]';
+            return 'dist/video/[name][extname]';
           }
 
           if (fileName.endsWith('.jpg') || fileName.endsWith('.png')) {
-            return 'images/[name][extname]';
+            return 'dist/images/[name][extname]';
           }
 
-          return 'assets/[name][extname]';
+          return 'dist/[name][extname]';
         },
       },
     },

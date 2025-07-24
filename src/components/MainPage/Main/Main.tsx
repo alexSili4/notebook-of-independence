@@ -1,10 +1,11 @@
 import { FC, useEffect, useRef, useState } from 'react';
-import HeroSection from '@MainPageComponents/HeroSection';
 import { IProps } from './Main.types';
-import AnimatedNewHistorySection from '@AnimatedMainPageComponents/AnimatedNewHistorySection';
 import { useScroll, useTransform } from 'framer-motion';
-import AnimatedAboutSection from '@AnimatedMainPageComponents/AnimatedAboutSection';
 import { Container } from './Main.styled';
+import AnimatedChronicleSection from '@AnimatedMainPageComponents/AnimatedChronicleSection';
+import AnimatedAboutSection from '@AnimatedMainPageComponents/AnimatedAboutSection';
+import AnimatedNewHistorySection from '@AnimatedMainPageComponents/AnimatedNewHistorySection';
+import HeroSection from '@MainPageComponents/HeroSection';
 
 const Main: FC<IProps> = ({ updateShowFullScreenHeroVideo }) => {
   const [progress, setProgress] = useState<number>(0);
@@ -23,6 +24,13 @@ const Main: FC<IProps> = ({ updateShowFullScreenHeroVideo }) => {
   const aboutSectionInView = progress >= 30;
   const aboutSectionContentInView = progress >= 35;
   const aboutSectionContentVideoInView = progress >= 40;
+  const chronicleSectionInView = progress >= 45;
+  const chronicleSectionFirstStepInView = progress >= 50;
+  const chronicleSectionSecondStepInView = progress >= 55;
+  const chronicleSectionThirdStepInView = progress >= 60;
+  const chronicleSectionFourthStepInView = progress >= 65;
+  const chronicleSectionFifthStepInView = progress >= 70;
+  const chronicleSectionContentInView = chronicleSectionFirstStepInView;
 
   useEffect(() => {
     const onProgressChange = (value: number) => {
@@ -55,6 +63,18 @@ const Main: FC<IProps> = ({ updateShowFullScreenHeroVideo }) => {
         inView={aboutSectionInView}
         contentInView={aboutSectionContentInView}
         videoInView={aboutSectionContentVideoInView}
+        nextSectionInView={chronicleSectionInView}
+      />
+      <AnimatedChronicleSection
+        contentInView={chronicleSectionContentInView}
+        fifthStepInView={chronicleSectionFifthStepInView}
+        firstStepInView={chronicleSectionFirstStepInView}
+        fourthStepInView={chronicleSectionFourthStepInView}
+        secondStepInView={chronicleSectionSecondStepInView}
+        thirdStepInView={chronicleSectionThirdStepInView}
+        animationDuration={2.5}
+        inView={chronicleSectionInView}
+        nextSectionInView={chronicleSectionFirstStepInView}
       />
     </Container>
   );

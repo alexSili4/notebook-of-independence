@@ -18,7 +18,7 @@ interface ITheme {
     header: number;
     heroVideo: number;
   };
-  transitionDurationAndFunc: string;
+  transitionDurationAndFunc: { all: string; chronicle: string };
   spacing: (value?: number) => number;
 }
 
@@ -44,7 +44,10 @@ const theme: ITheme = {
     header: 10,
     heroVideo: 100,
   },
-  transitionDurationAndFunc: '400ms cubic-bezier(0.4, 0, 0.2, 1)',
+  transitionDurationAndFunc: {
+    all: '400ms cubic-bezier(0.4, 0, 0.2, 1)',
+    chronicle: '2500ms cubic-bezier(0.4, 0, 0.2, 1)',
+  },
   spacing: (value = 1) => value * 4,
 };
 

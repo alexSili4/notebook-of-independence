@@ -5,7 +5,7 @@ export const Container = styled.div``;
 export const PhotoBottomLeft = styled.img`
   width: 363px;
   height: 341px;
-  transition: rotate ${({ theme }) => theme.transitionDurationAndFunc};
+  transition: rotate ${({ theme }) => theme.transitionDurationAndFunc.all};
 
   button:is(:hover, :focus) > & {
     rotate: -12.71deg;

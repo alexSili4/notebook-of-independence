@@ -90,7 +90,7 @@ export const PlayVideoBtnLineIcon = styled(PlayVideoBtnLine)`
   height: 58px;
   translate: -50% -50%;
   opacity: 0;
-  transition: opacity ${({ theme }) => theme.transitionDurationAndFunc};
+  transition: opacity ${({ theme }) => theme.transitionDurationAndFunc.all};
 
   button:is(:hover, :focus) & {
     opacity: 1;

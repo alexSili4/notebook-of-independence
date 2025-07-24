@@ -13,8 +13,8 @@ export const Container = styled(motion.div)`
 `;
 
 export const Element = styled(motion.div)`
-  width: 234px;
-  height: 138px;
+  width: 100%;
+  height: 100%;
   overflow: hidden;
 `;
 

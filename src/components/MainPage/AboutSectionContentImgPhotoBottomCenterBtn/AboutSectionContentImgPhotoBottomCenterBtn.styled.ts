@@ -5,7 +5,7 @@ export const Container = styled.div``;
 export const PhotoBottomCenter = styled.img`
   width: 270px;
   height: 270px;
-  transition: rotate ${({ theme }) => theme.transitionDurationAndFunc};
+  transition: rotate ${({ theme }) => theme.transitionDurationAndFunc.all};
 
   button:is(:hover, :focus) > & {
     rotate: -6.15deg;

@@ -5,7 +5,7 @@ export const PhotoTopLeftBtnWrap = styled.div``;
 export const PhotoTopLeft = styled.img`
   width: 407px;
   height: 293px;
-  transition: rotate ${({ theme }) => theme.transitionDurationAndFunc};
+  transition: rotate ${({ theme }) => theme.transitionDurationAndFunc.all};
 
   button:is(:hover, :focus) > & {
     rotate: -5.91deg;

@@ -3,4 +3,5 @@ export interface IProps {
   inView: boolean;
   contentInView: boolean;
   videoInView: boolean;
+  nextSectionInView: boolean;
 }

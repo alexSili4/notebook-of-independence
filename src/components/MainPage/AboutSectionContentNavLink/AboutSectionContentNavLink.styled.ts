@@ -37,7 +37,7 @@ export const ArrowImg = styled.img`
   left: 94px;
   width: 30px;
   height: 37px;
-  transition: rotate ${({ theme }) => theme.transitionDurationAndFunc};
+  transition: rotate ${({ theme }) => theme.transitionDurationAndFunc.all};
   transform-origin: top right;
 
   a:is(:hover, :focus) & {

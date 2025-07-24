@@ -51,7 +51,7 @@ export const BuyLinkLineIcon = styled(BuyLinkLine)`
   left: 50%;
   translate: -50% -50%;
   opacity: 0;
-  transition: opacity ${({ theme }) => theme.transitionDurationAndFunc};
+  transition: opacity ${({ theme }) => theme.transitionDurationAndFunc.all};
 
   a:is(:hover, :focus) & {
     opacity: 1;
