@@ -6,6 +6,7 @@ import AnimatedChronicleSection from '@AnimatedMainPageComponents/AnimatedChroni
 import AnimatedAboutSection from '@AnimatedMainPageComponents/AnimatedAboutSection';
 import AnimatedNewHistorySection from '@AnimatedMainPageComponents/AnimatedNewHistorySection';
 import HeroSection from '@MainPageComponents/HeroSection';
+import { useIsScrollingPageUp } from '@/hooks';
 
 const Main: FC<IProps> = ({ updateShowFullScreenHeroVideo }) => {
   const [progress, setProgress] = useState<number>(0);
@@ -17,6 +18,7 @@ const Main: FC<IProps> = ({ updateShowFullScreenHeroVideo }) => {
   const scrollProgress = useTransform(scrollYProgress, [0, 1], [0, 100], {
     clamp: true,
   });
+  const isScrollingPageUp = useIsScrollingPageUp();
 
   const heroSectionVideoInView = progress >= 15;
   const newHistorySectionInView = progress >= 20;
@@ -31,6 +33,19 @@ const Main: FC<IProps> = ({ updateShowFullScreenHeroVideo }) => {
   const chronicleSectionFourthStepInView = progress >= 65;
   const chronicleSectionFifthStepInView = progress >= 70;
   const chronicleSectionContentInView = chronicleSectionFirstStepInView;
+
+  const isSmoothChronicleSectionAnimation =
+    (isScrollingPageUp && aboutSectionContentVideoInView) ||
+    chronicleSectionInView;
+  const chronicleSectionAnimationDuration = 4;
+  const chronicleSectionAnimationBounce = 0.2;
+  const aboutSectionGeneralAnimationDuration = 2.5;
+  const aboutSectionAnimationBounce = isSmoothChronicleSectionAnimation
+    ? chronicleSectionAnimationBounce
+    : 0.4;
+  const aboutSectionAnimationDuration = isSmoothChronicleSectionAnimation
+    ? chronicleSectionAnimationDuration
+    : aboutSectionGeneralAnimationDuration;
 
   useEffect(() => {
     const onProgressChange = (value: number) => {
@@ -59,11 +74,15 @@ const Main: FC<IProps> = ({ updateShowFullScreenHeroVideo }) => {
         notebookInView={newHistorySectionNotebookInView}
       />
       <AnimatedAboutSection
-        animationDuration={2.5}
         inView={aboutSectionInView}
         contentInView={aboutSectionContentInView}
         videoInView={aboutSectionContentVideoInView}
         nextSectionInView={chronicleSectionInView}
+        animationDuration={aboutSectionGeneralAnimationDuration}
+        sectionAnimationBounce={aboutSectionAnimationBounce}
+        sectionAnimationDuration={aboutSectionAnimationDuration}
+        exitAnimationBounce={chronicleSectionAnimationBounce}
+        exitAnimationDuration={chronicleSectionAnimationDuration}
       />
       <AnimatedChronicleSection
         contentInView={chronicleSectionContentInView}
@@ -72,9 +91,9 @@ const Main: FC<IProps> = ({ updateShowFullScreenHeroVideo }) => {
         fourthStepInView={chronicleSectionFourthStepInView}
         secondStepInView={chronicleSectionSecondStepInView}
         thirdStepInView={chronicleSectionThirdStepInView}
-        animationDuration={2.5}
         inView={chronicleSectionInView}
-        nextSectionInView={chronicleSectionFirstStepInView}
+        animationBounce={chronicleSectionAnimationBounce}
+        animationDuration={chronicleSectionAnimationDuration}
       />
     </Container>
   );

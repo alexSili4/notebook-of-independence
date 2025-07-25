@@ -12,6 +12,7 @@ import { IProps } from './AnimatedChronicleSectionContentPreviewText.types';
 const AnimatedChronicleSectionContentPreviewText: FC<IProps> = ({
   inView,
   animationDuration,
+  animationBounce,
 }) => {
   const animate: VariantLabels = inView ? 'visible' : 'hidden';
 
@@ -23,7 +24,7 @@ const AnimatedChronicleSectionContentPreviewText: FC<IProps> = ({
   const transition: Transition = {
     type: 'spring',
     duration: animationDuration,
-    bounce: 0.2,
+    bounce: animationBounce,
   };
 
   const titlePartVariants: Variants = {

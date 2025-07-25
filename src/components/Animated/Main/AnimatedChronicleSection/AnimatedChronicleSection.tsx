@@ -11,15 +11,11 @@ const AnimatedChronicleSection: FC<IProps> = ({
   fourthStepInView,
   secondStepInView,
   thirdStepInView,
-  nextSectionInView,
   inView,
   animationDuration,
+  animationBounce,
 }) => {
-  const animate: VariantLabels = nextSectionInView
-    ? 'exit'
-    : inView
-    ? 'visible'
-    : 'hidden';
+  const animate: VariantLabels = inView ? 'visible' : 'hidden';
 
   const containerVariants: Variants = {
     hidden: {},
@@ -29,7 +25,7 @@ const AnimatedChronicleSection: FC<IProps> = ({
   const transition: Transition = {
     type: 'spring',
     duration: animationDuration,
-    bounce: 0.4,
+    bounce: animationBounce,
   };
 
   const elementVariants: Variants = {
@@ -39,10 +35,6 @@ const AnimatedChronicleSection: FC<IProps> = ({
     },
     visible: {
       x: 0,
-      transition,
-    },
-    exit: {
-      x: '-100%',
       transition,
     },
   };
@@ -59,6 +51,7 @@ const AnimatedChronicleSection: FC<IProps> = ({
           thirdStepInView={thirdStepInView}
           animationDuration={animationDuration}
           sectionInView={inView}
+          animationBounce={animationBounce}
         />
       </Element>
     </Container>

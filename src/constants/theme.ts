@@ -46,7 +46,7 @@ const theme: ITheme = {
   },
   transitionDurationAndFunc: {
     all: '400ms cubic-bezier(0.4, 0, 0.2, 1)',
-    chronicle: '2500ms cubic-bezier(0.4, 0, 0.2, 1)',
+    chronicle: '4000ms cubic-bezier(0.4, 0, 0.2, 1)',
   },
   spacing: (value = 1) => value * 4,
 };

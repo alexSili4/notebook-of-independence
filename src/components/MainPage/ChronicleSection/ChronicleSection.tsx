@@ -14,6 +14,7 @@ const ChronicleSection: FC<IProps> = ({
   thirdStepInView,
   sectionInView,
   animationDuration,
+  animationBounce,
 }) => {
   return (
     <Section>
@@ -23,6 +24,12 @@ const ChronicleSection: FC<IProps> = ({
             <ChronicleSectionContent
               animationDuration={animationDuration}
               sectionInView={sectionInView}
+              animationBounce={animationBounce}
+              firstStepInView={firstStepInView}
+              secondStepInView={secondStepInView}
+              thirdStepInView={thirdStepInView}
+              fourthStepInView={fourthStepInView}
+              fifthStepInView={fifthStepInView}
             />
             <ChronicleSectionProgressBar
               contentInView={contentInView}

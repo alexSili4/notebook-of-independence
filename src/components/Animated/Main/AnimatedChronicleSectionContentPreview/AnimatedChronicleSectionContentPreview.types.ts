@@ -1,5 +1,6 @@
 export interface IProps {
-  inView: boolean;
+  nextSectionInView: boolean;
   animationDuration: number;
+  inView: boolean;
   animationBounce: number;
 }

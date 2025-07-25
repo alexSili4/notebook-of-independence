@@ -5,7 +5,7 @@ export interface IProps {
   fourthStepInView: boolean;
   secondStepInView: boolean;
   thirdStepInView: boolean;
-  nextSectionInView: boolean;
   inView: boolean;
   animationDuration: number;
+  animationBounce: number;
 }

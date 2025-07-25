@@ -10,6 +10,10 @@ const AnimatedAboutSection: FC<IProps> = ({
   contentInView,
   videoInView,
   nextSectionInView,
+  sectionAnimationDuration,
+  sectionAnimationBounce,
+  exitAnimationDuration,
+  exitAnimationBounce,
 }) => {
   const animate: VariantLabels = nextSectionInView
     ? 'exit'
@@ -24,8 +28,8 @@ const AnimatedAboutSection: FC<IProps> = ({
 
   const transition: Transition = {
     type: 'spring',
-    duration: animationDuration,
-    bounce: 0.4,
+    duration: sectionAnimationDuration,
+    bounce: sectionAnimationBounce,
   };
 
   const elementVariants: Variants = {
@@ -42,7 +46,11 @@ const AnimatedAboutSection: FC<IProps> = ({
     exit: {
       y: 0,
       x: '-100%',
-      transition,
+      transition: {
+        ...transition,
+        duration: exitAnimationDuration,
+        bounce: exitAnimationBounce,
+      },
     },
   };
 

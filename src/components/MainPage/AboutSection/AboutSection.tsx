@@ -18,7 +18,7 @@ const AboutSection: FC<IProps> = ({
       />
       <AnimatedAboutSectionContent
         inView={contentInView}
-        animationDuration={4}
+        animationDuration={animationDuration}
         videoInView={videoInView}
       />
     </Section>

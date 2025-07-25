@@ -7,6 +7,7 @@ import { IProps } from './ChronicleSectionContentPreview.types';
 const ChronicleSectionContentPreview: FC<IProps> = ({
   animationDuration,
   inView,
+  animationBounce,
 }) => {
   return (
     <Container>
@@ -14,8 +15,12 @@ const ChronicleSectionContentPreview: FC<IProps> = ({
         <AnimatedChronicleSectionContentPreviewText
           animationDuration={animationDuration}
           inView={inView}
+          animationBounce={animationBounce}
         />
-        <AnimatedChronicleSectionContentPreviewLines />
+        <AnimatedChronicleSectionContentPreviewLines
+          animationDuration={animationDuration / 2}
+          inView={inView}
+        />
       </Content>
     </Container>
   );

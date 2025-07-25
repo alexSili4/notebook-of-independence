@@ -7,6 +7,7 @@ export interface IProps {
   firstStepInView: boolean;
   sectionInView: boolean;
   animationDuration: number;
+  animationBounce: number;
 }
 
 export interface IStyledBackgroundProps {
