@@ -15,23 +15,28 @@ const Main: FC<IProps> = ({ updateShowFullScreenHeroVideo }) => {
     target: containerRef,
     offset: ['start end', 'end start'],
   });
-  const scrollProgress = useTransform(scrollYProgress, [0, 1], [0, 100], {
-    clamp: true,
-  });
+  const scrollProgress = useTransform(
+    scrollYProgress,
+    [0, 0.1, 0.9, 1],
+    [0, 0, 15, 15],
+    {
+      clamp: true,
+    }
+  );
   const isScrollingPageUp = useIsScrollingPageUp();
 
-  const heroSectionVideoInView = progress >= 15;
-  const newHistorySectionInView = progress >= 20;
-  const newHistorySectionNotebookInView = progress >= 25;
-  const aboutSectionInView = progress >= 30;
-  const aboutSectionContentInView = progress >= 35;
-  const aboutSectionContentVideoInView = progress >= 40;
-  const chronicleSectionInView = progress >= 45;
-  const chronicleSectionFirstStepInView = progress >= 50;
-  const chronicleSectionSecondStepInView = progress >= 55;
-  const chronicleSectionThirdStepInView = progress >= 60;
-  const chronicleSectionFourthStepInView = progress >= 65;
-  const chronicleSectionFifthStepInView = progress >= 70;
+  const heroSectionVideoInView = progress >= 1;
+  const newHistorySectionInView = progress >= 2;
+  const newHistorySectionNotebookInView = progress >= 3;
+  const aboutSectionInView = progress >= 4;
+  const aboutSectionContentInView = progress >= 5;
+  const aboutSectionContentVideoInView = progress >= 6;
+  const chronicleSectionInView = progress >= 7;
+  const chronicleSectionFirstStepInView = progress >= 8;
+  const chronicleSectionSecondStepInView = progress >= 9;
+  const chronicleSectionThirdStepInView = progress >= 10;
+  const chronicleSectionFourthStepInView = progress >= 11;
+  const chronicleSectionFifthStepInView = progress >= 12;
   const chronicleSectionContentInView = chronicleSectionFirstStepInView;
 
   const isSmoothChronicleSectionAnimation =
@@ -49,6 +54,7 @@ const Main: FC<IProps> = ({ updateShowFullScreenHeroVideo }) => {
 
   useEffect(() => {
     const onProgressChange = (value: number) => {
+      console.log(value);
       setProgress(value);
     };
 

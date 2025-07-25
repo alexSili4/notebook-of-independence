@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import ChronicleSectionContentStepContainer from '@MainPageComponents/ChronicleSectionContentStepContainer';
-import ChronicleSectionContentThirdStepDecorativeElements from '@MainPageComponents/ChronicleSectionContentThirdStepDecorativeElements';
+import AnimatedChronicleSectionContentThirdStepDecorativeElements from '@AnimatedMainPageComponents/AnimatedChronicleSectionContentThirdStepDecorativeElements';
 import {
   TextWrap,
   Date,
@@ -8,8 +8,13 @@ import {
   Title,
   TitleWrap,
 } from './ChronicleSectionContentThirdStep.styled';
+import { IProps } from './ChronicleSectionContentThirdStep.types';
 
-const ChronicleSectionContentThirdStep: FC = () => {
+const ChronicleSectionContentThirdStep: FC<IProps> = ({
+  animationBounce,
+  animationDuration,
+  inView,
+}) => {
   return (
     <ChronicleSectionContentStepContainer>
       <TextWrap>
@@ -23,7 +28,11 @@ const ChronicleSectionContentThirdStep: FC = () => {
           </Text>
         </TitleWrap>
       </TextWrap>
-      <ChronicleSectionContentThirdStepDecorativeElements />
+      <AnimatedChronicleSectionContentThirdStepDecorativeElements
+        animationBounce={animationBounce}
+        animationDuration={animationDuration}
+        inView={inView}
+      />
     </ChronicleSectionContentStepContainer>
   );
 };

@@ -6,10 +6,15 @@ import {
   Title,
   TitleWrap,
 } from './ChronicleSectionContentFirstStep.styled';
-import ChronicleSectionContentFirstStepDecorativeElements from '@MainPageComponents/ChronicleSectionContentFirstStepDecorativeElements';
+import AnimatedChronicleSectionContentFirstStepDecorativeElements from '@AnimatedMainPageComponents/AnimatedChronicleSectionContentFirstStepDecorativeElements';
 import ChronicleSectionContentStepContainer from '@MainPageComponents/ChronicleSectionContentStepContainer';
+import { IProps } from './ChronicleSectionContentFirstStep.types';
 
-const ChronicleSectionContentFirstStep: FC = () => {
+const ChronicleSectionContentFirstStep: FC<IProps> = ({
+  animationBounce,
+  animationDuration,
+  inView,
+}) => {
   return (
     <ChronicleSectionContentStepContainer>
       <TextWrap>
@@ -23,7 +28,11 @@ const ChronicleSectionContentFirstStep: FC = () => {
           </Text>
         </TitleWrap>
       </TextWrap>
-      <ChronicleSectionContentFirstStepDecorativeElements />
+      <AnimatedChronicleSectionContentFirstStepDecorativeElements
+        animationBounce={animationBounce}
+        animationDuration={animationDuration}
+        inView={inView}
+      />
     </ChronicleSectionContentStepContainer>
   );
 };

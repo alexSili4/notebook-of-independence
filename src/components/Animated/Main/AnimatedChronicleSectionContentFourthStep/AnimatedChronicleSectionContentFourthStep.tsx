@@ -48,7 +48,11 @@ const AnimatedChronicleSectionContentFourthStep: FC<IProps> = ({
   return (
     <Container animate={animate} variants={containerVariants} initial='hidden'>
       <Element variants={elementVariants}>
-        <ChronicleSectionContentFourthStep />
+        <ChronicleSectionContentFourthStep
+          animationBounce={animationBounce}
+          animationDuration={animationDuration}
+          inView={inView}
+        />
       </Element>
     </Container>
   );

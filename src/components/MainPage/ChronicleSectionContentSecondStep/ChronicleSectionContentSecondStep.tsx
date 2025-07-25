@@ -7,12 +7,21 @@ import {
   TitleWrap,
 } from './ChronicleSectionContentSecondStep.styled';
 import ChronicleSectionContentStepContainer from '@MainPageComponents/ChronicleSectionContentStepContainer';
-import ChronicleSectionContentSecondStepDecorativeElements from '@MainPageComponents/ChronicleSectionContentSecondStepDecorativeElements';
+import AnimatedChronicleSectionContentSecondStepDecorativeElements from '@AnimatedMainPageComponents/AnimatedChronicleSectionContentSecondStepDecorativeElements';
+import { IProps } from './ChronicleSectionContentSecondStep.types';
 
-const ChronicleSectionContentSecondStep: FC = () => {
+const ChronicleSectionContentSecondStep: FC<IProps> = ({
+  animationBounce,
+  animationDuration,
+  inView,
+}) => {
   return (
     <ChronicleSectionContentStepContainer>
-      <ChronicleSectionContentSecondStepDecorativeElements />
+      <AnimatedChronicleSectionContentSecondStepDecorativeElements
+        animationBounce={animationBounce}
+        animationDuration={animationDuration}
+        inView={inView}
+      />
       <TextWrap>
         <Date>23.08</Date>
         <TitleWrap>

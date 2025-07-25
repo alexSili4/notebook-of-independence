@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import ChronicleSectionContentStepContainer from '@MainPageComponents/ChronicleSectionContentStepContainer';
-import ChronicleSectionContentFourthStepDecorativeElements from '@MainPageComponents/ChronicleSectionContentFourthStepDecorativeElements';
+import AnimatedChronicleSectionContentFourthStepDecorativeElements from '@AnimatedMainPageComponents/AnimatedChronicleSectionContentFourthStepDecorativeElements';
 import {
   TextWrap,
   Date,
@@ -8,11 +8,20 @@ import {
   Title,
   TitleWrap,
 } from './ChronicleSectionContentFourthStep.styled';
+import { IProps } from './ChronicleSectionContentFourthStep.types';
 
-const ChronicleSectionContentFourthStep: FC = () => {
+const ChronicleSectionContentFourthStep: FC<IProps> = ({
+  animationBounce,
+  animationDuration,
+  inView,
+}) => {
   return (
     <ChronicleSectionContentStepContainer>
-      <ChronicleSectionContentFourthStepDecorativeElements />
+      <AnimatedChronicleSectionContentFourthStepDecorativeElements
+        animationBounce={animationBounce}
+        animationDuration={animationDuration}
+        inView={inView}
+      />
       <TextWrap>
         <Date>01.12</Date>
         <TitleWrap>

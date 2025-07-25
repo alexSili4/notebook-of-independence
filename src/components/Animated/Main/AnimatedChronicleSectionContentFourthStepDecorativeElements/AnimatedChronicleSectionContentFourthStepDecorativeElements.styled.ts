@@ -1,4 +1,21 @@
 import styled from '@emotion/styled';
+import { motion } from 'framer-motion';
+
+export const Container = styled(motion.div)`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+`;
+
+export const Element = styled(motion.div)`
+  position: relative;
+`;
+
+export const PrimaryElement = styled(Element)`
+  z-index: 10;
+`;
 
 export const Photo = styled.img`
   position: absolute;
@@ -24,7 +41,6 @@ export const Ukraine = styled.img`
   right: -273px;
   width: 313px;
   height: 230px;
-  mix-blend-mode: multiply;
 `;
 
 export const TextWrap = styled.div`
