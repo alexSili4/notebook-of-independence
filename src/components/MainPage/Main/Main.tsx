@@ -54,7 +54,6 @@ const Main: FC<IProps> = ({ updateShowFullScreenHeroVideo }) => {
 
   useEffect(() => {
     const onProgressChange = (value: number) => {
-      console.log(value);
       setProgress(value);
     };
 
