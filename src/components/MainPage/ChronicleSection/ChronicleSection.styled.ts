@@ -3,9 +3,6 @@ import sectionBg from '@/images/chronicle/section-bg.png';
 import { IStyledBackgroundProps } from './ChronicleSection.types';
 
 export const Section = styled.section`
-  position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
 `;

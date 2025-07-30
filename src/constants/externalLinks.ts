@@ -1,5 +1,13 @@
-const enum ExternalLinks{
-	buyNotebook='https://silpo.ua'
+const enum ExternalLinks {
+  buyNotebook = '/',
+  viber = '/',
+  discord = '/',
+  instagram = '/',
+  telegram = '/',
+  facebook = '/',
+  crypto = '/',
+  mono = '/',
+  sun = 'https://sun.agency/',
 }
 
-export default ExternalLinks
+export default ExternalLinks;

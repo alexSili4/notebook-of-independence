@@ -41,6 +41,7 @@ export const Ukraine = styled.img`
   right: -273px;
   width: 313px;
   height: 230px;
+  mix-blend-mode: multiply;
 `;
 
 export const TextWrap = styled.div`

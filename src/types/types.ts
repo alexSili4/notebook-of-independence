@@ -9,6 +9,7 @@ export type BtnClickEvent = MouseEvent<HTMLButtonElement>;
 export type RefDivObject = RefObject<HTMLDivElement>;
 
 // other
+export type StringOrNull = string | null;
 
 export interface IPageFlip {
   pageFlip: () => PageFlip;
@@ -21,3 +22,7 @@ export interface IMainPageOutletContext {
 }
 
 export interface IOutletContext extends IMainPageOutletContext {}
+
+export interface IRegExp {
+  allSpaces: RegExp;
+}
