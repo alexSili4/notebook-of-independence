@@ -8,18 +8,24 @@ import {
 } from './DonationSection.styled';
 import GeneralContainer from '@GeneralComponents/GeneralContainer';
 import DonationSectionLinks from '@MainPageComponents/DonationSectionLinks';
-import DonationSectionPaymentDetails from '@MainPageComponents/DonationSectionPaymentDetails';
 import sectionTexture from '@/images/donation/section-texture.png';
 import sectionBg from '@/images/donation/section-bg.png';
+import AnimatedDonationSectionPaymentDetails from '@AnimatedMainPageComponents/AnimatedDonationSectionPaymentDetails';
+import { IProps } from './DonationSection.types';
+import DonationSectionDecorativeElements from '@MainPageComponents/DonationSectionDecorativeElements';
 
-const DonationSection: FC = () => {
+const DonationSection: FC<IProps> = ({ animationDuration, inView }) => {
   return (
     <Section>
       <GeneralContainer>
         <Background>
           <Container>
+            <DonationSectionDecorativeElements />
             <DonationSectionLinks />
-            <DonationSectionPaymentDetails />
+            <AnimatedDonationSectionPaymentDetails
+              animationDuration={animationDuration}
+              inView={inView}
+            />
           </Container>
           <BackgroundImg src={sectionBg} alt='' />
           <BackgroundTexture src={sectionTexture} alt='' />

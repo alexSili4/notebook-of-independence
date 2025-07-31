@@ -1,12 +1,6 @@
 import styled from '@emotion/styled';
 
-export const Section = styled.section`
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-`;
+export const Section = styled.section``;
 
 export const Background = styled.div`
   position: relative;

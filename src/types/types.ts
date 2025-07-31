@@ -1,15 +1,19 @@
-import { MouseEvent, RefObject } from 'react';
+import { ChangeEvent, MouseEvent, RefObject } from 'react';
 import type { PageFlip } from 'page-flip';
 import { SetBooleanFunc } from './functions.types';
 
 // events
 export type BtnClickEvent = MouseEvent<HTMLButtonElement>;
 
+export type InputChangeEvent = ChangeEvent<HTMLInputElement>;
+
 // refs
 export type RefDivObject = RefObject<HTMLDivElement>;
 
 // other
 export type StringOrNull = string | null;
+
+export type ElementOrNull = Element | null;
 
 export interface IPageFlip {
   pageFlip: () => PageFlip;

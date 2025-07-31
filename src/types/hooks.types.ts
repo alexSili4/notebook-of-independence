@@ -17,3 +17,8 @@ export interface IUseAboutSectionContentImages {
   isFourthStep: boolean;
   isFifthStep: boolean;
 }
+
+export interface IUseModalWinProps {
+  setModalWinState: Func;
+  showModalWin: boolean;
+}

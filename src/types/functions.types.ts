@@ -1,8 +1,10 @@
-import { BtnClickEvent } from './types';
+import { BtnClickEvent, InputChangeEvent } from './types';
 
 export type Func = () => void;
 
 export type OnBtnClickFunc = (e: BtnClickEvent) => void;
+
+export type OnInputChangeFunc = (e: InputChangeEvent) => void;
 
 export type SetBooleanFunc = (data: boolean) => void;
 

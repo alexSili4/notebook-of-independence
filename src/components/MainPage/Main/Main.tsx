@@ -10,7 +10,7 @@ import { Container } from './Main.styled';
 // import AnimatedAzovSection from '@AnimatedMainPageComponents/AnimatedAzovSection';
 // import AnimatedNotebookSection from '@AnimatedMainPageComponents/AnimatedNotebookSection';
 // import AnimatedBuyNotebookSection from '@AnimatedMainPageComponents/AnimatedBuyNotebookSection';
-// import AnimatedQuizSection from '@AnimatedMainPageComponents/AnimatedQuizSection';
+import AnimatedQuizSection from '@AnimatedMainPageComponents/AnimatedQuizSection';
 import AnimatedDonationSection from '@AnimatedMainPageComponents/AnimatedDonationSection';
 
 const Main: FC<IProps> = ({ updateShowFullScreenHeroVideo }) => {
@@ -22,7 +22,7 @@ const Main: FC<IProps> = ({ updateShowFullScreenHeroVideo }) => {
   });
   const scrollProgress = useTransform(
     scrollYProgress,
-    [0, 0.1, 0.9, 1],
+    [0, 0.1, 0.8, 1],
     [0, 0, 17, 17],
     {
       clamp: true,
@@ -47,13 +47,14 @@ const Main: FC<IProps> = ({ updateShowFullScreenHeroVideo }) => {
   // const notebookSectionInView = progress >= 14;
   // const buyNotebookSectionInView = progress >= 15;
   // const quizSectionInView = progress >= 16;
+  const donationSectionInView = progress >= 17;
 
   // const isSmoothChronicleSectionAnimation =
   //   (isScrollingPageUp && aboutSectionContentVideoInView) ||
   //   chronicleSectionInView;
   // const chronicleSectionAnimationDuration = 4;
   // const chronicleSectionAnimationBounce = 0.2;
-  // const generalAnimationDuration = 2.5;
+  const generalAnimationDuration = 2.5;
   // const aboutSectionAnimationBounce = isSmoothChronicleSectionAnimation
   //   ? chronicleSectionAnimationBounce
   //   : 0.4;
@@ -140,11 +141,15 @@ const Main: FC<IProps> = ({ updateShowFullScreenHeroVideo }) => {
         inView={buyNotebookSectionInView}
         animationBounce={notebookSectionAnimationBounce}
       />
+      */}
       <AnimatedQuizSection
         animationDuration={generalAnimationDuration}
-        inView={quizSectionInView}
-      /> */}
-      <AnimatedDonationSection />
+        inView
+      />
+      <AnimatedDonationSection
+        animationDuration={generalAnimationDuration}
+        inView={donationSectionInView}
+      />
     </Container>
   );
 };
