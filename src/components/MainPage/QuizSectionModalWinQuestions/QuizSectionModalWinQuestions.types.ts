@@ -1,8 +1,12 @@
-import { Func } from '@/types/functions.types';
-import { RefDivObject } from '@/types/types';
+import { GoToNextQuestionFunc } from '@/types/functions.types';
+import { IQuestions } from '@/types/questions.types';
 
 export interface IProps {
-  containerRef: RefDivObject;
-  incrementCurrentQuestion: Func;
-  incrementTotalScore: Func;
+  goToNextQuestion: GoToNextQuestionFunc;
+  questions: IQuestions;
+  animationBounce: number;
+  animationDuration: number;
+  firstQuestionInView: boolean;
+  secondQuestionInView: boolean;
+  thirdQuestionInView: boolean;
 }

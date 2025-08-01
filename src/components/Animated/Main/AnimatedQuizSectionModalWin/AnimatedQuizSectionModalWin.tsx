@@ -5,6 +5,7 @@ import { Container } from './AnimatedQuizSectionModalWin.styled';
 import { IProps } from './AnimatedQuizSectionModalWin.types';
 import { useModalWin } from '@/hooks';
 import ModalWin from '@GeneralComponents/ModalWin';
+import { questions } from '@/constants';
 
 const AnimatedQuizSectionModalWin: FC<IProps> = ({
   showModalWin,
@@ -42,7 +43,10 @@ const AnimatedQuizSectionModalWin: FC<IProps> = ({
             animate='animate'
             exit='exit'
           >
-            <QuizSectionModalWin onCloseModalWinBtnClick={setModalWinState} />
+            <QuizSectionModalWin
+              onCloseModalWinBtnClick={setModalWinState}
+              questions={questions}
+            />
           </Container>
         </ModalWin>
       )}

@@ -1,9 +1,13 @@
 import styled from '@emotion/styled';
 
 export const Container = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
   padding: ${({ theme: { spacing } }) => `${spacing(4)}px ${spacing(15)}px`};
 `;
 

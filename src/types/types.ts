@@ -11,6 +11,8 @@ export type InputChangeEvent = ChangeEvent<HTMLInputElement>;
 export type RefDivObject = RefObject<HTMLDivElement>;
 
 // other
+export type Booleans = boolean[];
+
 export type StringOrNull = string | null;
 
 export type ElementOrNull = Element | null;

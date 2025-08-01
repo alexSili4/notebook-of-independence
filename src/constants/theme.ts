@@ -5,6 +5,7 @@ declare module '@emotion/react' {
 interface ITheme {
   colors: {
     white: string;
+    black: string;
   };
   fontFamily: { inter: string; gogol: string };
   padding: {
@@ -25,6 +26,7 @@ interface ITheme {
 const theme: ITheme = {
   colors: {
     white: '#ffffff',
+    black: '#000000',
   },
   fontFamily: {
     inter: 'Inter',

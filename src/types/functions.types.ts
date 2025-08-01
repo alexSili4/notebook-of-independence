@@ -15,3 +15,17 @@ export interface IGetChronicleSectionMarkerTranslateProps {
   secondStepInView: boolean;
   firstStepInView: boolean;
 }
+
+export interface IUpdateAnswersProps {
+  index: number;
+  isCorrectAnswer: boolean;
+}
+
+export type UpdateAnswersFunc = (data: IUpdateAnswersProps) => void;
+
+export interface IGoToNextQuestionProps {
+  index: number;
+  isCorrectAnswer: boolean;
+}
+
+export type GoToNextQuestionFunc = (data: IGoToNextQuestionProps) => void;

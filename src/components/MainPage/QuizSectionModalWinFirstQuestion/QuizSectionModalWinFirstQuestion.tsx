@@ -2,14 +2,15 @@ import { FC, useState } from 'react';
 import { Container, Content } from './QuizSectionModalWinFirstQuestion.styled';
 import QuizSectionModalWinQuestionTitle from '@MainPageComponents/QuizSectionModalWinQuestionTitle';
 import { IProps } from './QuizSectionModalWinFirstQuestion.types';
-import { InputChangeEvent, StringOrNull } from '@/types/types';
+import { BtnClickEvent, InputChangeEvent, StringOrNull } from '@/types/types';
 import QuizSectionModalWinFirstQuestionAnswers from '@MainPageComponents/QuizSectionModalWinFirstQuestionAnswers';
 import { makeBlur } from '@/utils';
+import QuizSectionModalWinQuestionsNextBtn from '@MainPageComponents/QuizSectionModalWinQuestionsNextBtn';
 
 const QuizSectionModalWinFirstQuestion: FC<IProps> = ({
   question: { question, variants },
-  incrementTotalScore,
-  incrementCurrentQuestion,
+  goToNextQuestion,
+  index,
 }) => {
   const [currentAnswer, setCurrentAnswer] = useState<StringOrNull>(null);
 
@@ -23,12 +24,10 @@ const QuizSectionModalWinFirstQuestion: FC<IProps> = ({
     setCurrentAnswer(value);
   };
 
-  const onNextBtnClick = () => {
-    if (isCorrectAnswer) {
-      incrementTotalScore();
-    }
+  const onNextBtnClick = (e: BtnClickEvent) => {
+    makeBlur(e.currentTarget);
 
-    incrementCurrentQuestion();
+    goToNextQuestion({ index, isCorrectAnswer });
   };
 
   return (
@@ -41,6 +40,7 @@ const QuizSectionModalWinFirstQuestion: FC<IProps> = ({
           variants={variants}
         />
       </Content>
+      <QuizSectionModalWinQuestionsNextBtn onNextBtnClick={onNextBtnClick} />
     </Container>
   );
 };

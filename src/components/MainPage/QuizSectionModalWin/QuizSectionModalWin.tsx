@@ -1,33 +1,58 @@
-import { FC, useEffect, useRef, useState } from 'react';
-import { Container, Content, Background } from './QuizSectionModalWin.styled';
+import { FC, useEffect, useState } from 'react';
+import { Container, Background } from './QuizSectionModalWin.styled';
 import QuizSectionModalWinControls from '@MainPageComponents/QuizSectionModalWinControls';
 import QuizSectionModalWinProgress from '@MainPageComponents/QuizSectionModalWinProgress';
 import QuizSectionModalWinQuestions from '@MainPageComponents/QuizSectionModalWinQuestions';
 import { IProps } from './QuizSectionModalWin.types';
-import { BtnClickEvent } from '@/types/types';
+import { Booleans, BtnClickEvent } from '@/types/types';
 import { makeBlur } from '@/utils';
+import {
+  IGoToNextQuestionProps,
+  IUpdateAnswersProps,
+} from '@/types/functions.types';
+import AnimatedQuizSectionModalWinResult from '@AnimatedMainPageComponents/AnimatedQuizSectionModalWinResult';
 
-const QuizSectionModalWin: FC<IProps> = ({ onCloseModalWinBtnClick }) => {
+const QuizSectionModalWin: FC<IProps> = ({
+  onCloseModalWinBtnClick,
+  questions,
+}) => {
   const [totalQuestions, setTotalQuestions] = useState<number>(0);
-  const [currentQuestion, setCurrentQuestion] = useState<number>(5);
-  const [totalScore, setTotalScore] = useState<number>(0);
-  const questionsRef = useRef<HTMLDivElement>(null);
+  const [currentQuestion, setCurrentQuestion] = useState<number>(1);
+  const [answers, setAnswers] = useState<Booleans>([]);
 
   const isFirstQuestion = currentQuestion === 1;
+  const firstQuestionInView = currentQuestion >= 1;
+  const secondQuestionInView = currentQuestion >= 2;
+  const thirdQuestionInView = currentQuestion >= 3;
+
   const progress = (100 / totalQuestions) * currentQuestion;
   const currentQuestionValue = currentQuestion.toString().padStart(2, '0');
   const totalQuestionsValue = totalQuestions.toString().padStart(2, '0');
+
+  const updateAnswers = ({ index, isCorrectAnswer }: IUpdateAnswersProps) => {
+    setAnswers((prevState) => {
+      const items = [...prevState];
+      items[index] = isCorrectAnswer;
+
+      return items;
+    });
+  };
+
+  const goToNextQuestion = ({
+    index,
+    isCorrectAnswer,
+  }: IGoToNextQuestionProps) => {
+    updateAnswers({ index, isCorrectAnswer });
+
+    incrementCurrentQuestion();
+  };
 
   const decrementCurrentQuestion = () => {
     setCurrentQuestion((prevState) => (prevState -= 1));
   };
 
   const incrementCurrentQuestion = () => {
-    setCurrentQuestion((prevState) => (prevState -= 1));
-  };
-
-  const incrementTotalScore = () => {
-    setTotalScore((prevState) => (prevState -= 1));
+    setCurrentQuestion((prevState) => (prevState += 1));
   };
 
   const onGoBackBtnClick = (e: BtnClickEvent) => {
@@ -37,19 +62,19 @@ const QuizSectionModalWin: FC<IProps> = ({ onCloseModalWinBtnClick }) => {
   };
 
   useEffect(() => {
-    const questions = questionsRef.current;
+    console.log(answers);
+  });
 
-    if (questions) {
-      const totalQuestions = questions.children.length;
+  useEffect(() => {
+    const totalQuestions = Object.keys(questions).length;
 
-      setTotalQuestions(totalQuestions);
-    }
-  }, []);
+    setTotalQuestions(totalQuestions);
+  }, [questions]);
 
   return (
     <Container>
       <Background>
-        {/* <QuizSectionModalWinControls
+        <QuizSectionModalWinControls
           disabledGoBackBtn={isFirstQuestion}
           onCloseModalWinBtnClick={onCloseModalWinBtnClick}
           onGoBackBtnClick={onGoBackBtnClick}
@@ -58,12 +83,17 @@ const QuizSectionModalWin: FC<IProps> = ({ onCloseModalWinBtnClick }) => {
           progress={progress}
           currentQuestion={currentQuestionValue}
           totalQuestions={totalQuestionsValue}
-        /> */}
-        <QuizSectionModalWinQuestions
-          containerRef={questionsRef}
-          incrementCurrentQuestion={incrementCurrentQuestion}
-          incrementTotalScore={incrementTotalScore}
         />
+        <QuizSectionModalWinQuestions
+          goToNextQuestion={goToNextQuestion}
+          questions={questions}
+          animationBounce={0.2}
+          animationDuration={4}
+          firstQuestionInView={firstQuestionInView}
+          secondQuestionInView={secondQuestionInView}
+          thirdQuestionInView={thirdQuestionInView}
+        />
+        <AnimatedQuizSectionModalWinResult />
       </Background>
     </Container>
   );

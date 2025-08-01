@@ -2,7 +2,10 @@ import styled from '@emotion/styled';
 import { IStyledProgressProps } from './QuizSectionModalWinProgress.types';
 
 export const Container = styled.div`
-  position: relative;
+  position: absolute;
+  top: 96px;
+  left: 50%;
+  translate: -50% 0;
 `;
 
 export const QuestionWrap = styled.div`

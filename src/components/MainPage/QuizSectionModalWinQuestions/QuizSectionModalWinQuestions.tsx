@@ -1,23 +1,40 @@
 import { FC } from 'react';
 import { IProps } from './QuizSectionModalWinQuestions.types';
-import QuizSectionModalWinFirstQuestion from '@MainPageComponents/QuizSectionModalWinFirstQuestion';
-import QuizSectionModalWinQuestionsNextBtn from '@MainPageComponents/QuizSectionModalWinQuestionsNextBtn';
-import { questions } from '@/constants';
-import { Container } from './QuizSectionModalWinQuestions.styled';
+import { Container, Content } from './QuizSectionModalWinQuestions.styled';
+import AnimatedQuizSectionModalWinFirstQuestion from '@AnimatedMainPageComponents/AnimatedQuizSectionModalWinFirstQuestion';
+import AnimatedQuizSectionModalWinSecondQuestion from '@AnimatedMainPageComponents/AnimatedQuizSectionModalWinSecondQuestion';
 
 const QuizSectionModalWinQuestions: FC<IProps> = ({
-  containerRef,
-  incrementCurrentQuestion,
-  incrementTotalScore,
+  questions,
+  goToNextQuestion,
+  animationBounce,
+  animationDuration,
+  firstQuestionInView,
+  secondQuestionInView,
+  thirdQuestionInView,
 }) => {
   return (
-    <Container ref={containerRef}>
-      <QuizSectionModalWinFirstQuestion
-        question={questions[1]}
-        incrementCurrentQuestion={incrementCurrentQuestion}
-        incrementTotalScore={incrementTotalScore}
-      />
-      <QuizSectionModalWinQuestionsNextBtn />
+    <Container>
+      <Content>
+        <AnimatedQuizSectionModalWinFirstQuestion
+          question={questions[0]}
+          index={0}
+          goToNextQuestion={goToNextQuestion}
+          animationBounce={animationBounce}
+          animationDuration={animationDuration}
+          inView={firstQuestionInView}
+          nextQuestionInView={secondQuestionInView}
+        />
+        <AnimatedQuizSectionModalWinSecondQuestion
+          question={questions[1]}
+          index={1}
+          goToNextQuestion={goToNextQuestion}
+          animationBounce={animationBounce}
+          animationDuration={animationDuration}
+          inView={secondQuestionInView}
+          nextQuestionInView={thirdQuestionInView}
+        />
+      </Content>
     </Container>
   );
 };

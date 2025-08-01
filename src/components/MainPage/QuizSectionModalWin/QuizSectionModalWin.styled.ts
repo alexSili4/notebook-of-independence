@@ -6,18 +6,11 @@ export const Container = styled.div`
 `;
 
 export const Background = styled.div`
+  position: relative;
   height: 100%;
   background-color: ${({ theme }) => theme.colors.white};
   background-image: url(${sectionBg});
   background-position: 0 0;
   background-size: 100% 100%;
   background-repeat: no-repeat;
-`;
-
-export const Content = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: ${({ theme }) => theme.spacing(7)}px;
-  height: 100%;
 `;
