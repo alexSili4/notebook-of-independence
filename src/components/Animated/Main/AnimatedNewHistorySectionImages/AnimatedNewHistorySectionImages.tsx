@@ -3,11 +3,13 @@ import NewHistorySectionImages from '@MainPageComponents/NewHistorySectionImages
 import { Transition, VariantLabels, Variants } from 'framer-motion';
 import { IProps } from './AnimatedNewHistorySectionImages.types';
 import { Container, Element } from './AnimatedNewHistorySectionImages.styled';
+import { useIsDesk } from '@/hooks';
 
 const AnimatedNewHistorySectionImages: FC<IProps> = ({
   inView,
   animationDuration,
 }) => {
+  const isDesk = useIsDesk();
   const animate: VariantLabels = inView ? 'visible' : 'hidden';
 
   const containerVariants: Variants = {
@@ -23,7 +25,7 @@ const AnimatedNewHistorySectionImages: FC<IProps> = ({
 
   const elementVariants: Variants = {
     hidden: {
-      y: '-32vh',
+      y: isDesk ? '-32vh' : '-17.5lvh',
       transition,
     },
     visible: {

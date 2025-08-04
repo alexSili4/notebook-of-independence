@@ -16,11 +16,11 @@ const AboutSection: FC<IProps> = ({
         animationDuration={animationDuration}
         sectionInView={sectionInView}
       />
-      <AnimatedAboutSectionContent
+      {/* <AnimatedAboutSectionContent
         inView={contentInView}
         animationDuration={animationDuration}
         videoInView={videoInView}
-      />
+      /> */}
     </Section>
   );
 };

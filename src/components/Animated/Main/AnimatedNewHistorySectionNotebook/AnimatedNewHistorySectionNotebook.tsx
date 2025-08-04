@@ -3,11 +3,13 @@ import NewHistorySectionNotebook from '@MainPageComponents/NewHistorySectionNote
 import { Container, Element } from './AnimatedNewHistorySectionNotebook.styled';
 import { Transition, VariantLabels, Variants } from 'framer-motion';
 import { IProps } from './AnimatedNewHistorySectionNotebook.types';
+import { useIsDesk } from '@/hooks';
 
 const AnimatedNewHistorySectionNotebook: FC<IProps> = ({
   animationDuration,
   inView,
 }) => {
+  const isDesk = useIsDesk();
   const animate: VariantLabels = inView ? 'visible' : 'hidden';
 
   const containerVariants: Variants = {
@@ -23,11 +25,11 @@ const AnimatedNewHistorySectionNotebook: FC<IProps> = ({
 
   const elementVariants: Variants = {
     hidden: {
-      y: '56.9vh',
+      y: isDesk ? '56.9vh' : '21.6vh',
       transition,
     },
     visible: {
-      y: 0,
+      y: isDesk ? 0 : '-20vh',
       transition,
     },
   };

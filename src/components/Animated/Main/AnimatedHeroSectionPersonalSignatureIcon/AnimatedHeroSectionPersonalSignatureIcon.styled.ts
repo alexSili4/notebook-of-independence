@@ -4,12 +4,16 @@ import { motion } from 'framer-motion';
 
 export const Container = styled(motion.div)`
   position: absolute;
-  top: 27px;
+  top: 73px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
   width: 234px;
   height: 138px;
+
+  @media screen and (min-width: ${({ theme }) => theme.breakpoints.desk}px) {
+    top: 27px;
+  }
 `;
 
 export const Element = styled(motion.div)`

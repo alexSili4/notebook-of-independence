@@ -15,8 +15,12 @@ import {
   TextLineBottom,
 } from './QuizSectionModalWinResultText.styled';
 import text from '@/images/quiz/questions/text.png';
+import { IProps } from './QuizSectionModalWinResultText.types';
 
-const QuizSectionModalWinResultText: FC = () => {
+const QuizSectionModalWinResultText: FC<IProps> = ({
+  totalQuestions,
+  totalScore,
+}) => {
   return (
     <Container>
       <HashtagWrap>
@@ -27,9 +31,9 @@ const QuizSectionModalWinResultText: FC = () => {
         <CharacteristicWrap>
           <TotalScoreWrap>
             <TotalScoreText>
-              <TotalScoreTextPart>5</TotalScoreTextPart>
+              <TotalScoreTextPart>{totalScore}</TotalScoreTextPart>
               <TotalScoreTextPart>\</TotalScoreTextPart>
-              <TotalScoreTextPart>5</TotalScoreTextPart>
+              <TotalScoreTextPart>{totalQuestions}</TotalScoreTextPart>
             </TotalScoreText>
           </TotalScoreWrap>
           <CharacteristicText>

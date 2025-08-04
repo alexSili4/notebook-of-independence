@@ -1,12 +1,9 @@
 import { FC, useRef } from 'react';
 import HTMLFlipBook from 'react-pageflip';
 import {
-  BuyLink,
   Container,
   Image,
   NotebookWrap,
-  BuyLinkTitle,
-  BuyLinkLineIcon,
 } from './NewHistorySectionNotebook.styled';
 import page1 from '@/images/newHistory/notebook/page-1.jpg';
 import page2 from '@/images/newHistory/notebook/page-2.jpg';
@@ -17,9 +14,10 @@ import page6 from '@/images/newHistory/notebook/page-6.jpg';
 import { BtnClickEvent, PageFlipOrNull } from '@/types/types';
 import NewHistorySectionNotebookControls from '@MainPageComponents/NewHistorySectionNotebookControls';
 import { makeBlur } from '@/utils';
-import { ExternalLinks } from '@/constants';
+import { useIsDesk } from '@/hooks';
 
 const NewHistorySectionNotebook: FC = () => {
+  const isDesk = useIsDesk();
   const bookRef = useRef<PageFlipOrNull>(null);
   const { innerWidth, innerHeight } = window;
 
@@ -46,12 +44,12 @@ const NewHistorySectionNotebook: FC = () => {
           ref={bookRef}
           style={{}}
           className=''
-          width={innerWidth * 0.4}
-          minWidth={1}
-          maxWidth={innerWidth * 0.4}
-          height={innerHeight * 0.85}
-          minHeight={1}
-          maxHeight={innerHeight * 0.85}
+          width={isDesk ? innerWidth * 0.4 : innerWidth * 0.7}
+          minWidth={isDesk ? innerWidth * 0.4 : innerWidth * 0.7}
+          maxWidth={isDesk ? innerWidth * 0.4 : innerWidth * 0.7}
+          height={isDesk ? innerHeight * 0.85 : innerHeight * 0.47}
+          minHeight={isDesk ? innerHeight * 0.85 : innerHeight * 0.47}
+          maxHeight={isDesk ? innerHeight * 0.85 : innerHeight * 0.47}
           startPage={0}
           size='stretch'
           flippingTime={800}
@@ -76,14 +74,6 @@ const NewHistorySectionNotebook: FC = () => {
           <Image src={page6} alt='' />
         </HTMLFlipBook>
       </NotebookWrap>
-      <BuyLink
-        href={ExternalLinks.buyNotebook}
-        target='_blank'
-        rel='noopener noreferrer'
-      >
-        <BuyLinkTitle>Купити</BuyLinkTitle>
-        <BuyLinkLineIcon />
-      </BuyLink>
     </Container>
   );
 };

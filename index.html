@@ -4,7 +4,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>React + TS</title>
+    <style>
+      .bg-wrap {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100lvh;
+        background-image: url('./body-bg-mob.jpg');
+        background-position: 0 0;
+        background-size: 100% 100lvh;
+        background-repeat: no-repeat;
+      }
 
+      @media screen and (min-width: 1440px) {
+        .bg-wrap {
+          background-image: url('./body-bg-desk.jpg');
+        }
+      }
+    </style>
     <!-- Google Tag Manager -->
     <script>
       (function (w, d, s, l, i) {
@@ -32,6 +50,7 @@
     ></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
+    <div class="bg-wrap"></div>
     <div id="root"></div>
     <div id="modal-root"></div>
 

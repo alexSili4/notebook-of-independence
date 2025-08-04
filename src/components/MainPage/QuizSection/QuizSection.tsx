@@ -9,7 +9,7 @@ import AnimatedQuizSectionContent from '@AnimatedMainPageComponents/AnimatedQuiz
 import AnimatedQuizSectionModalWin from '@AnimatedMainPageComponents/AnimatedQuizSectionModalWin';
 
 const QuizSection: FC<IProps> = ({ animationDuration, inView }) => {
-  const [showModalWin, setShowModalWin] = useState<boolean>(true);
+  const [showModalWin, setShowModalWin] = useState<boolean>(false);
 
   const toggleShowModalWin = () => {
     setShowModalWin((prevState) => !prevState);

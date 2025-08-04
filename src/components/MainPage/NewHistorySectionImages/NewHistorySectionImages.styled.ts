@@ -1,27 +1,49 @@
 import styled from '@emotion/styled';
 
-export const LeftDecorativeImg = styled.img`
+export const LeftDecorativePicture = styled.picture`
   position: absolute;
-  top: 5.3vh;
-  left: -4.5vw;
-  width: 226px;
-  height: 214px;
+  top: -19px;
+  left: -44px;
+  width: 135px;
+  height: 133px;
+
+  @media screen and (min-width: ${({ theme }) => theme.breakpoints.desk}px) {
+    top: 5.3vh;
+    left: -4.5vw;
+    width: 226px;
+    height: 214px;
+  }
 `;
 
-export const RightDecorativeImg = styled.img`
+export const RightDecorativePicture = styled.picture`
   position: absolute;
-  top: 18vh;
-  right: 2.1vw;
-  width: 226px;
-  height: 214px;
+  top: -47px;
+  right: -32px;
+  width: 128px;
+  height: 137px;
+
+  @media screen and (min-width: ${({ theme }) => theme.breakpoints.desk}px) {
+    top: 18vh;
+    right: 2.1vw;
+    width: 226px;
+    height: 214px;
+  }
 `;
 
-export const BackgroundImg = styled.img`
+export const BackgroundPicture = styled.picture`
   position: absolute;
   top: 0;
-  left: 50%;
-  width: 107.9vw;
-  height: 132vh;
-  opacity: 0.15;
-  transform: translateX(-50%);
+  left: 0;
+  width: 100%;
+  height: 117.5vh;
+
+  @media screen and (min-width: ${({ theme }) => theme.breakpoints.desk}px) {
+    height: 132vh;
+    opacity: 0.15;
+  }
+
+  & > img {
+    width: 100%;
+    height: 100%;
+  }
 `;

@@ -1,24 +1,29 @@
 import { FC } from 'react';
 import {
   Container,
-  CloseImg,
+  CloseDarkImg,
   CloseModalWinBtn,
   CloseModalWinBtnTitle,
   GoBackBtn,
   GoBackImg,
+  CloseImgWrap,
+  CloseLightImg,
 } from './QuizSectionModalWinControls.styled';
 import goBack from '@/images/quiz/go-back.png';
-import close from '@/images/quiz/close.png';
+import closeDark from '@/images/quiz/close-dark.png';
+import closeLight from '@/images/quiz/close-light.png';
 import { IProps } from './QuizSectionModalWinControls.types';
 
 const QuizSectionModalWinControls: FC<IProps> = ({
   onGoBackBtnClick,
   disabledGoBackBtn,
   onCloseModalWinBtnClick,
+  showResult,
 }) => {
   return (
     <Container>
       <GoBackBtn
+        showResult={showResult}
         type='button'
         onClick={onGoBackBtnClick}
         disabled={disabledGoBackBtn}
@@ -26,8 +31,13 @@ const QuizSectionModalWinControls: FC<IProps> = ({
         <GoBackImg src={goBack} alt='' />
       </GoBackBtn>
       <CloseModalWinBtn type='button' onClick={onCloseModalWinBtnClick}>
-        <CloseModalWinBtnTitle>закрити квест</CloseModalWinBtnTitle>
-        <CloseImg src={close} alt='' />
+        <CloseModalWinBtnTitle showResult={showResult}>
+          закрити квест
+        </CloseModalWinBtnTitle>
+        <CloseImgWrap>
+          <CloseDarkImg src={closeDark} alt='' showResult={showResult} />
+          <CloseLightImg src={closeLight} alt='' showResult={showResult} />
+        </CloseImgWrap>
       </CloseModalWinBtn>
     </Container>
   );

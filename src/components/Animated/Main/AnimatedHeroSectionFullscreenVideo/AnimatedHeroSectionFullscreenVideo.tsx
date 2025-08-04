@@ -7,7 +7,7 @@ import {
 import heroVideo from '@/video/hero.mp4';
 import { IProps } from './AnimatedHeroSectionFullscreenVideo.types';
 import { Transition, VariantLabels, Variants } from 'framer-motion';
-import { useIsFirsRender } from '@/hooks';
+import { useIsFirsRender, useIsDesk } from '@/hooks';
 
 const HeroSectionVideo: FC<IProps> = ({
   animationDelay,
@@ -15,6 +15,7 @@ const HeroSectionVideo: FC<IProps> = ({
   animationDuration,
   inView,
 }) => {
+  const isDesk = useIsDesk();
   const { isFirstRender, updateIsFirsRender } = useIsFirsRender();
   const animate: VariantLabels = videoInView
     ? 'visible'
@@ -34,9 +35,9 @@ const HeroSectionVideo: FC<IProps> = ({
 
   const elementVariants: Variants = {
     hidden: {
-      y: '31.5vh',
-      width: '41.4vw',
-      height: '40vh',
+      y: isDesk ? '31.5vh' : '27vh',
+      width: isDesk ? '41.4vw' : '91.5vw',
+      height: isDesk ? '40vh' : '27.6vh',
       transition: {
         ...transition,
         delay: isFirstRender ? animationDelay : 0,
@@ -50,7 +51,7 @@ const HeroSectionVideo: FC<IProps> = ({
     },
     initial: {
       y: '50vh',
-      width: '41.4vw',
+      width: isDesk ? '41.4vw' : '91.5vw',
       height: 0,
       transition: {
         ...transition,

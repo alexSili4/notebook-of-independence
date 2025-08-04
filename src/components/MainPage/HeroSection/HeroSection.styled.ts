@@ -1,5 +1,4 @@
 import styled from '@emotion/styled';
-import independenceBg from '@/images/hero/independence-bg.jpg';
 
 export const Section = styled.section`
   position: fixed;
@@ -11,10 +10,6 @@ export const Section = styled.section`
 
 export const Background = styled.div`
   height: 100%;
-  background-image: url(${independenceBg});
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
 `;
 
 export const Container = styled.div`
@@ -24,11 +19,20 @@ export const Container = styled.div`
   align-items: center;
   justify-content: space-between;
   height: 100%;
-  padding-top: 14.6vh;
-  padding-bottom: 16.9vh;
+  padding-top: 21.6vh;
+  padding-bottom: 21.7vh;
+
+  @media screen and (min-width: ${({ theme }) => theme.breakpoints.desk}px) {
+    padding-top: 14.6vh;
+    padding-bottom: 16.9vh;
+  }
 `;
 
 export const TextWrap = styled.div`
   position: relative;
-  width: 545px;
+  width: 340px;
+
+  @media screen and (min-width: ${({ theme }) => theme.breakpoints.desk}px) {
+    width: 545px;
+  }
 `;

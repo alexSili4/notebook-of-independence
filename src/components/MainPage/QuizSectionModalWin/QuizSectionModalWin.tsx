@@ -19,8 +19,12 @@ const QuizSectionModalWin: FC<IProps> = ({
   const [totalQuestions, setTotalQuestions] = useState<number>(0);
   const [currentQuestion, setCurrentQuestion] = useState<number>(1);
   const [answers, setAnswers] = useState<Booleans>([]);
+  const [showResult, setShowResult] = useState<boolean>(false);
+
+  const totalScore = answers.filter((answer) => answer).length;
 
   const isFirstQuestion = currentQuestion === 1;
+  const isLastQuestion = totalQuestions === currentQuestion;
   const firstQuestionInView = currentQuestion >= 1;
   const secondQuestionInView = currentQuestion >= 2;
   const thirdQuestionInView = currentQuestion >= 3;
@@ -44,7 +48,11 @@ const QuizSectionModalWin: FC<IProps> = ({
   }: IGoToNextQuestionProps) => {
     updateAnswers({ index, isCorrectAnswer });
 
-    incrementCurrentQuestion();
+    if (isLastQuestion) {
+      setShowResult(true);
+    } else {
+      incrementCurrentQuestion();
+    }
   };
 
   const decrementCurrentQuestion = () => {
@@ -62,10 +70,6 @@ const QuizSectionModalWin: FC<IProps> = ({
   };
 
   useEffect(() => {
-    console.log(answers);
-  });
-
-  useEffect(() => {
     const totalQuestions = Object.keys(questions).length;
 
     setTotalQuestions(totalQuestions);
@@ -75,6 +79,7 @@ const QuizSectionModalWin: FC<IProps> = ({
     <Container>
       <Background>
         <QuizSectionModalWinControls
+          showResult={showResult}
           disabledGoBackBtn={isFirstQuestion}
           onCloseModalWinBtnClick={onCloseModalWinBtnClick}
           onGoBackBtnClick={onGoBackBtnClick}
@@ -93,7 +98,11 @@ const QuizSectionModalWin: FC<IProps> = ({
           secondQuestionInView={secondQuestionInView}
           thirdQuestionInView={thirdQuestionInView}
         />
-        <AnimatedQuizSectionModalWinResult />
+        <AnimatedQuizSectionModalWinResult
+          inView={showResult}
+          totalQuestions={totalQuestions}
+          totalScore={totalScore}
+        />
       </Background>
     </Container>
   );

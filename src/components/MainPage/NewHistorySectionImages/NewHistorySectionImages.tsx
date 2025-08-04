@@ -1,19 +1,34 @@
 import { FC } from 'react';
-import leftDecorativeImg from '@/images/newHistory/left-decorative-img.png';
-import rightDecorativeImg from '@/images/newHistory/right-decorative-img.png';
-import sectionBg from '@/images/newHistory/section-bg.png';
+import leftDecorativeImgMob from '@/images/newHistory/left-decorative-img-mob.png';
+import leftDecorativeImgDesk from '@/images/newHistory/left-decorative-img-desk.png';
+import rightDecorativeImgDesk from '@/images/newHistory/right-decorative-img-desk.png';
+import rightDecorativeImgMob from '@/images/newHistory/right-decorative-img-mob.png';
+import sectionBgDesk from '@/images/newHistory/section-bg-desk.png';
+import sectionBgMob from '@/images/newHistory/section-bg-mob.png';
 import {
-  BackgroundImg,
-  LeftDecorativeImg,
-  RightDecorativeImg,
+  BackgroundPicture,
+  LeftDecorativePicture,
+  RightDecorativePicture,
 } from './NewHistorySectionImages.styled';
+import { theme } from '@/constants';
 
 const NewHistorySectionImages: FC = () => {
+  const deskMedia = `(min-width: ${theme.breakpoints.desk}px)`;
+
   return (
     <>
-      <BackgroundImg src={sectionBg} alt='' />
-      <LeftDecorativeImg src={leftDecorativeImg} alt='' />
-      <RightDecorativeImg src={rightDecorativeImg} alt='' />
+      <BackgroundPicture>
+        <source srcSet={sectionBgDesk} media={deskMedia} />
+        <img src={sectionBgMob} alt='' />
+      </BackgroundPicture>
+      <LeftDecorativePicture>
+        <source srcSet={leftDecorativeImgDesk} media={deskMedia} />
+        <img src={leftDecorativeImgMob} alt='' />
+      </LeftDecorativePicture>
+      <RightDecorativePicture>
+        <source srcSet={rightDecorativeImgDesk} media={deskMedia} />
+        <img src={rightDecorativeImgMob} alt='' />
+      </RightDecorativePicture>
     </>
   );
 };
