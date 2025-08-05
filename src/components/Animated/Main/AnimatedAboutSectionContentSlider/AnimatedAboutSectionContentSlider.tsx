@@ -12,6 +12,7 @@ import {
 import decorativeLines from '@/images/about/decorative-lines-mob.png';
 import { IProps } from './AnimatedAboutSectionContentSlider.types';
 import { useInView } from 'framer-motion';
+import AboutSectionContentSliderPagination from '@MainPageComponents/AboutSectionContentSliderPagination';
 
 const AnimatedAboutSectionContentSlider: FC<IProps> = ({
   animationDuration,
@@ -91,6 +92,7 @@ const AnimatedAboutSectionContentSlider: FC<IProps> = ({
             onNextBtnClick={onNextBtnClick}
           />
         </SwiperSlide>
+        <AboutSectionContentSliderPagination />
       </Swiper>
     </Container>
   );

@@ -29,3 +29,5 @@ export interface IGoToNextQuestionProps {
 }
 
 export type GoToNextQuestionFunc = (data: IGoToNextQuestionProps) => void;
+
+export type OnSliderPaginationBtnClickFunc = (data: number) => void;
