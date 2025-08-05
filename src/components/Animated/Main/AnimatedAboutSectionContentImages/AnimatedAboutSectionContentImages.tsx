@@ -238,7 +238,7 @@ const AnimatedAboutSectionContentImages: FC<IProps> = ({
         >
           <PhotoBottomRightText>
             Ще в юності присягнув боротися за незалежну Україну. «Я тоді став і
-            поклявся перед небом», — згадував Лук’яненко. кладовищі.
+            поклявся перед небом», — згадував Лук’яненко.
           </PhotoBottomRightText>
         </AnimatedAboutSectionContentImgText>
       </PhotoWrap>

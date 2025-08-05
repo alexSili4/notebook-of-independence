@@ -21,6 +21,11 @@ export const Images = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
+
+  @media screen and (max-width: ${({ theme }) =>
+      theme.breakpoints.desk - 1}px) {
+    display: none;
+  }
 `;
 
 export const PhotoWrap = styled.div`

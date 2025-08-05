@@ -1,6 +1,5 @@
 import { ChangeEvent, MouseEvent, RefObject } from 'react';
 import type { PageFlip } from 'page-flip';
-import { SetBooleanFunc } from './functions.types';
 
 // events
 export type BtnClickEvent = MouseEvent<HTMLButtonElement>;
@@ -22,12 +21,6 @@ export interface IPageFlip {
 }
 
 export type PageFlipOrNull = IPageFlip | null;
-
-export interface IMainPageOutletContext {
-  updateShowFullScreenHeroVideo: SetBooleanFunc;
-}
-
-export interface IOutletContext extends IMainPageOutletContext {}
 
 export interface IRegExp {
   allSpaces: RegExp;

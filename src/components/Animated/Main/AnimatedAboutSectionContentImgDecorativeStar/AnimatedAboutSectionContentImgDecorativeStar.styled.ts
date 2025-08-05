@@ -3,13 +3,13 @@ import { motion } from 'framer-motion';
 
 export const Container = styled(motion.div)`
   position: absolute;
-  top: 3vh;
-  left: 10.1vw;
+  top: 5vh;
+  left: 10.5vw;
 `;
 
 export const Element = styled(motion.div)``;
 
 export const DecorativeStar = styled.img`
-  width: 126px;
-  height: 126px;
+  width: 103px;
+  height: 80px;
 `;

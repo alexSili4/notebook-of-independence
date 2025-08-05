@@ -3,6 +3,7 @@ import { Global, css } from '@emotion/react';
 import 'modern-normalize';
 import { interBold, interRegular, gogolRegular } from '@/fonts';
 import { theme } from '@/constants';
+import 'swiper/css';
 
 const GlobalStyles: FC = () => (
   <Global

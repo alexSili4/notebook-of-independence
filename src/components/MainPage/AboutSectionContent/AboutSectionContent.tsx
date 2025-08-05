@@ -7,6 +7,7 @@ import AnimatedAboutSectionContentImages from '@AnimatedMainPageComponents/Anima
 import AnimatedAboutSectionContentNavLink from '@AnimatedMainPageComponents/AnimatedAboutSectionContentNavLink';
 import AnimatedAboutSectionContentVideo from '@AnimatedMainPageComponents/AnimatedAboutSectionContentVideo';
 import { IProps } from './AboutSectionContent.types';
+import AnimatedAboutSectionContentSlider from '@AnimatedMainPageComponents/AnimatedAboutSectionContentSlider';
 
 const AboutSectionContent: FC<IProps> = ({
   decorativeShapeInView,
@@ -38,6 +39,7 @@ const AboutSectionContent: FC<IProps> = ({
               animationDuration={animationDuration}
               inView={videoInView}
             />
+            <AnimatedAboutSectionContentSlider animationDuration={1} />
           </Content>
         </Background>
       </GeneralContainer>

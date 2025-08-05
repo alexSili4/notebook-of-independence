@@ -25,6 +25,7 @@ interface ITheme {
     video: string;
     chronicle: string;
     result: string;
+    aboutSlider: string;
   };
   spacing: (value?: number) => number;
 }
@@ -58,6 +59,7 @@ const theme: ITheme = {
     video: '2500ms cubic-bezier(0.4, 0, 0.2, 1)',
     chronicle: '4000ms cubic-bezier(0.4, 0, 0.2, 1)',
     result: '4000ms cubic-bezier(0.4, 0, 0.2, 1)',
+    aboutSlider: '1000ms cubic-bezier(0.4, 0, 0.2, 1)',
   },
   spacing: (value = 1) => value * 4,
 };

@@ -1,12 +1,17 @@
 import styled from '@emotion/styled';
-import sectionBg from '@/images/about/section-preview-bg.jpg';
+import sectionBgDesk from '@/images/about/section-preview-bg-desk.jpg';
+import sectionBgMob from '@/images/about/section-preview-bg-mob.jpg';
 
 export const Background = styled.div`
   height: 100%;
-  background-image: url(${sectionBg});
+  background-image: url(${sectionBgMob});
   background-position: 0 0;
   background-size: cover;
   background-repeat: no-repeat;
+
+  @media screen and (min-width: ${({ theme }) => theme.breakpoints.desk}px) {
+    background-image: url(${sectionBgDesk});
+  }
 `;
 
 export const Container = styled.div`
@@ -22,14 +27,25 @@ export const TitleWrap = styled.div`
 
 export const StarImg = styled.img`
   position: absolute;
-  top: 208px;
-  left: -162px;
-  width: 126px;
-  height: 126px;
+  top: -176px;
+  left: 229px;
+  width: 104px;
+  height: 80px;
+
+  @media screen and (min-width: ${({ theme }) => theme.breakpoints.desk}px) {
+    top: 225px;
+    left: -154px;
+  }
 `;
 
 export const BookImg = styled.img`
   position: absolute;
+  bottom: -211px;
+ left: 42px;
+  width: 77px;
+  height: 89px;
+
+  @media screen and (min-width: ${({ theme }) => theme.breakpoints.desk}px) {
   top: -70px;
   right: -98px;
   width: 122px;

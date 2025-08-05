@@ -3,12 +3,14 @@ import AboutSectionContent from '@MainPageComponents/AboutSectionContent';
 import { Transition, VariantLabels, Variants } from 'framer-motion';
 import { IProps } from './AnimatedAboutSectionContent.types';
 import { Container, Element } from './AnimatedAboutSectionContent.styled';
+import { useIsDesk } from '@/hooks';
 
 const AnimatedAboutSectionContent: FC<IProps> = ({
   animationDuration,
   inView,
   videoInView,
 }) => {
+  const isDesk = useIsDesk();
   const animate: VariantLabels = inView ? 'visible' : 'hidden';
 
   const containerVariants: Variants = {
@@ -18,17 +20,19 @@ const AnimatedAboutSectionContent: FC<IProps> = ({
 
   const transition: Transition = {
     type: 'spring',
-    duration: animationDuration,
-    bounce: 0.2,
+    duration: isDesk ? animationDuration : 2.5,
+    bounce: isDesk ? 0.2 : 0.4,
   };
 
   const elementVariants: Variants = {
     hidden: {
-      x: '100%',
+      x: isDesk ? '100%' : 0,
+      y: isDesk ? 0 : '100%',
       transition,
     },
     visible: {
       x: 0,
+      y: 0,
       transition,
     },
   };
