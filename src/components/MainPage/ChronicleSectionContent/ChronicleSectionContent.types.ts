@@ -7,4 +7,5 @@ export interface IProps {
   thirdStepInView: boolean;
   fourthStepInView: boolean;
   fifthStepInView: boolean;
+  isDesk: boolean;
 }

@@ -5,7 +5,11 @@ export const Container = styled.div`
   justify-content: center;
   width: 100%;
   height: 100%;
-  padding-top: 18.4vh;
+  padding-top: 27.1lvh;
+
+  @media screen and (min-width: ${({ theme }) => theme.breakpoints.desk}px) {
+    padding-top: 18.4lvh;
+  }
 `;
 
 export const Content = styled.div`

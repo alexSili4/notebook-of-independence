@@ -8,7 +8,7 @@ export const LeftDecorativePicture = styled.picture`
   height: 133px;
 
   @media screen and (min-width: ${({ theme }) => theme.breakpoints.desk}px) {
-    top: 5.3vh;
+    top: 5.3lvh;
     left: -4.5vw;
     width: 226px;
     height: 214px;
@@ -23,7 +23,7 @@ export const RightDecorativePicture = styled.picture`
   height: 137px;
 
   @media screen and (min-width: ${({ theme }) => theme.breakpoints.desk}px) {
-    top: 18vh;
+    top: 18lvh;
     right: 2.1vw;
     width: 226px;
     height: 214px;
@@ -35,10 +35,10 @@ export const BackgroundPicture = styled.picture`
   top: 0;
   left: 0;
   width: 100%;
-  height: 117.5vh;
+  height: 117.5lvh;
 
   @media screen and (min-width: ${({ theme }) => theme.breakpoints.desk}px) {
-    height: 132vh;
+    height: 132lvh;
     opacity: 0.15;
   }
 

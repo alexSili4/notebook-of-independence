@@ -26,7 +26,7 @@ const AnimatedHeroSectionVideo: FC<IProps> = ({
 
   const elementVariants: Variants = {
     hidden: {
-      y: '40vh',
+      y: '40lvh',
       transition,
     },
     visible: {

@@ -19,38 +19,70 @@ export const PhotoLeft = styled.img`
   left: -220px;
   width: 414px;
   height: 311px;
+
+  @media screen and (max-width: ${({ theme }) =>
+      theme.breakpoints.desk - 1}px) {
+    display: none;
+  }
 `;
 
 export const PhotoRight = styled.img`
   position: absolute;
-  top: 11px;
-  right: -208px;
-  width: 306px;
-  height: 372px;
+  top: -22px;
+  right: 71px;
+  width: 186px;
+  height: 226px;
+
+  @media screen and (min-width: ${({ theme }) => theme.breakpoints.desk}px) {
+    top: 11px;
+    right: -208px;
+    width: 306px;
+    height: 372px;
+  }
 `;
 
 export const BlueColor = styled.img`
   position: absolute;
-  top: -76px;
-  right: 82px;
-  width: 135px;
-  height: 171px;
+  top: 83px;
+  right: 272px;
+  width: 78px;
+  height: 99px;
+
+  @media screen and (min-width: ${({ theme }) => theme.breakpoints.desk}px) {
+    top: -76px;
+    right: 82px;
+    width: 135px;
+    height: 171px;
+  }
 `;
 
 export const YellowColor = styled.img`
   position: absolute;
-  top: -40px;
-  right: -12px;
-  width: 140px;
-  height: 174px;
+  top: 103px;
+  right: 217px;
+  width: 82px;
+  height: 101px;
+
+  @media screen and (min-width: ${({ theme }) => theme.breakpoints.desk}px) {
+    top: -40px;
+    right: -12px;
+    width: 140px;
+    height: 174px;
+  }
 `;
 
 export const TextWrap = styled.div`
   position: absolute;
-  top: -98px;
-  left: 47px;
+  top: -125px;
+  left: 79px;
   width: 271px;
-  rotate: 9.09deg;
+
+  @media screen and (min-width: ${({ theme }) => theme.breakpoints.desk}px) {
+    top: -98px;
+    left: 47px;
+    width: 271px;
+    rotate: 9.09deg;
+  }
 `;
 
 export const Text = styled.p`

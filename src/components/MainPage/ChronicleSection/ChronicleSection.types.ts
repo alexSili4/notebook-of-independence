@@ -8,6 +8,7 @@ export interface IProps {
   sectionInView: boolean;
   animationDuration: number;
   animationBounce: number;
+  isDesk: boolean;
 }
 
 export interface IStyledBackgroundProps {

@@ -1,6 +1,6 @@
 import { IGetChronicleSectionMarkerTranslateProps } from '@/types/functions.types';
 
-const getChronicleSectionMarkerTranslate = ({
+const getChronicleSectionProgressBarTranslate = ({
   fifthStepInView,
   firstStepInView,
   fourthStepInView,
@@ -8,26 +8,26 @@ const getChronicleSectionMarkerTranslate = ({
   thirdStepInView,
 }: IGetChronicleSectionMarkerTranslateProps): string => {
   if (fifthStepInView) {
-    return '90%';
+    return '-75%';
   }
 
   if (fourthStepInView) {
-    return '70%';
+    return '-50%';
   }
 
   if (thirdStepInView) {
-    return '50%';
+    return '-25%';
   }
 
   if (secondStepInView) {
-    return '30%';
+    return '0%';
   }
 
   if (firstStepInView) {
-    return '10%';
+    return '25%';
   }
 
-  return '0%';
+  return '75%';
 };
 
-export default getChronicleSectionMarkerTranslate;
+export default getChronicleSectionProgressBarTranslate;

@@ -7,11 +7,11 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   gap: ${({ theme }) => theme.spacing(4)}px;
-  padding-top: 12vh;
+  padding-top: 12lvh;
 
   @media screen and (min-width: ${({ theme }) => theme.breakpoints.desk}px) {
     gap: ${({ theme }) => theme.spacing(5)}px;
-    padding-top: 9.8vh;
+    padding-top: 9.8lvh;
   }
 `;
 

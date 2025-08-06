@@ -8,7 +8,7 @@ export const Container = styled.div`
   justify-content: flex-end;
   gap: ${({ theme }) => theme.spacing(13)}px;
   width: 37.5vw;
-  padding-bottom: 26.9vh;
+  padding-bottom: 26.9lvh;
 `;
 
 export const Title = styled.h2`

@@ -1,21 +1,25 @@
 import { FC } from 'react';
-import leftLine from '@/images/chronicle/left-line.png';
-import rightLine from '@/images/chronicle/right-line.png';
+import leftLineDesk from '@/images/chronicle/left-line-desk.png';
+import leftLineMob from '@/images/chronicle/left-line-mob.png';
+import rightLineDesk from '@/images/chronicle/right-line-desk.png';
+import rightLineMob from '@/images/chronicle/right-line-mob.png';
 import {
   LeftLineContainer,
-  LeftLine,
+  LeftLinePicture,
   LeftLineImgWrap,
   RightLineImgWrap,
-  RightLine,
+  RightLinePicture,
   RightLineContainer,
 } from './AnimatedChronicleSectionContentPreviewLines.styled';
 import { Transition, VariantLabels, Variants } from 'framer-motion';
 import { IProps } from './AnimatedChronicleSectionContentPreviewLines.types';
+import { theme } from '@/constants';
 
 const AnimatedChronicleSectionContentPreviewLines: FC<IProps> = ({
   inView,
   animationDuration,
 }) => {
+  const deskMedia = `(min-width: ${theme.breakpoints.desk}px)`;
   const animate: VariantLabels = inView ? 'visible' : 'hidden';
 
   const containerVariants: Variants = {
@@ -62,7 +66,10 @@ const AnimatedChronicleSectionContentPreviewLines: FC<IProps> = ({
         initial='hidden'
       >
         <LeftLineImgWrap variants={leftLineVariants}>
-          <LeftLine src={leftLine} alt='' />
+          <LeftLinePicture>
+            <source srcSet={leftLineDesk} media={deskMedia} />
+            <img src={leftLineMob} alt='' />
+          </LeftLinePicture>
         </LeftLineImgWrap>
       </LeftLineContainer>
       <RightLineContainer
@@ -71,7 +78,11 @@ const AnimatedChronicleSectionContentPreviewLines: FC<IProps> = ({
         initial='hidden'
       >
         <RightLineImgWrap variants={rightLineVariants}>
-          <RightLine src={rightLine} alt='' />
+          <RightLinePicture>
+            <source srcSet={rightLineDesk} media={deskMedia} />
+            <img src={rightLineMob} alt='' />
+          </RightLinePicture>
+          {/* <RightLine src={rightLine} alt='' /> */}
         </RightLineImgWrap>
       </RightLineContainer>
     </>

@@ -8,7 +8,7 @@ export const Container = styled.div`
 
 export const Image = styled.img`
   width: 40vw;
-  height: 85vh;
+  height: 85lvh;
 `;
 
 export const NotebookWrap = styled.div`

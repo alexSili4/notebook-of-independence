@@ -35,7 +35,7 @@ const AnimatedAboutSection: FC<IProps> = ({
 
   const elementVariants: Variants = {
     hidden: {
-      y: '100vh',
+      y: '100lvh',
       x: 0,
       transition,
     },

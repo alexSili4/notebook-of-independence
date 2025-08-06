@@ -39,30 +39,30 @@ export const PhotoWrap = styled.div`
 
 export const PhotoTopLeftText = styled(Text)`
   left: 54.7vw;
-  bottom: 25.6vh;
+  bottom: 25.6lvh;
   width: 501px;
 `;
 
 export const PhotoBottomLeftText = styled(Text)`
   left: 53.5vw;
-  bottom: 16.4vh;
+  bottom: 16.4lvh;
   width: 506px;
 `;
 
 export const PhotoTopRightText = styled(Text)`
   left: 54.7vw;
-  bottom: 21.6vh;
+  bottom: 21.6lvh;
   width: 506px;
 `;
 
 export const PhotoBottomCenterText = styled(Text)`
   left: 55.8vw;
-  bottom: 21.6vh;
+  bottom: 21.6lvh;
   width: 501px;
 `;
 
 export const PhotoBottomRightText = styled(Text)`
   left: 54.7vw;
-  bottom: 41.5vh;
+  bottom: 41.5lvh;
   width: 506px;
 `;

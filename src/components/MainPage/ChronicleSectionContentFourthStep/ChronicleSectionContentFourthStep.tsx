@@ -5,15 +5,16 @@ import {
   TextWrap,
   Date,
   Text,
-  Title,
   TitleWrap,
 } from './ChronicleSectionContentFourthStep.styled';
 import { IProps } from './ChronicleSectionContentFourthStep.types';
+import ChronicleSectionContentStepTitle from '@MainPageComponents/ChronicleSectionContentStepTitle';
 
 const ChronicleSectionContentFourthStep: FC<IProps> = ({
   animationBounce,
   animationDuration,
   inView,
+  isDesk,
 }) => {
   return (
     <ChronicleSectionContentStepContainer>
@@ -21,11 +22,14 @@ const ChronicleSectionContentFourthStep: FC<IProps> = ({
         animationBounce={animationBounce}
         animationDuration={animationDuration}
         inView={inView}
+        isDesk={isDesk}
       />
       <TextWrap>
         <Date>01.12</Date>
         <TitleWrap>
-          <Title>Україна сказала «Так»</Title>
+          <ChronicleSectionContentStepTitle>
+            Україна сказала «Так»
+          </ChronicleSectionContentStepTitle>
           <Text>
             90,32% українців на референдумі підтвердили Незалежність.
             <br />

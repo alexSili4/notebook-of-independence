@@ -16,18 +16,32 @@ export const Element = styled(motion.div)`
 
 export const PhotoLeft = styled.img`
   position: absolute;
-  top: 62px;
-  left: -219px;
-  width: 397px;
-  height: 294px;
+  top: 21px;
+  left: 89px;
+  width: 257px;
+  height: 210px;
+
+  @media screen and (min-width: ${({ theme }) => theme.breakpoints.desk}px) {
+    top: 62px;
+    left: -219px;
+    width: 397px;
+    height: 294px;
+  }
 `;
 
 export const PhotoRight = styled.img`
   position: absolute;
-  top: -80px;
-  right: -204px;
-  width: 386px;
-  height: 273px;
+  top: -74px;
+  right: 113px;
+  width: 206px;
+  height: 152px;
+
+  @media screen and (min-width: ${({ theme }) => theme.breakpoints.desk}px) {
+    top: -80px;
+    right: -204px;
+    width: 386px;
+    height: 273px;
+  }
 `;
 
 export const TextWrap = styled.div`
@@ -42,6 +56,11 @@ export const TextWrap = styled.div`
   background-size: 100% 100%;
   background-repeat: no-repeat;
   rotate: 9.09deg;
+
+  @media screen and (max-width: ${({ theme }) =>
+      theme.breakpoints.desk - 1}px) {
+    display: none;
+  }
 `;
 
 export const Text = styled.p`

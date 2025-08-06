@@ -23,7 +23,7 @@ const AnimatedHeroSectionTitle: FC<IProps> = ({
 
   const elementVariants: Variants = {
     hidden: {
-      y: '25vh',
+      y: '25lvh',
       transition,
     },
     visible: {

@@ -14,6 +14,7 @@ const AnimatedChronicleSection: FC<IProps> = ({
   inView,
   animationDuration,
   animationBounce,
+  isDesk,
 }) => {
   const animate: VariantLabels = inView ? 'visible' : 'hidden';
 
@@ -24,17 +25,19 @@ const AnimatedChronicleSection: FC<IProps> = ({
 
   const transition: Transition = {
     type: 'spring',
-    duration: animationDuration,
-    bounce: animationBounce,
+    duration: isDesk ? animationDuration : 2.5,
+    bounce: isDesk ? animationBounce : 0.4,
   };
 
   const elementVariants: Variants = {
     hidden: {
-      x: '100%',
+      x: isDesk ? '100%' : 0,
+      y: isDesk ? 0 : '100%',
       transition,
     },
     visible: {
       x: 0,
+      y: 0,
       transition,
     },
   };
@@ -52,6 +55,7 @@ const AnimatedChronicleSection: FC<IProps> = ({
           animationDuration={animationDuration}
           sectionInView={inView}
           animationBounce={animationBounce}
+          isDesk={isDesk}
         />
       </Element>
     </Container>

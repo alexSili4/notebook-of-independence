@@ -24,11 +24,11 @@ const AnimatedNewHistorySectionNotebook: FC<IProps> = ({
 
   const elementVariants: Variants = {
     hidden: {
-      y: isDesk ? '56.9vh' : '21.6vh',
+      y: isDesk ? '56.9lvh' : '21.6lvh',
       transition,
     },
     visible: {
-      y: isDesk ? 0 : '-20vh',
+      y: isDesk ? 0 : '-20lvh',
       transition,
     },
   };

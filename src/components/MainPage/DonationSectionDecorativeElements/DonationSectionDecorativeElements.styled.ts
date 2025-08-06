@@ -4,7 +4,7 @@ import Lines from '@/icons/donation/lines.svg?react';
 
 export const HeartIcon = styled(Heart)`
   position: absolute;
-  top: 12.8vh;
+  top: 12.8lvh;
   left: 8.6vw;
   width: 46px;
 `;

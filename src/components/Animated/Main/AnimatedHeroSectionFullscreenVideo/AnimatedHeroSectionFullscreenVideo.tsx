@@ -35,9 +35,9 @@ const HeroSectionVideo: FC<IProps> = ({
 
   const elementVariants: Variants = {
     hidden: {
-      y: isDesk ? '31.5vh' : '27vh',
+      y: isDesk ? '31.5lvh' : '27lvh',
       width: isDesk ? '41.4vw' : '91.5vw',
-      height: isDesk ? '40vh' : '27.6vh',
+      height: isDesk ? '40lvh' : '27.6lvh',
       transition: {
         ...transition,
         delay: isFirstRender ? animationDelay : 0,
@@ -50,7 +50,7 @@ const HeroSectionVideo: FC<IProps> = ({
       transition,
     },
     initial: {
-      y: '50vh',
+      y: '50lvh',
       width: isDesk ? '41.4vw' : '91.5vw',
       height: 0,
       transition: {

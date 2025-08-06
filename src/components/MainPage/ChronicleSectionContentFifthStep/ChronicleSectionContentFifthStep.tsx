@@ -6,22 +6,25 @@ import {
   TextWrap,
   Date,
   Text,
-  Title,
   TitleWrap,
 } from './ChronicleSectionContentFifthStep.styled';
 import { IProps } from './ChronicleSectionContentFifthStep.types';
+import ChronicleSectionContentStepTitle from '@MainPageComponents/ChronicleSectionContentStepTitle';
 
 const ChronicleSectionContentFifthStep: FC<IProps> = ({
   animationBounce,
   animationDuration,
   inView,
+  isDesk,
 }) => {
   return (
     <ChronicleSectionContentStepContainer>
       <TextWrap>
         <Date>04.08</Date>
         <TitleWrap>
-          <Title>Прапор на куполі</Title>
+          <ChronicleSectionContentStepTitle>
+            Прапор на куполі
+          </ChronicleSectionContentStepTitle>
           <Text>
             Перший синьо-жовтий прапор над Верховною Радою підняли лише на
             десятий день незалежності, хоч парламентська комуністична більшість
@@ -33,6 +36,7 @@ const ChronicleSectionContentFifthStep: FC<IProps> = ({
         animationBounce={animationBounce}
         animationDuration={animationDuration}
         inView={inView}
+        isDesk={isDesk}
       />
     </ChronicleSectionContentStepContainer>
   );

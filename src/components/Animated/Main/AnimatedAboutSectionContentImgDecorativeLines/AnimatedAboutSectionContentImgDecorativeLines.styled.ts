@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 export const Container = styled(motion.div)`
   position: absolute;
-  top: 6.9vh;
+  top: 6.9lvh;
   left: -22px;
 `;
 

@@ -4,7 +4,7 @@ import { useScroll, useTransform } from 'framer-motion';
 import { Container } from './Main.styled';
 import { useIsDesk, useIsScrollingPageUp } from '@/hooks';
 import HeroSection from '@MainPageComponents/HeroSection';
-// import AnimatedChronicleSection from '@AnimatedMainPageComponents/AnimatedChronicleSection';
+import AnimatedChronicleSection from '@AnimatedMainPageComponents/AnimatedChronicleSection';
 import AnimatedAboutSection from '@AnimatedMainPageComponents/AnimatedAboutSection';
 import AnimatedNewHistorySection from '@AnimatedMainPageComponents/AnimatedNewHistorySection';
 // import AnimatedAzovSection from '@AnimatedMainPageComponents/AnimatedAzovSection';
@@ -38,12 +38,12 @@ const Main: FC<IProps> = ({ updateShowFullScreenHeroVideo }) => {
   const aboutSectionContentInView = progress >= 5;
   const aboutSectionContentVideoInView = progress >= 6;
   const chronicleSectionInView = progress >= 7;
-  // const chronicleSectionFirstStepInView = progress >= 8;
-  // const chronicleSectionSecondStepInView = progress >= 9;
-  // const chronicleSectionThirdStepInView = progress >= 10;
-  // const chronicleSectionFourthStepInView = progress >= 11;
-  // const chronicleSectionFifthStepInView = progress >= 12;
-  // const chronicleSectionContentInView = chronicleSectionFirstStepInView;
+  const chronicleSectionFirstStepInView = progress >= 8;
+  const chronicleSectionSecondStepInView = progress >= 9;
+  const chronicleSectionThirdStepInView = progress >= 10;
+  const chronicleSectionFourthStepInView = progress >= 11;
+  const chronicleSectionFifthStepInView = progress >= 12;
+  const chronicleSectionContentInView = chronicleSectionFirstStepInView;
   // const azovSectionInView = progress >= 13;
   // const notebookSectionInView = progress >= 14;
   // const buyNotebookSectionInView = progress >= 15;
@@ -113,7 +113,6 @@ const Main: FC<IProps> = ({ updateShowFullScreenHeroVideo }) => {
         exitAnimationDuration={chronicleSectionAnimationDuration}
         isDesk={isDesk}
       />
-      {/* 
       <AnimatedChronicleSection
         contentInView={chronicleSectionContentInView}
         fifthStepInView={chronicleSectionFifthStepInView}
@@ -124,7 +123,9 @@ const Main: FC<IProps> = ({ updateShowFullScreenHeroVideo }) => {
         inView={chronicleSectionInView}
         animationBounce={chronicleSectionAnimationBounce}
         animationDuration={chronicleSectionAnimationDuration}
+        isDesk={isDesk}
       />
+      {/* 
       <AnimatedAzovSection
         animationDuration={azovSectionAnimationDuration}
         inView={azovSectionInView}

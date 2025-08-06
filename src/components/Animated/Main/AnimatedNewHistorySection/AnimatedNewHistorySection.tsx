@@ -25,7 +25,7 @@ const AnimatedNewHistorySection: FC<IProps> = ({
 
   const elementVariants: Variants = {
     hidden: {
-      y: '100vh',
+      y: '100lvh',
       transition,
     },
     visible: {

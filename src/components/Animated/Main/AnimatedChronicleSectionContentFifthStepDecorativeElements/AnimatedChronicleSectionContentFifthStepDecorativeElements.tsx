@@ -18,7 +18,7 @@ import { IProps } from './AnimatedChronicleSectionContentFifthStepDecorativeElem
 
 const AnimatedChronicleSectionContentFifthStepDecorativeElements: FC<
   IProps
-> = ({ animationBounce, animationDuration, inView }) => {
+> = ({ animationBounce, animationDuration, inView, isDesk }) => {
   const animate: VariantLabels = inView ? 'visible' : 'hidden';
 
   const containerVariants: Variants = {
@@ -45,7 +45,18 @@ const AnimatedChronicleSectionContentFifthStepDecorativeElements: FC<
 
   const rightElementVariants: Variants = {
     hidden: {
-      x: -200,
+      x: isDesk ? -200 : '-28%',
+      transition,
+    },
+    visible: {
+      x: 0,
+      transition,
+    },
+  };
+
+  const colorsElementVariants: Variants = {
+    hidden: {
+      x: isDesk ? -200 : '50%',
       transition,
     },
     visible: {
@@ -61,14 +72,16 @@ const AnimatedChronicleSectionContentFifthStepDecorativeElements: FC<
       </Element>
       <Element variants={rightElementVariants}>
         <PhotoRight src={photoRight} alt='' />
-        <BlueColor src={blueColor} alt='' />
-        <YellowColor src={yellowColor} alt='' />
         <TextWrap>
           <Text>
             Тисячі українців з вигуками "Ганьба!" прорвали кордон міліції і
             змусили зняти прапор УРСР
           </Text>
         </TextWrap>
+      </Element>
+      <Element variants={colorsElementVariants}>
+        <BlueColor src={blueColor} alt='' />
+        <YellowColor src={yellowColor} alt='' />
       </Element>
     </Container>
   );

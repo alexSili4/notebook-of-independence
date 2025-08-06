@@ -26,7 +26,7 @@ export const VideoWrap = styled.div`
   display: flex;
   flex-direction: column;
   gap: ${({ theme }) => theme.spacing(9)}px;
-  height: 40.5vh;
+  height: 40.5lvh;
   aspect-ratio: 368 / 271;
   padding-top: ${({ theme }) => theme.spacing(4)}px;
   padding-right: ${({ theme }) => theme.spacing(6)}px;
@@ -39,7 +39,7 @@ export const VideoWrap = styled.div`
 
   @media screen and (min-width: ${({ theme }) => theme.breakpoints.desk}px) {
     gap: ${({ theme }) => theme.spacing(3)}px;
-    height: 80.6vh;
+    height: 80.6lvh;
     aspect-ratio: 967 / 645;
     padding-top: ${({ theme }) => theme.spacing(12)}px;
     padding-right: ${({ theme }) => theme.spacing(21)}px;
@@ -59,14 +59,14 @@ export const VideoBg = styled.img`
   position: absolute;
   top: 20px;
   left: -3px;
-  height: 31.5vh;
+  height: 31.5lvh;
   aspect-ratio: 368 / 211;
   rotate: 2.13deg;
 
   @media screen and (min-width: ${({ theme }) => theme.breakpoints.desk}px) {
     top: 50%;
     left: 50%;
-    height: 68.3vh;
+    height: 68.3lvh;
     aspect-ratio: 954 / 546;
     translate: -50% -50%;
   }

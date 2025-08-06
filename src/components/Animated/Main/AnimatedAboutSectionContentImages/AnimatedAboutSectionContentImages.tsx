@@ -55,7 +55,7 @@ const AnimatedAboutSectionContentImages: FC<IProps> = ({
   const toTopLeftExitVariants: Variants = {
     hidden: {
       x: '-40vw',
-      y: '-40vh',
+      y: '-40lvh',
       transition,
     },
     visible: {
@@ -68,7 +68,7 @@ const AnimatedAboutSectionContentImages: FC<IProps> = ({
   const toBottomLeftExitVariants: Variants = {
     hidden: {
       x: '-40vw',
-      y: '40vh',
+      y: '40lvh',
       transition,
     },
     visible: {
@@ -81,7 +81,7 @@ const AnimatedAboutSectionContentImages: FC<IProps> = ({
   const toTopRightExitVariants: Variants = {
     hidden: {
       x: '40vw',
-      y: '-40vh',
+      y: '-40lvh',
       transition,
     },
     visible: {

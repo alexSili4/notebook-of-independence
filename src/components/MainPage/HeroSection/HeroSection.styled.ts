@@ -19,12 +19,12 @@ export const Container = styled.div`
   align-items: center;
   justify-content: space-between;
   height: 100%;
-  padding-top: 21.6vh;
-  padding-bottom: 21.7vh;
+  padding-top: 21.6lvh;
+  padding-bottom: 21.7lvh;
 
   @media screen and (min-width: ${({ theme }) => theme.breakpoints.desk}px) {
-    padding-top: 14.6vh;
-    padding-bottom: 16.9vh;
+    padding-top: 14.6lvh;
+    padding-bottom: 16.9lvh;
   }
 `;
 

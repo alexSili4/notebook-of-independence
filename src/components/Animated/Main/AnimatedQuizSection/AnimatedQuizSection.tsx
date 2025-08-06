@@ -20,7 +20,7 @@ const AnimatedQuizSection: FC<IProps> = ({ animationDuration, inView }) => {
 
   const elementVariants: Variants = {
     hidden: {
-      y: '100vh',
+      y: '100lvh',
       x: 0,
       transition,
     },

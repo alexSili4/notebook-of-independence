@@ -17,7 +17,7 @@ import { Transition, VariantLabels, Variants } from 'framer-motion';
 
 const AnimatedChronicleSectionContentFourthStepDecorativeElements: FC<
   IProps
-> = ({ animationBounce, animationDuration, inView }) => {
+> = ({ animationBounce, animationDuration, inView, isDesk }) => {
   const animate: VariantLabels = inView ? 'visible' : 'hidden';
 
   const containerVariants: Variants = {
@@ -33,22 +33,39 @@ const AnimatedChronicleSectionContentFourthStepDecorativeElements: FC<
 
   const leftElementVariants: Variants = {
     hidden: {
-      x: 200,
+      x: isDesk ? 200 : 0,
+      y: isDesk ? 0 : 150,
       transition,
     },
     visible: {
       x: 0,
+      y: 0,
       transition,
     },
   };
 
-  const rightElementVariants: Variants = {
+  const ukraineElementVariants: Variants = {
     hidden: {
-      x: -200,
+      x: isDesk ? -200 : 0,
+      y: isDesk ? 0 : 150,
       transition,
     },
     visible: {
       x: 0,
+      y: 0,
+      transition,
+    },
+  };
+
+  const statisticsElementVariants: Variants = {
+    hidden: {
+      x: isDesk ? -200 : 0,
+      y: isDesk ? 0 : -150,
+      transition,
+    },
+    visible: {
+      x: 0,
+      y: 0,
       transition,
     },
   };
@@ -61,9 +78,11 @@ const AnimatedChronicleSectionContentFourthStepDecorativeElements: FC<
           <Text>Найбільша явка виборців за всю історію незалежної України</Text>
         </TextWrap>
       </PrimaryElement>
-      <Element variants={rightElementVariants}>
-        <Statistics src={statistics} alt='' />
+      <PrimaryElement variants={ukraineElementVariants}>
         <Ukraine src={ukraine} alt='' />
+      </PrimaryElement>
+      <Element variants={statisticsElementVariants}>
+        <Statistics src={statistics} alt='' />
       </Element>
     </Container>
   );

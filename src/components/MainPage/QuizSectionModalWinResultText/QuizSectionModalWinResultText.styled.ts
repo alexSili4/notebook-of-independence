@@ -8,8 +8,8 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   background-color: #fffad2;
-  padding-top: 6.5vh;
-  padding-bottom: 8.5vh;
+  padding-top: 6.5lvh;
+  padding-bottom: 8.5lvh;
 `;
 
 export const HashtagWrap = styled.div`
@@ -36,7 +36,7 @@ export const Content = styled.div`
 `;
 
 export const TextImg = styled.img`
-  max-height: 26.9vh;
+  max-height: 26.9lvh;
 `;
 
 export const CharacteristicWrap = styled.div`

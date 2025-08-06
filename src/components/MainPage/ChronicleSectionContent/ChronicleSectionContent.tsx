@@ -17,6 +17,7 @@ const ChronicleSectionContent: FC<IProps> = ({
   thirdStepInView,
   fourthStepInView,
   fifthStepInView,
+  isDesk,
 }) => {
   return (
     <Container>
@@ -31,30 +32,35 @@ const ChronicleSectionContent: FC<IProps> = ({
         nextSectionInView={secondStepInView}
         animationBounce={animationBounce}
         inView={firstStepInView}
+        isDesk={isDesk}
       />
       <AnimatedChronicleSectionContentSecondStep
         animationDuration={animationDuration}
         nextSectionInView={thirdStepInView}
         animationBounce={animationBounce}
         inView={secondStepInView}
+        isDesk={isDesk}
       />
       <AnimatedChronicleSectionContentThirdStep
         animationDuration={animationDuration}
         nextSectionInView={fourthStepInView}
         animationBounce={animationBounce}
         inView={thirdStepInView}
+        isDesk={isDesk}
       />
       <AnimatedChronicleSectionContentFourthStep
         animationDuration={animationDuration}
         nextSectionInView={fifthStepInView}
         animationBounce={animationBounce}
         inView={fourthStepInView}
+        isDesk={isDesk}
       />
       <AnimatedChronicleSectionContentFifthStep
         animationDuration={animationDuration}
         nextSectionInView={false}
         animationBounce={animationBounce}
         inView={fifthStepInView}
+        isDesk={isDesk}
       />
     </Container>
   );

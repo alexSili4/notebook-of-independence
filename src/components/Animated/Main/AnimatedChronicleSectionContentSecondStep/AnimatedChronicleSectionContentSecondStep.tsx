@@ -12,6 +12,7 @@ const AnimatedChronicleSectionContentSecondStep: FC<IProps> = ({
   animationDuration,
   animationBounce,
   inView,
+  isDesk,
 }) => {
   const animate: VariantLabels = nextSectionInView
     ? 'exit'
@@ -52,6 +53,7 @@ const AnimatedChronicleSectionContentSecondStep: FC<IProps> = ({
           animationBounce={animationBounce}
           animationDuration={animationDuration}
           inView={inView}
+          isDesk={isDesk}
         />
       </Element>
     </Container>

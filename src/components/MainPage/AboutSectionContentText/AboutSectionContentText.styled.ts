@@ -10,7 +10,7 @@ export const Container = styled.div`
 
 export const TextLeftWrap = styled.div`
   position: absolute;
-  top: 43.1vh;
+  top: 43.1lvh;
   left: 8.7vw;
   width: 293px;
 `;
@@ -34,7 +34,7 @@ export const AccentLineLeftIcon = styled(AccentLineLeft)`
 
 export const TextRightWrap = styled.div`
   position: absolute;
-  top: 7.6vh;
+  top: 7.6lvh;
   left: 58.4vw;
   width: 360px;
 `;

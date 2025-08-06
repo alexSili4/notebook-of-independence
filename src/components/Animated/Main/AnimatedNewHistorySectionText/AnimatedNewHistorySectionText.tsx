@@ -24,7 +24,7 @@ const AnimatedNewHistorySectionText: FC<IProps> = ({
 
   const elementVariants: Variants = {
     hidden: {
-      y: isDesk ? '-100vh' : '-17.5vh',
+      y: isDesk ? '-100lvh' : '-17.5lvh',
       transition,
     },
     visible: {

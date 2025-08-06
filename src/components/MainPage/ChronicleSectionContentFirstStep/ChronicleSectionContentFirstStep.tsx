@@ -3,28 +3,31 @@ import {
   TextWrap,
   Date,
   Text,
-  Title,
   TitleWrap,
 } from './ChronicleSectionContentFirstStep.styled';
 import AnimatedChronicleSectionContentFirstStepDecorativeElements from '@AnimatedMainPageComponents/AnimatedChronicleSectionContentFirstStepDecorativeElements';
 import ChronicleSectionContentStepContainer from '@MainPageComponents/ChronicleSectionContentStepContainer';
 import { IProps } from './ChronicleSectionContentFirstStep.types';
+import ChronicleSectionContentStepTitle from '@MainPageComponents/ChronicleSectionContentStepTitle';
 
 const ChronicleSectionContentFirstStep: FC<IProps> = ({
   animationBounce,
   animationDuration,
   inView,
+  isDesk,
 }) => {
   return (
     <ChronicleSectionContentStepContainer>
       <TextWrap>
         <Date>16.07</Date>
         <TitleWrap>
-          <Title>Прапор на куполі</Title>
+          <ChronicleSectionContentStepTitle>
+            Суверенітет: перший крок
+          </ChronicleSectionContentStepTitle>
           <Text>
-            Перший синьо-жовтий прапор над Верховною Радою підняли лише на
-            десятий день незалежності, хоч парламентська комуністична більшість
-            не бажала цього. Цей прапор став доказом, що Незалежність жива.
+            Верховна Рада ухвалила Декларацію про державний суверенітет України.
+            Це був перший документ, що проголосив пріоритет українських законів
+            над радянськими. Незалежність стала питанням часу.
           </Text>
         </TitleWrap>
       </TextWrap>
@@ -32,6 +35,7 @@ const ChronicleSectionContentFirstStep: FC<IProps> = ({
         animationBounce={animationBounce}
         animationDuration={animationDuration}
         inView={inView}
+        isDesk={isDesk}
       />
     </ChronicleSectionContentStepContainer>
   );

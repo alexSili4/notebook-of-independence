@@ -19,7 +19,7 @@ import { IProps } from './AnimatedChronicleSectionContentFirstStepDecorativeElem
 
 const AnimatedChronicleSectionContentFirstStepDecorativeElements: FC<
   IProps
-> = ({ inView, animationDuration, animationBounce }) => {
+> = ({ inView, animationDuration, animationBounce, isDesk }) => {
   const animate: VariantLabels = inView ? 'visible' : 'hidden';
 
   const containerVariants: Variants = {
@@ -35,22 +35,26 @@ const AnimatedChronicleSectionContentFirstStepDecorativeElements: FC<
 
   const leftElementVariants: Variants = {
     hidden: {
-      x: 200,
+      x: isDesk ? 200 : 0,
+      y: isDesk ? 0 : 150,
       transition,
     },
     visible: {
       x: 0,
+      y: 0,
       transition,
     },
   };
 
   const rightElementVariants: Variants = {
     hidden: {
-      x: -200,
+      x: isDesk ? -200 : 0,
+      y: isDesk ? 0 : -150,
       transition,
     },
     visible: {
       x: 0,
+      y: 0,
       transition,
     },
   };

@@ -19,6 +19,7 @@ const ChronicleSectionContentSecondStepDecorativeElements: FC<IProps> = ({
   animationBounce,
   animationDuration,
   inView,
+  isDesk,
 }) => {
   const animate: VariantLabels = inView ? 'visible' : 'hidden';
 
@@ -35,7 +36,7 @@ const ChronicleSectionContentSecondStepDecorativeElements: FC<IProps> = ({
 
   const leftElementVariants: Variants = {
     hidden: {
-      x: 200,
+      x: isDesk ? 200 : 145,
       transition,
     },
     visible: {
@@ -46,7 +47,7 @@ const ChronicleSectionContentSecondStepDecorativeElements: FC<IProps> = ({
 
   const rightElementVariants: Variants = {
     hidden: {
-      x: -200,
+      x: isDesk ? -200 : -145,
       transition,
     },
     visible: {

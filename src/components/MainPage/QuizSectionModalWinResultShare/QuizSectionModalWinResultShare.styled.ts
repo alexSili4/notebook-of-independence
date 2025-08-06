@@ -22,10 +22,10 @@ export const Container = styled.div`
 
 export const Photo = styled.img`
   position: absolute;
-  top: 10.8vh;
+  top: 10.8lvh;
   left: 50%;
   width: 30.6vw;
-  height: 43.8vh;
+  height: 43.8lvh;
   translate: -50% 0;
 `;
 
