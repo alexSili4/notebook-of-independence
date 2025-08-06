@@ -8,4 +8,5 @@ export interface IProps {
   sectionAnimationBounce: number;
   exitAnimationDuration: number;
   exitAnimationBounce: number;
+  isDesk: boolean;
 }

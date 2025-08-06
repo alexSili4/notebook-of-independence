@@ -3,6 +3,7 @@ export interface IProps {
   inView: boolean;
   videoInView: boolean;
   animationDuration: number;
+  isDesk: boolean;
 }
 
 export interface IStyledElementProps {

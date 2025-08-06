@@ -2,7 +2,7 @@ import { FC, useEffect, useRef, useState } from 'react';
 import { IProps } from './Main.types';
 import { useScroll, useTransform } from 'framer-motion';
 import { Container } from './Main.styled';
-import { useIsScrollingPageUp } from '@/hooks';
+import { useIsDesk, useIsScrollingPageUp } from '@/hooks';
 import HeroSection from '@MainPageComponents/HeroSection';
 // import AnimatedChronicleSection from '@AnimatedMainPageComponents/AnimatedChronicleSection';
 import AnimatedAboutSection from '@AnimatedMainPageComponents/AnimatedAboutSection';
@@ -28,6 +28,7 @@ const Main: FC<IProps> = ({ updateShowFullScreenHeroVideo }) => {
       clamp: true,
     }
   );
+  const isDesk = useIsDesk();
   const isScrollingPageUp = useIsScrollingPageUp();
 
   const heroSectionVideoInView = progress >= 1;
@@ -91,12 +92,14 @@ const Main: FC<IProps> = ({ updateShowFullScreenHeroVideo }) => {
       <HeroSection
         animationDuration={generalAnimationDuration}
         animationDelay={1}
+        isDesk={isDesk}
         videoInView={heroSectionVideoInView}
       />
       <AnimatedNewHistorySection
         animationDuration={generalAnimationDuration}
         sectionInView={newHistorySectionInView}
         notebookInView={newHistorySectionNotebookInView}
+        isDesk={isDesk}
       />
       <AnimatedAboutSection
         inView={aboutSectionInView}
@@ -108,6 +111,7 @@ const Main: FC<IProps> = ({ updateShowFullScreenHeroVideo }) => {
         sectionAnimationDuration={aboutSectionAnimationDuration}
         exitAnimationBounce={chronicleSectionAnimationBounce}
         exitAnimationDuration={chronicleSectionAnimationDuration}
+        isDesk={isDesk}
       />
       {/* 
       <AnimatedChronicleSection

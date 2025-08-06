@@ -8,6 +8,7 @@ const AnimatedNewHistorySection: FC<IProps> = ({
   animationDuration,
   sectionInView,
   notebookInView,
+  isDesk,
 }) => {
   const animate: VariantLabels = sectionInView ? 'visible' : 'hidden';
 
@@ -37,6 +38,7 @@ const AnimatedNewHistorySection: FC<IProps> = ({
     <Container animate={animate} variants={containerVariants} initial='hidden'>
       <Element variants={elementVariants}>
         <NewHistorySection
+          isDesk={isDesk}
           animationDuration={animationDuration}
           notebookInView={notebookInView}
         />

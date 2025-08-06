@@ -3,4 +3,5 @@ export interface IProps {
   animationDuration: number;
   sectionInView: boolean;
   videoInView: boolean;
+  isDesk: boolean;
 }

@@ -9,6 +9,7 @@ const AnimatedHeroSectionVideo: FC<IProps> = ({
   inView,
   animationDuration,
   videoInView,
+  isDesk,
 }) => {
   const animate: VariantLabels = inView ? 'visible' : 'hidden';
 
@@ -42,6 +43,7 @@ const AnimatedHeroSectionVideo: FC<IProps> = ({
           animationDelay={animationDelay}
           videoInView={videoInView}
           animationDuration={animationDuration}
+          isDesk={isDesk}
         />
       </Element>
     </Container>

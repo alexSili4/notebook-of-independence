@@ -9,6 +9,7 @@ import AnimatedNewHistorySectionImages from '@AnimatedMainPageComponents/Animate
 const NewHistorySection: FC<IProps> = ({
   animationDuration,
   notebookInView,
+  isDesk,
 }) => {
   return (
     <Section>
@@ -17,14 +18,17 @@ const NewHistorySection: FC<IProps> = ({
           <AnimatedNewHistorySectionImages
             animationDuration={animationDuration}
             inView={!notebookInView}
+            isDesk={isDesk}
           />
           <AnimatedNewHistorySectionText
             animationDuration={animationDuration}
             inView={!notebookInView}
+            isDesk={isDesk}
           />
           <AnimatedNewHistorySectionNotebook
             animationDuration={animationDuration}
             inView={notebookInView}
+            isDesk={isDesk}
           />
         </Container>
       </GeneralContainer>

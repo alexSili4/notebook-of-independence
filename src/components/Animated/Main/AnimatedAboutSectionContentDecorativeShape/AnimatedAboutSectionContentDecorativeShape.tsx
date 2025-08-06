@@ -6,13 +6,12 @@ import {
 } from './AnimatedAboutSectionContentDecorativeShape.styled';
 import { Transition, VariantLabels, Variants } from 'framer-motion';
 import { IProps } from './AnimatedAboutSectionContentDecorativeShape.types';
-import { useIsDesk } from '@/hooks';
 
 const AnimatedAboutSectionContentDecorativeShape: FC<IProps> = ({
   animationDuration,
   inView,
+  isDesk,
 }) => {
-  const isDesk = useIsDesk();
   const animate: VariantLabels = inView ? 'visible' : 'hidden';
 
   const containerVariants: Variants = {

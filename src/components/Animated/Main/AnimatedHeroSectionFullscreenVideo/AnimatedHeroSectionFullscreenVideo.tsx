@@ -7,15 +7,15 @@ import {
 import heroVideo from '@/video/hero.mp4';
 import { IProps } from './AnimatedHeroSectionFullscreenVideo.types';
 import { Transition, VariantLabels, Variants } from 'framer-motion';
-import { useIsFirsRender, useIsDesk } from '@/hooks';
+import { useIsFirsRender } from '@/hooks';
 
 const HeroSectionVideo: FC<IProps> = ({
   animationDelay,
   videoInView,
   animationDuration,
   inView,
+  isDesk,
 }) => {
-  const isDesk = useIsDesk();
   const { isFirstRender, updateIsFirsRender } = useIsFirsRender();
   const animate: VariantLabels = videoInView
     ? 'visible'

@@ -14,10 +14,9 @@ import page6 from '@/images/newHistory/notebook/page-6.jpg';
 import { BtnClickEvent, PageFlipOrNull } from '@/types/types';
 import NewHistorySectionNotebookControls from '@MainPageComponents/NewHistorySectionNotebookControls';
 import { makeBlur } from '@/utils';
-import { useIsDesk } from '@/hooks';
+import { IProps } from './NewHistorySectionNotebook.types';
 
-const NewHistorySectionNotebook: FC = () => {
-  const isDesk = useIsDesk();
+const NewHistorySectionNotebook: FC<IProps> = ({ isDesk }) => {
   const bookRef = useRef<PageFlipOrNull>(null);
   const { innerWidth, innerHeight } = window;
 

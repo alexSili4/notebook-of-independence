@@ -8,9 +8,13 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: ${({ theme }) => theme.spacing(6)}px;
+  gap: ${({ theme }) => theme.spacing(15)}px;
   width: 100%;
   height: 100%;
+
+  @media screen and (min-width: ${({ theme }) => theme.breakpoints.desk}px) {
+    gap: ${({ theme }) => theme.spacing(6)}px;
+  }
 `;
 
 export const Content = styled.div`
@@ -21,18 +25,28 @@ export const VideoWrap = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
-  height: 80.6vh;
-  aspect-ratio: 967 / 645;
-  gap: ${({ theme }) => theme.spacing(3)}px;
-  padding-top: ${({ theme }) => theme.spacing(12)}px;
-  padding-right: ${({ theme }) => theme.spacing(21)}px;
-  padding-bottom: ${({ theme }) => theme.spacing(8)}px;
-  padding-left: ${({ theme }) => theme.spacing(18)}px;
+  gap: ${({ theme }) => theme.spacing(9)}px;
+  height: 40.5vh;
+  aspect-ratio: 368 / 271;
+  padding-top: ${({ theme }) => theme.spacing(4)}px;
+  padding-right: ${({ theme }) => theme.spacing(6)}px;
+  padding-left: ${({ theme }) => theme.spacing(8)}px;
   background-image: url(${videoBg});
   background-position: 0 0;
-  background-size: 100% 100%;
+  background-size: 100% 87.5%;
   background-repeat: no-repeat;
   rotate: -2.49deg;
+
+  @media screen and (min-width: ${({ theme }) => theme.breakpoints.desk}px) {
+    gap: ${({ theme }) => theme.spacing(3)}px;
+    height: 80.6vh;
+    aspect-ratio: 967 / 645;
+    padding-top: ${({ theme }) => theme.spacing(12)}px;
+    padding-right: ${({ theme }) => theme.spacing(21)}px;
+    padding-bottom: ${({ theme }) => theme.spacing(8)}px;
+    padding-left: ${({ theme }) => theme.spacing(18)}px;
+    background-size: 100% 100%;
+  }
 `;
 
 export const StyledReactPlayer = styled(ReactPlayer)`
@@ -43,12 +57,19 @@ export const StyledReactPlayer = styled(ReactPlayer)`
 
 export const VideoBg = styled.img`
   position: absolute;
-  top: 50%;
-  left: 50%;
-  height: 68.3vh;
-  aspect-ratio: 954 / 546;
-  translate: -50% -50%;
+  top: 20px;
+  left: -3px;
+  height: 31.5vh;
+  aspect-ratio: 368 / 211;
   rotate: 2.13deg;
+
+  @media screen and (min-width: ${({ theme }) => theme.breakpoints.desk}px) {
+    top: 50%;
+    left: 50%;
+    height: 68.3vh;
+    aspect-ratio: 954 / 546;
+    translate: -50% -50%;
+  }
 `;
 
 export const Desc = styled.p`

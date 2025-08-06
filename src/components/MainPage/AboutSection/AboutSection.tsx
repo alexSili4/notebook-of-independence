@@ -9,6 +9,7 @@ const AboutSection: FC<IProps> = ({
   animationDuration,
   sectionInView,
   videoInView,
+  isDesk,
 }) => {
   return (
     <Section>
@@ -20,6 +21,7 @@ const AboutSection: FC<IProps> = ({
         inView={contentInView}
         animationDuration={animationDuration}
         videoInView={videoInView}
+        isDesk={isDesk}
       />
     </Section>
   );

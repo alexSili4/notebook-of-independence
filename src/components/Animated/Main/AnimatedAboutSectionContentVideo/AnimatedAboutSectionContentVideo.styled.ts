@@ -8,11 +8,6 @@ export const Container = styled(motion.div)`
   width: 100%;
   height: 100%;
   pointer-events: none;
-
-  @media screen and (max-width: ${({ theme }) =>
-      theme.breakpoints.desk - 1}px) {
-    display: none;
-  }
 `;
 
 export const Element = styled(motion.div)`

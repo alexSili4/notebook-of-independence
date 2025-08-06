@@ -14,6 +14,7 @@ const AnimatedAboutSection: FC<IProps> = ({
   sectionAnimationBounce,
   exitAnimationDuration,
   exitAnimationBounce,
+  isDesk,
 }) => {
   const animate: VariantLabels = nextSectionInView
     ? 'exit'
@@ -28,8 +29,8 @@ const AnimatedAboutSection: FC<IProps> = ({
 
   const transition: Transition = {
     type: 'spring',
-    duration: sectionAnimationDuration,
-    bounce: sectionAnimationBounce,
+    duration: isDesk ? sectionAnimationDuration : 2.5,
+    bounce: isDesk ? sectionAnimationBounce : 0.4,
   };
 
   const elementVariants: Variants = {
@@ -44,12 +45,12 @@ const AnimatedAboutSection: FC<IProps> = ({
       transition,
     },
     exit: {
-      y: 0,
-      x: '-100%',
+      y: isDesk ? 0 : '-100%',
+      x: isDesk ? '-100%' : 0,
       transition: {
         ...transition,
-        duration: exitAnimationDuration,
-        bounce: exitAnimationBounce,
+        duration: isDesk ? exitAnimationDuration : 2.5,
+        bounce: isDesk ? exitAnimationBounce : 0.4,
       },
     },
   };
@@ -62,6 +63,7 @@ const AnimatedAboutSection: FC<IProps> = ({
           animationDuration={animationDuration}
           sectionInView={inView}
           videoInView={videoInView}
+          isDesk={isDesk}
         />
       </Element>
     </Container>

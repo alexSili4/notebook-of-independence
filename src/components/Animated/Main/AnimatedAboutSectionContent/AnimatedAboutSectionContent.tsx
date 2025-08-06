@@ -3,14 +3,13 @@ import AboutSectionContent from '@MainPageComponents/AboutSectionContent';
 import { Transition, VariantLabels, Variants } from 'framer-motion';
 import { IProps } from './AnimatedAboutSectionContent.types';
 import { Container, Element } from './AnimatedAboutSectionContent.styled';
-import { useIsDesk } from '@/hooks';
 
 const AnimatedAboutSectionContent: FC<IProps> = ({
   animationDuration,
   inView,
   videoInView,
+  isDesk,
 }) => {
-  const isDesk = useIsDesk();
   const animate: VariantLabels = inView ? 'visible' : 'hidden';
 
   const containerVariants: Variants = {
@@ -44,6 +43,7 @@ const AnimatedAboutSectionContent: FC<IProps> = ({
           animationDuration={animationDuration}
           decorativeShapeInView={inView}
           videoInView={videoInView}
+          isDesk={isDesk}
         />
       </Element>
     </Container>

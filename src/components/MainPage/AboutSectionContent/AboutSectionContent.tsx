@@ -13,12 +13,14 @@ const AboutSectionContent: FC<IProps> = ({
   decorativeShapeInView,
   animationDuration,
   videoInView,
+  isDesk,
 }) => {
   return (
     <Container>
       <AnimatedAboutSectionContentDecorativeShape
         animationDuration={animationDuration}
         inView={decorativeShapeInView}
+        isDesk={isDesk}
       />
       <GeneralContainer>
         <Background>
@@ -35,11 +37,14 @@ const AboutSectionContent: FC<IProps> = ({
               animationDuration={animationDuration}
               inView={!videoInView}
             />
+            <AnimatedAboutSectionContentSlider
+              animationDuration={animationDuration}
+              inView={!videoInView}
+            />
             <AnimatedAboutSectionContentVideo
               animationDuration={animationDuration}
               inView={videoInView}
             />
-            <AnimatedAboutSectionContentSlider animationDuration={1} />
           </Content>
         </Background>
       </GeneralContainer>

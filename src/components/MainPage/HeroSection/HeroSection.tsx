@@ -11,6 +11,7 @@ const HeroSection: FC<IProps> = ({
   animationDelay,
   animationDuration,
   videoInView,
+  isDesk,
 }) => {
   return (
     <Section>
@@ -38,6 +39,7 @@ const HeroSection: FC<IProps> = ({
               animationDuration={animationDuration}
               animationDelay={animationDelay}
               videoInView={videoInView}
+              isDesk={isDesk}
               inView
             />
           </Container>
