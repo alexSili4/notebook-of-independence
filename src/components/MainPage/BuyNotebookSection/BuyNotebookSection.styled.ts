@@ -4,7 +4,15 @@ import sectionBgMob from '@/images/buyNotebook/section-bg-mob.png';
 
 export const Section = styled.section`
   width: 100%;
-  height: 100%;
+
+  @media screen and (min-width: ${({ theme }) => theme.breakpoints.desk}px) {
+    height: 100%;
+  }
+
+  @media screen and (max-width: ${({ theme }) =>
+      theme.breakpoints.desk - 1}px) {
+    height: 100lvh;
+  }
 `;
 
 export const Background = styled.div`
@@ -17,6 +25,11 @@ export const Background = styled.div`
 
   @media screen and (min-width: ${({ theme }) => theme.breakpoints.desk}px) {
     background-image: url(${sectionBgDesk});
+  }
+
+  @media screen and (max-width: ${({ theme }) =>
+      theme.breakpoints.desk - 1}px) {
+    height: 100lvh;
   }
 `;
 

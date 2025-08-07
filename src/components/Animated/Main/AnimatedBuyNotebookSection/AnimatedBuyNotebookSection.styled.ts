@@ -11,6 +11,17 @@ export const Container = styled(motion.div)`
 `;
 
 export const Element = styled(motion.div)`
-  height: 100%;
   pointer-events: all;
+
+  @media screen and (min-width: ${({ theme }) => theme.breakpoints.desk}px) {
+    height: 100%;
+  }
+
+  @media screen and (max-width: ${({ theme }) =>
+      theme.breakpoints.desk - 1}px) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    min-height: 100%;
+  }
 `;

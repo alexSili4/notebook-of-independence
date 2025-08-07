@@ -1,12 +1,20 @@
 import { FC } from 'react';
-import { DeskContainer } from './BuyNotebookSectionInfoDelivery.styled';
+import {
+  ContainerDesk,
+  ContainerMob,
+} from './BuyNotebookSectionInfoDelivery.styled';
 import BuyNotebookSectionInfoDeliveryContent from '@MainPageComponents/BuyNotebookSectionInfoDeliveryContent';
 
 const BuyNotebookSectionInfoDelivery: FC = () => {
   return (
-    <DeskContainer>
-      <BuyNotebookSectionInfoDeliveryContent />
-    </DeskContainer>
+    <>
+      <ContainerMob>
+        <BuyNotebookSectionInfoDeliveryContent />
+      </ContainerMob>
+      <ContainerDesk>
+        <BuyNotebookSectionInfoDeliveryContent />
+      </ContainerDesk>
+    </>
   );
 };
 
