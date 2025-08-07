@@ -4,10 +4,15 @@ export const Container = styled.div`
   position: relative;
   height: 100%;
   background-color: #6e8ade;
-  padding-top: 12lvh;
-  padding-bottom: 9.4lvh;
-  padding-left: 14vw;
-  padding-right: 14.6vw;
+  padding: ${({ theme: { spacing } }) =>
+    `${spacing(18)}px ${spacing(4)}px ${spacing(8)}px`};
+
+  @media screen and (min-width: ${({ theme }) => theme.breakpoints.desk}px) {
+    padding-top: 12lvh;
+    padding-bottom: 9.4lvh;
+    padding-left: 14vw;
+    padding-right: 14.6vw;
+  }
 `;
 
 export const BackgroundImg = styled.img`

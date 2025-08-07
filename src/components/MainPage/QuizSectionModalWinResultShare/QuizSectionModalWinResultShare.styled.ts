@@ -18,6 +18,11 @@ export const Container = styled.div`
   background-size: 100% 100%;
   background-repeat: no-repeat;
   padding-bottom: ${({ theme }) => theme.spacing(24)}px;
+
+  @media screen and (max-width: ${({ theme }) =>
+      theme.breakpoints.desk - 1}px) {
+    display: none;
+  }
 `;
 
 export const Photo = styled.img`

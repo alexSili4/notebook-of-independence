@@ -13,8 +13,10 @@ import {
   TextLineTop,
   TextLineCenter,
   TextLineBottom,
+  StarMobImg,
 } from './QuizSectionModalWinResultText.styled';
 import text from '@/images/quiz/questions/text.png';
+import starMob from '@/images/quiz/questions/star-mob.png';
 import { IProps } from './QuizSectionModalWinResultText.types';
 
 const QuizSectionModalWinResultText: FC<IProps> = ({
@@ -44,6 +46,7 @@ const QuizSectionModalWinResultText: FC<IProps> = ({
           <TextLineBottom></TextLineBottom>
         </CharacteristicWrap>
       </Content>
+      <StarMobImg src={starMob} alt='' />
     </Container>
   );
 };
