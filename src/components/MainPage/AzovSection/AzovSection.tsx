@@ -4,7 +4,8 @@ import {
   Background,
   Container,
   Content,
-  Title,
+  TitleDesk,
+  TitleMob,
   TitleWrap,
   LogoIcon,
   TitleContainer,
@@ -30,7 +31,12 @@ const AzovSection: FC<IProps> = ({ animationDuration, inView }) => {
             </Content>
             <TitleContainer>
               <TitleWrap>
-                <Title>100% прибутку НА Азов.Супровід</Title>
+                <TitleDesk>100% прибутку НА Азов.Супровід</TitleDesk>
+                <TitleMob>
+                  100%
+                  <br />
+                  прибутку НА Азов.Супровід
+                </TitleMob>
                 <LineIcon />
               </TitleWrap>
               <AnimatedAzovSectionStarIcon

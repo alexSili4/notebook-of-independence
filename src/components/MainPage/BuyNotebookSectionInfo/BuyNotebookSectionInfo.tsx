@@ -5,20 +5,17 @@ import {
   Title,
   TitleWrap,
   Container,
-  AccentIcon,
+  AccentIconDesk,
+  AccentIconMob,
   Content,
   Price,
   Info,
-  DescWrap,
-  Desc,
-  DeliveryIcon,
-  DescText,
-  PackageIcon,
   BuyInfo,
   BuyLink,
   BuyDesc,
 } from './BuyNotebookSectionInfo.styled';
 import { ExternalLinks } from '@/constants';
+import BuyNotebookSectionInfoDelivery from '@MainPageComponents/BuyNotebookSectionInfoDelivery';
 
 const BuyNotebookSectionInfo: FC = () => {
   return (
@@ -32,28 +29,14 @@ const BuyNotebookSectionInfo: FC = () => {
               Акта проголошення Незалежності. Увесь прибуток від продажу йде на
               підтримку родин захисників — Азов.Супровід.
             </Text>
-            <AccentIcon />
+            <AccentIconMob />
+            <AccentIconDesk />
           </TextWrap>
         </TitleWrap>
         <Price>50 грн</Price>
       </Content>
       <Info>
-        <DescWrap>
-          <Desc>
-            <DeliveryIcon />
-            <DescText>
-              Доставка по всій Україні: Новою поштою та Укрпоштою Термін
-              доставки: 2–5 робочих днів після підтвердження оплати
-            </DescText>
-          </Desc>
-          <Desc>
-            <PackageIcon />
-            <DescText>
-              Упаковка: зошит надходить у фірмовому крафтовому конверті,
-              захищеному від вологи
-            </DescText>
-          </Desc>
-        </DescWrap>
+        <BuyNotebookSectionInfoDelivery />
         <BuyInfo>
           <BuyLink
             href={ExternalLinks.buyNotebook}

@@ -7,9 +7,9 @@ import HeroSection from '@MainPageComponents/HeroSection';
 import AnimatedChronicleSection from '@AnimatedMainPageComponents/AnimatedChronicleSection';
 import AnimatedAboutSection from '@AnimatedMainPageComponents/AnimatedAboutSection';
 import AnimatedNewHistorySection from '@AnimatedMainPageComponents/AnimatedNewHistorySection';
-// import AnimatedAzovSection from '@AnimatedMainPageComponents/AnimatedAzovSection';
-// import AnimatedNotebookSection from '@AnimatedMainPageComponents/AnimatedNotebookSection';
-// import AnimatedBuyNotebookSection from '@AnimatedMainPageComponents/AnimatedBuyNotebookSection';
+import AnimatedAzovSection from '@AnimatedMainPageComponents/AnimatedAzovSection';
+import AnimatedNotebookSection from '@AnimatedMainPageComponents/AnimatedNotebookSection';
+import AnimatedBuyNotebookSection from '@AnimatedMainPageComponents/AnimatedBuyNotebookSection';
 // import AnimatedQuizSection from '@AnimatedMainPageComponents/AnimatedQuizSection';
 // import AnimatedDonationSection from '@AnimatedMainPageComponents/AnimatedDonationSection';
 
@@ -44,9 +44,9 @@ const Main: FC<IProps> = ({ updateShowFullScreenHeroVideo }) => {
   const chronicleSectionFourthStepInView = progress >= 11;
   const chronicleSectionFifthStepInView = progress >= 12;
   const chronicleSectionContentInView = chronicleSectionFirstStepInView;
-  // const azovSectionInView = progress >= 13;
-  // const notebookSectionInView = progress >= 14;
-  // const buyNotebookSectionInView = progress >= 15;
+  const azovSectionInView = progress >= 13;
+  const notebookSectionInView = progress >= 14;
+  const buyNotebookSectionInView = progress >= 15;
   // const quizSectionInView = progress >= 16;
   // const donationSectionInView = progress >= 17;
 
@@ -62,16 +62,16 @@ const Main: FC<IProps> = ({ updateShowFullScreenHeroVideo }) => {
   const aboutSectionAnimationDuration = isSmoothChronicleSectionAnimation
     ? chronicleSectionAnimationDuration
     : generalAnimationDuration;
-  // const isSmoothNotebookSectionAnimation =
-  //   isScrollingPageUp && azovSectionInView;
-  // const notebookSectionAnimationBounce = 0.2;
-  // const azovSectionAnimationBounce = isSmoothNotebookSectionAnimation
-  //   ? notebookSectionAnimationBounce
-  //   : 0.4;
-  // const notebookSectionAnimationDuration = 4;
-  // const azovSectionAnimationDuration = isSmoothNotebookSectionAnimation
-  //   ? notebookSectionAnimationDuration
-  //   : generalAnimationDuration;
+  const isSmoothNotebookSectionAnimation =
+    isScrollingPageUp && azovSectionInView;
+  const notebookSectionAnimationBounce = 0.2;
+  const azovSectionAnimationBounce = isSmoothNotebookSectionAnimation
+    ? notebookSectionAnimationBounce
+    : 0.4;
+  const notebookSectionAnimationDuration = 4;
+  const azovSectionAnimationDuration = isSmoothNotebookSectionAnimation
+    ? notebookSectionAnimationDuration
+    : generalAnimationDuration;
 
   useEffect(() => {
     const onProgressChange = (value: number) => {
@@ -125,7 +125,6 @@ const Main: FC<IProps> = ({ updateShowFullScreenHeroVideo }) => {
         animationDuration={chronicleSectionAnimationDuration}
         isDesk={isDesk}
       />
-      {/* 
       <AnimatedAzovSection
         animationDuration={azovSectionAnimationDuration}
         inView={azovSectionInView}
@@ -147,6 +146,7 @@ const Main: FC<IProps> = ({ updateShowFullScreenHeroVideo }) => {
         inView={buyNotebookSectionInView}
         animationBounce={notebookSectionAnimationBounce}
       />
+      {/* 
       <AnimatedQuizSection
         animationDuration={generalAnimationDuration}
         inView={quizSectionInView}

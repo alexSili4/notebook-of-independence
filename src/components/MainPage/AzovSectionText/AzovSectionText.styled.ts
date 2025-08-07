@@ -4,7 +4,10 @@ export const Container = styled.div``;
 
 export const Content = styled.div`
   position: relative;
-  width: 34.8vw;
+
+  @media screen and (min-width: ${({ theme }) => theme.breakpoints.desk}px) {
+    width: 34.8vw;
+  }
 `;
 
 export const TextWrap = styled.div`

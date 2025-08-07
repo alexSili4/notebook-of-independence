@@ -1,5 +1,6 @@
 import { FC } from 'react';
-import photo from '@/images/notebook/photo.png';
+import photoDesk from '@/images/notebook/photo-desk.png';
+import photoMob from '@/images/notebook/photo-mob.png';
 import { Transition, VariantLabels, Variants } from 'framer-motion';
 import {
   Container,
@@ -7,6 +8,7 @@ import {
   Photo,
 } from './AnimatedNotebookSectionPhoto.styled';
 import { IProps } from './AnimatedNotebookSectionPhoto.types';
+import { theme } from '@/constants';
 
 const AnimatedNotebookSectionPhoto: FC<IProps> = ({
   inView,
@@ -14,6 +16,7 @@ const AnimatedNotebookSectionPhoto: FC<IProps> = ({
   animationBounce,
 }) => {
   const animate: VariantLabels = inView ? 'visible' : 'hidden';
+  const deskMedia = `(min-width: ${theme.breakpoints.desk}px)`;
 
   const containerVariants: Variants = {
     hidden: {},
@@ -40,7 +43,10 @@ const AnimatedNotebookSectionPhoto: FC<IProps> = ({
   return (
     <Container animate={animate} variants={containerVariants} initial='hidden'>
       <Element variants={elementVariants}>
-        <Photo src={photo} alt='' />
+        <Photo>
+          <source srcSet={photoDesk} media={deskMedia} />
+          <img src={photoMob} alt='' />
+        </Photo>
       </Element>
     </Container>
   );

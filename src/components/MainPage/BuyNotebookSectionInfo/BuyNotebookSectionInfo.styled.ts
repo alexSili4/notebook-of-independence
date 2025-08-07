@@ -1,39 +1,65 @@
 import styled from '@emotion/styled';
-import Accent from '@/icons/buyNotebook/accent.svg?react';
-import Delivery from '@/icons/buyNotebook/delivery.svg?react';
-import Package from '@/icons/buyNotebook/package.svg?react';
+import AccentDesk from '@/icons/buyNotebook/accent-desk.svg?react';
+import AccentMob from '@/icons/buyNotebook/accent-mob.svg?react';
 
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
   gap: ${({ theme }) => theme.spacing(8)}px;
-  width: 38.9vw;
+
+  @media screen and (min-width: ${({ theme }) => theme.breakpoints.desk}px) {
+    width: 38.9vw;
+  }
+
+  @media screen and (max-width: ${({ theme }) =>
+      theme.breakpoints.desk - 1}px) {
+    justify-content: space-between;
+    height: 100%;
+  }
 `;
 
 export const Content = styled.div`
   display: flex;
   flex-direction: column;
-  gap: ${({ theme }) => theme.spacing(6)}px;
+  gap: ${({ theme }) => theme.spacing(4)}px;
+
+  @media screen and (min-width: ${({ theme }) => theme.breakpoints.desk}px) {
+    gap: ${({ theme }) => theme.spacing(6)}px;
+  }
 `;
 
 export const TitleWrap = styled.div`
   display: flex;
   flex-direction: column;
-  gap: ${({ theme }) => theme.spacing(6)}px;
+  gap: ${({ theme }) => theme.spacing(4)}px;
+
+  @media screen and (min-width: ${({ theme }) => theme.breakpoints.desk}px) {
+    gap: ${({ theme }) => theme.spacing(6)}px;
+  }
 `;
 
 export const Title = styled.h2`
   color: ${({ theme }) => theme.colors.white};
   font-family: ${({ theme }) => theme.fontFamily.inter};
-  font-size: 44px;
-  font-weight: 700;
+  font-size: 24px;
+  font-weight: 600;
   line-height: 1;
   letter-spacing: -2.26px;
   text-transform: uppercase;
+
+  @media screen and (min-width: ${({ theme }) => theme.breakpoints.desk}px) {
+    font-size: 44px;
+    font-weight: 700;
+  }
 `;
 
 export const TextWrap = styled.div`
   position: relative;
+
+  @media screen and (max-width: ${({ theme }) =>
+      theme.breakpoints.desk - 1}px) {
+    width: 343px;
+  }
 `;
 
 export const Text = styled.p`
@@ -44,11 +70,26 @@ export const Text = styled.p`
   line-height: 1.4;
 `;
 
-export const AccentIcon = styled(Accent)`
+export const AccentIconMob = styled(AccentMob)`
+  position: absolute;
+  top: 44px;
+  left: -1px;
+
+  @media screen and (min-width: ${({ theme }) => theme.breakpoints.desk}px) {
+    display: none;
+  }
+`;
+
+export const AccentIconDesk = styled(AccentDesk)`
   position: absolute;
   top: -1px;
   left: 44px;
   width: 162px;
+
+  @media screen and (max-width: ${({ theme }) =>
+      theme.breakpoints.desk - 1}px) {
+    display: none;
+  }
 `;
 
 export const Price = styled.p`
@@ -64,49 +105,28 @@ export const Price = styled.p`
 export const Info = styled.div`
   display: flex;
   flex-direction: column;
-  gap: ${({ theme }) => theme.spacing(8)}px;
-`;
+  gap: ${({ theme }) => theme.spacing(6)}px;
 
-export const DescWrap = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: ${({ theme }) => theme.spacing(3)}px;
-`;
-
-export const Desc = styled.div`
-  display: flex;
-  gap: ${({ theme }) => theme.spacing(2)}px;
-`;
-
-export const DeliveryIcon = styled(Delivery)`
-  flex-shrink: 0;
-  width: 16px;
-`;
-
-export const DescText = styled.p`
-  color: ${({ theme }) => theme.colors.white};
-  font-family: ${({ theme }) => theme.fontFamily.inter};
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.4;
-`;
-
-export const PackageIcon = styled(Package)`
-  flex-shrink: 0;
-  width: 16px;
+  @media screen and (min-width: ${({ theme }) => theme.breakpoints.desk}px) {
+    gap: ${({ theme }) => theme.spacing(8)}px;
+  }
 `;
 
 export const BuyInfo = styled.div`
   display: flex;
   flex-direction: column;
-  gap: ${({ theme }) => theme.spacing(8)}px;
+  gap: ${({ theme }) => theme.spacing(4)}px;
+
+  @media screen and (min-width: ${({ theme }) => theme.breakpoints.desk}px) {
+    gap: ${({ theme }) => theme.spacing(8)}px;
+  }
 `;
 
 export const BuyLink = styled.a`
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 56px;
+  height: 46px;
   border-radius: 100px;
   background-color: #6983d0;
   color: ${({ theme }) => theme.colors.white};
@@ -115,14 +135,23 @@ export const BuyLink = styled.a`
   font-weight: 700;
   line-height: 1;
   text-transform: uppercase;
+
+  @media screen and (min-width: ${({ theme }) => theme.breakpoints.desk}px) {
+    height: 56px;
+  }
 `;
 
 export const BuyDesc = styled.p`
   color: rgba(0, 0, 0, 0.32);
-  font-family: ${({ theme }) => theme.fontFamily.inter};
-  font-size: 31.21px;
+  font-family: Inter;
+  font-size: 18.92px;
   font-weight: 900;
   line-height: 1;
-  letter-spacing: -1.9px;
+  letter-spacing: -1.05px;
   text-transform: uppercase;
+
+  @media screen and (min-width: ${({ theme }) => theme.breakpoints.desk}px) {
+    font-size: 31.21px;
+    letter-spacing: -1.9px;
+  }
 `;
