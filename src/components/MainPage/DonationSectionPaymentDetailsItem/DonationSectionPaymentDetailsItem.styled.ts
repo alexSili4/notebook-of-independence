@@ -12,24 +12,38 @@ export const Container = styled.div`
 export const TextWrap = styled.div`
   display: flex;
   flex-direction: column;
-  gap: ${({ theme }) => theme.spacing(3)}PX;
+  gap: ${({ theme }) => theme.spacing(2)}px;
+
+  @media screen and (min-width: ${({ theme }) => theme.breakpoints.desk}px) {
+    gap: ${({ theme }) => theme.spacing(3)}px;
+  }
 `;
 
 export const Title = styled.p`
   color: #2f2f2f;
   font-family: ${({ theme }) => theme.fontFamily.inter};
-  font-size: 20px;
+  font-size: 14px;
   font-weight: 600;
   line-height: 1.4;
   text-transform: uppercase;
+
+  @media screen and (min-width: ${({ theme }) => theme.breakpoints.desk}px) {
+    color: #2f2f2f;
+    font-family: ${({ theme }) => theme.fontFamily.inter};
+    font-size: 20px;
+  }
 `;
 
 export const Text = styled.p`
   color: #2f2f2f;
   font-family: ${({ theme }) => theme.fontFamily.inter};
-  font-size: 20px;
+  font-size: 14px;
   font-weight: 400;
   line-height: 1.4;
+
+  @media screen and (min-width: ${({ theme }) => theme.breakpoints.desk}px) {
+    font-size: 20px;
+  }
 `;
 
 export const CopyBtn = styled.button`

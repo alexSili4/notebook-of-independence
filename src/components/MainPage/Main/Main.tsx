@@ -10,8 +10,8 @@ import AnimatedNewHistorySection from '@AnimatedMainPageComponents/AnimatedNewHi
 import AnimatedAzovSection from '@AnimatedMainPageComponents/AnimatedAzovSection';
 import AnimatedNotebookSection from '@AnimatedMainPageComponents/AnimatedNotebookSection';
 import AnimatedBuyNotebookSection from '@AnimatedMainPageComponents/AnimatedBuyNotebookSection';
-// import AnimatedQuizSection from '@AnimatedMainPageComponents/AnimatedQuizSection';
-// import AnimatedDonationSection from '@AnimatedMainPageComponents/AnimatedDonationSection';
+import AnimatedQuizSection from '@AnimatedMainPageComponents/AnimatedQuizSection';
+import AnimatedDonationSection from '@AnimatedMainPageComponents/AnimatedDonationSection';
 
 const Main: FC<IProps> = ({ updateShowFullScreenHeroVideo }) => {
   const [progress, setProgress] = useState<number>(0);
@@ -47,8 +47,8 @@ const Main: FC<IProps> = ({ updateShowFullScreenHeroVideo }) => {
   const azovSectionInView = progress >= 13;
   const notebookSectionInView = progress >= 14;
   const buyNotebookSectionInView = progress >= 15;
-  // const quizSectionInView = progress >= 16;
-  // const donationSectionInView = progress >= 17;
+  const quizSectionInView = progress >= 16;
+  const donationSectionInView = progress >= 17;
 
   const isSmoothChronicleSectionAnimation =
     (isScrollingPageUp && aboutSectionContentVideoInView) ||
@@ -145,8 +145,8 @@ const Main: FC<IProps> = ({ updateShowFullScreenHeroVideo }) => {
         animationDuration={notebookSectionAnimationDuration}
         inView={buyNotebookSectionInView}
         animationBounce={notebookSectionAnimationBounce}
+        isDesk={isDesk}
       />
-      {/* 
       <AnimatedQuizSection
         animationDuration={generalAnimationDuration}
         inView={quizSectionInView}
@@ -155,7 +155,6 @@ const Main: FC<IProps> = ({ updateShowFullScreenHeroVideo }) => {
         animationDuration={generalAnimationDuration}
         inView={donationSectionInView}
       />
-      */}
     </Container>
   );
 };

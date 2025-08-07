@@ -11,7 +11,7 @@ export const Section = styled.section`
 
   @media screen and (max-width: ${({ theme }) =>
       theme.breakpoints.desk - 1}px) {
-    height: 100lvh;
+    min-height: 100lvh;
   }
 `;
 
@@ -29,7 +29,7 @@ export const Background = styled.div`
 
   @media screen and (max-width: ${({ theme }) =>
       theme.breakpoints.desk - 1}px) {
-    height: 100lvh;
+    min-height: 100lvh;
   }
 `;
 
@@ -53,6 +53,7 @@ export const Container = styled.div`
   @media screen and (max-width: ${({ theme }) =>
       theme.breakpoints.desk - 1}px) {
     gap: ${({ theme }) => theme.spacing(8)}px;
+    min-height: 100lvh;
   }
 `;
 

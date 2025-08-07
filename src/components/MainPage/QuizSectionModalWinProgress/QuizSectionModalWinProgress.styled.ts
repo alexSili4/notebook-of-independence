@@ -3,9 +3,13 @@ import { IStyledProgressProps } from './QuizSectionModalWinProgress.types';
 
 export const Container = styled.div`
   position: absolute;
-  top: 96px;
+  top: 81px;
   left: 50%;
   translate: -50% 0;
+
+  @media screen and (min-width: ${({ theme }) => theme.breakpoints.desk}px) {
+    top: 96px;
+  }
 `;
 
 export const QuestionWrap = styled.div`
@@ -21,10 +25,14 @@ export const CurrentQuestionWrap = styled(QuestionWrap)`
 export const QuestionNumber = styled.p`
   color: #2f2f2f;
   font-family: ${({ theme }) => theme.fontFamily.inter};
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
   line-height: 1.6;
   text-transform: uppercase;
+
+  @media screen and (min-width: ${({ theme }) => theme.breakpoints.desk}px) {
+    font-size: 16px;
+  }
 `;
 
 export const ProgressWrap = styled.div`

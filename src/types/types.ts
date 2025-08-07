@@ -14,6 +14,8 @@ export type Booleans = boolean[];
 
 export type StringOrNull = string | null;
 
+export type NumberOrNull = number | null;
+
 export type ElementOrNull = Element | null;
 
 export interface IPageFlip {

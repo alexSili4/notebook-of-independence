@@ -1,20 +1,13 @@
 import { FC } from 'react';
-import {
-  ContainerDesk,
-  ContainerMob,
-} from './BuyNotebookSectionInfoDelivery.styled';
 import BuyNotebookSectionInfoDeliveryContent from '@MainPageComponents/BuyNotebookSectionInfoDeliveryContent';
+import BuyNotebookSectionInfoDeliveryAccordion from '@MainPageComponents/BuyNotebookSectionInfoDeliveryAccordion';
+import { IProps } from './BuyNotebookSectionInfoDelivery.types';
 
-const BuyNotebookSectionInfoDelivery: FC = () => {
-  return (
-    <>
-      <ContainerMob>
-        <BuyNotebookSectionInfoDeliveryContent />
-      </ContainerMob>
-      <ContainerDesk>
-        <BuyNotebookSectionInfoDeliveryContent />
-      </ContainerDesk>
-    </>
+const BuyNotebookSectionInfoDelivery: FC<IProps> = ({ isDesk }) => {
+  return isDesk ? (
+    <BuyNotebookSectionInfoDeliveryContent />
+  ) : (
+    <BuyNotebookSectionInfoDeliveryAccordion />
   );
 };
 

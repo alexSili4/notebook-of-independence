@@ -16,8 +16,9 @@ import {
 } from './BuyNotebookSectionInfo.styled';
 import { ExternalLinks } from '@/constants';
 import BuyNotebookSectionInfoDelivery from '@MainPageComponents/BuyNotebookSectionInfoDelivery';
+import { IProps } from './BuyNotebookSectionInfo.types';
 
-const BuyNotebookSectionInfo: FC = () => {
+const BuyNotebookSectionInfo: FC<IProps> = ({ isDesk }) => {
   return (
     <Container>
       <Content>
@@ -36,7 +37,7 @@ const BuyNotebookSectionInfo: FC = () => {
         <Price>50 грн</Price>
       </Content>
       <Info>
-        <BuyNotebookSectionInfoDelivery />
+        <BuyNotebookSectionInfoDelivery isDesk={isDesk} />
         <BuyInfo>
           <BuyLink
             href={ExternalLinks.buyNotebook}

@@ -8,6 +8,7 @@ const AnimatedBuyNotebookSection: FC<IProps> = ({
   animationDuration,
   animationBounce,
   inView,
+  isDesk,
 }) => {
   const animate: VariantLabels = inView ? 'visible' : 'hidden';
 
@@ -36,7 +37,7 @@ const AnimatedBuyNotebookSection: FC<IProps> = ({
   return (
     <Container animate={animate} variants={containerVariants} initial='hidden'>
       <Element variants={elementVariants}>
-        <BuyNotebookSection />
+        <BuyNotebookSection isDesk={isDesk} />
       </Element>
     </Container>
   );

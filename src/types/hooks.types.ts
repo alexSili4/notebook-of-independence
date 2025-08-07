@@ -1,4 +1,5 @@
 import { Func } from './functions.types';
+import { NumberOrNull, RefDivObject } from './types';
 
 export interface IUseIsFirsRender {
   isFirstRender: boolean;
@@ -21,4 +22,11 @@ export interface IUseAboutSectionContentImages {
 export interface IUseModalWinProps {
   setModalWinState: Func;
   showModalWin: boolean;
+}
+
+export interface IUseAccordionElement {
+  isShowElement: boolean;
+  elementRef: RefDivObject;
+  elementScrollHeight: NumberOrNull;
+  toggleIsShowElement: Func;
 }

@@ -7,6 +7,11 @@ export const HeartIcon = styled(Heart)`
   top: 12.8lvh;
   left: 8.6vw;
   width: 46px;
+
+  @media screen and (max-width: ${({ theme }) =>
+      theme.breakpoints.desk - 1}px) {
+    display: none;
+  }
 `;
 
 export const LinesIcon = styled(Lines)`
@@ -14,4 +19,9 @@ export const LinesIcon = styled(Lines)`
   top: -18px;
   left: 7.2vw;
   width: 140px;
+
+  @media screen and (max-width: ${({ theme }) =>
+      theme.breakpoints.desk - 1}px) {
+    display: none;
+  }
 `;

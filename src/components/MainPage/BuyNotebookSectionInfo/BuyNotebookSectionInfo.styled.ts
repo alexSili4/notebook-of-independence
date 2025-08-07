@@ -13,8 +13,8 @@ export const Container = styled.div`
 
   @media screen and (max-width: ${({ theme }) =>
       theme.breakpoints.desk - 1}px) {
+    flex-grow: 1;
     justify-content: space-between;
-    height: 100%;
   }
 `;
 

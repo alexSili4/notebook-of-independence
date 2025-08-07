@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
-import sectionBg from '@/images/quiz/section-bg.jpg';
+import sectionBgDesk from '@/images/quiz/section-bg-desk.jpg';
+import sectionBgMob from '@/images/quiz/section-bg-mob.jpg';
 
 export const Section = styled.section`
   position: fixed;
@@ -12,14 +13,22 @@ export const Section = styled.section`
 export const Background = styled.div`
   height: 100%;
   background-color: #6983d0;
-  background-image: url(${sectionBg});
+  background-image: url(${sectionBgMob});
   background-position: center;
   background-size: 100% 100%;
   background-repeat: no-repeat;
+
+  @media screen and (min-width: ${({ theme }) => theme.breakpoints.desk}px) {
+    background-image: url(${sectionBgDesk});
+  }
 `;
 
 export const Container = styled.div`
   position: relative;
   height: 100%;
-  padding-top: 16.7ssvh;
+  padding-top: 21.8vh;
+
+  @media screen and (min-width: ${({ theme }) => theme.breakpoints.desk}px) {
+    padding-top: 16.7vh;
+  }
 `;

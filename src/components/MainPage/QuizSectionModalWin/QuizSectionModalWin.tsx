@@ -80,7 +80,7 @@ const QuizSectionModalWin: FC<IProps> = ({
       <Background>
         <QuizSectionModalWinControls
           showResult={showResult}
-          disabledGoBackBtn={isFirstQuestion}
+          hiddenGoBackBtn={isFirstQuestion || showResult}
           onCloseModalWinBtnClick={onCloseModalWinBtnClick}
           onGoBackBtnClick={onGoBackBtnClick}
         />
@@ -89,7 +89,7 @@ const QuizSectionModalWin: FC<IProps> = ({
           currentQuestion={currentQuestionValue}
           totalQuestions={totalQuestionsValue}
         />
-        <QuizSectionModalWinQuestions
+        {/* <QuizSectionModalWinQuestions
           goToNextQuestion={goToNextQuestion}
           questions={questions}
           animationBounce={0.2}
@@ -97,12 +97,12 @@ const QuizSectionModalWin: FC<IProps> = ({
           firstQuestionInView={firstQuestionInView}
           secondQuestionInView={secondQuestionInView}
           thirdQuestionInView={thirdQuestionInView}
-        />
-        <AnimatedQuizSectionModalWinResult
+        /> */}
+        {/* <AnimatedQuizSectionModalWinResult
           inView={showResult}
           totalQuestions={totalQuestions}
           totalScore={totalScore}
-        />
+        /> */}
       </Background>
     </Container>
   );

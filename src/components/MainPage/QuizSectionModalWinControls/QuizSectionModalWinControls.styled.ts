@@ -14,7 +14,11 @@ export const Container = styled.div`
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding: ${({ theme: { spacing } }) => `${spacing(4)}px ${spacing(15)}px`};
+  padding: ${({ theme: { spacing } }) => `${spacing(2)}px ${spacing(4)}px`};
+
+  @media screen and (min-width: ${({ theme }) => theme.breakpoints.desk}px) {
+    padding: ${({ theme: { spacing } }) => `${spacing(4)}px ${spacing(15)}px`};
+  }
 `;
 
 export const GoBackBtn = styled.button<IStyledGoBackBtnProps>`
@@ -30,17 +34,25 @@ export const GoBackBtn = styled.button<IStyledGoBackBtnProps>`
 `;
 
 export const GoBackImg = styled.img`
-  width: 56px;
-  height: 56px;
+  width: 48px;
+  height: 48px;
+
+  @media screen and (min-width: ${({ theme }) => theme.breakpoints.desk}px) {
+    width: 56px;
+    height: 56px;
+  }
 `;
 
 export const CloseModalWinBtn = styled.button`
   display: flex;
   align-items: center;
-  gap: ${({ theme }) => theme.spacing()}px;
   padding: 0;
   border: none;
   background-color: transparent;
+
+  @media screen and (min-width: ${({ theme }) => theme.breakpoints.desk}px) {
+    gap: ${({ theme }) => theme.spacing()}px;
+  }
 `;
 
 export const CloseModalWinBtnTitle = styled.span<IStyledCloseModalWinBtnTitleProps>`

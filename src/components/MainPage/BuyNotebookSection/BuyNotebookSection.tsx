@@ -7,14 +7,15 @@ import {
 } from './BuyNotebookSection.styled';
 import notebook from '@/images/buyNotebook/notebook.jpg';
 import BuyNotebookSectionInfo from '@MainPageComponents/BuyNotebookSectionInfo';
+import { IProps } from './BuyNotebookSection.types';
 
-const BuyNotebookSection: FC = () => {
+const BuyNotebookSection: FC<IProps> = ({ isDesk }) => {
   return (
     <Section>
       <Background>
         <Container>
           <Notebook src={notebook} alt='' />
-          <BuyNotebookSectionInfo />
+          <BuyNotebookSectionInfo isDesk={isDesk} />
         </Container>
       </Background>
     </Section>

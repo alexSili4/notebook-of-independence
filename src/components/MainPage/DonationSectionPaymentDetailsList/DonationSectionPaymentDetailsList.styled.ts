@@ -5,9 +5,13 @@ export const List = styled.ul`
   z-index: 10;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: ${({ theme }) => theme.spacing(6)}px;
-  height: 100%;
+  gap: ${({ theme }) => theme.spacing(4)}px;
+
+  @media screen and (min-width: ${({ theme }) => theme.breakpoints.desk}px) {
+    justify-content: center;
+    gap: ${({ theme }) => theme.spacing(6)}px;
+    height: 100%;
+  }
 `;
 
 export const ListItem = styled.li``;

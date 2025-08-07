@@ -16,17 +16,17 @@ import { IProps } from './QuizSectionModalWinControls.types';
 
 const QuizSectionModalWinControls: FC<IProps> = ({
   onGoBackBtnClick,
-  disabledGoBackBtn,
-  onCloseModalWinBtnClick,
+  hiddenGoBackBtn,
   showResult,
+  onCloseModalWinBtnClick,
 }) => {
   return (
     <Container>
       <GoBackBtn
-        showResult={showResult}
+        showResult={hiddenGoBackBtn}
         type='button'
         onClick={onGoBackBtnClick}
-        disabled={disabledGoBackBtn}
+        disabled={hiddenGoBackBtn}
       >
         <GoBackImg src={goBack} alt='' />
       </GoBackBtn>

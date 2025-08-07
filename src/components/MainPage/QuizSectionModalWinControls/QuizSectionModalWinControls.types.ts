@@ -2,7 +2,7 @@ import { Func, OnBtnClickFunc } from '@/types/functions.types';
 
 export interface IProps {
   showResult: boolean;
-  disabledGoBackBtn: boolean;
+  hiddenGoBackBtn: boolean;
   onGoBackBtnClick: OnBtnClickFunc;
   onCloseModalWinBtnClick: Func;
 }

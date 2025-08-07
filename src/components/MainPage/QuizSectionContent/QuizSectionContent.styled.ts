@@ -5,37 +5,60 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: ${({ theme }) => theme.spacing(24)}px;
+  gap: ${({ theme }) => theme.spacing(8)}px;
   height: 100%;
+
+  @media screen and (min-width: ${({ theme }) => theme.breakpoints.desk}px) {
+    gap: ${({ theme }) => theme.spacing(24)}px;
+  }
 `;
 
 export const TextWrap = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: ${({ theme }) => theme.spacing(5)}px;
+  gap: ${({ theme }) => theme.spacing(4)}px;
+
+  @media screen and (min-width: ${({ theme }) => theme.breakpoints.desk}px) {
+    gap: ${({ theme }) => theme.spacing(5)}px;
+  }
+
+  @media screen and (max-width: ${({ theme }) =>
+      theme.breakpoints.desk - 1}px) {
+    width: 343px;
+  }
 `;
 
 export const Title = styled.h2`
-  width: 1005px;
   color: #6983d0;
   font-family: ${({ theme }) => theme.fontFamily.inter};
-  font-size: 120px;
-  font-weight: 700;
+  font-size: 56px;
+  font-weight: 600;
   line-height: 1.05;
-  letter-spacing: -8px;
+  letter-spacing: -2px;
   text-align: center;
   text-transform: uppercase;
+
+  @media screen and (min-width: ${({ theme }) => theme.breakpoints.desk}px) {
+    width: 1005px;
+    font-size: 120px;
+    font-weight: 700;
+    letter-spacing: -8px;
+  }
 `;
 
 export const Text = styled.p`
-  width: 630px;
   color: #2f2f2f;
   font-family: ${({ theme }) => theme.fontFamily.inter};
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 1.6;
   text-align: center;
+
+  @media screen and (min-width: ${({ theme }) => theme.breakpoints.desk}px) {
+    width: 630px;
+    font-size: 20px;
+  }
 `;
 
 export const ShowQuizBtnWrap = styled.div`

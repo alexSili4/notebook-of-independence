@@ -3,3 +3,4 @@ export { default as useAboutSectionContentImages } from './useAboutSectionConten
 export { default as useIsScrollingPageUp } from './useIsScrollingPageUp';
 export { default as useModalWin } from './useModalWin';
 export { default as useIsDesk } from './useIsDesk';
+export { default as useAccordionElement } from './useAccordionElement';
