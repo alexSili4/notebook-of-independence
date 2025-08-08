@@ -9,10 +9,10 @@ export const LeftLineContainer = styled(motion.div)`
   height: 387px;
 
   @media screen and (min-width: ${({ theme }) => theme.breakpoints.desk}px) {
-    top: 111px;
-    left: -423px;
-    width: 407px;
-    height: 251px;
+    top: 114px;
+    left: -501px;
+    width: 485px;
+    height: 270px;
   }
 `;
 
@@ -34,9 +34,9 @@ export const LeftLinePicture = styled.picture`
   height: 387px;
 
   @media screen and (min-width: ${({ theme }) => theme.breakpoints.desk}px) {
-    width: 407px;
-    max-width: 407px;
-    height: 251px;
+    max-width: 485px;
+    width: 485px;
+    height: 270px;
   }
 `;
 

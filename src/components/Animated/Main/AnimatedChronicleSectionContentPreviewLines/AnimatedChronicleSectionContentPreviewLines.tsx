@@ -82,7 +82,6 @@ const AnimatedChronicleSectionContentPreviewLines: FC<IProps> = ({
             <source srcSet={rightLineDesk} media={deskMedia} />
             <img src={rightLineMob} alt='' />
           </RightLinePicture>
-          {/* <RightLine src={rightLine} alt='' /> */}
         </RightLineImgWrap>
       </RightLineContainer>
     </>

@@ -23,10 +23,10 @@ export const RightDecorativePicture = styled.picture`
   height: 137px;
 
   @media screen and (min-width: ${({ theme }) => theme.breakpoints.desk}px) {
-    top: 18lvh;
-    right: 2.1vw;
-    width: 226px;
-    height: 214px;
+    top: 159px;
+    right: 66px;
+    width: 154px;
+    height: 120px;
   }
 `;
 

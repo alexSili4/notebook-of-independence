@@ -40,14 +40,19 @@ export const StarImg = styled.img`
 
 export const BookImg = styled.img`
   position: absolute;
-  bottom: -211px;
- left: 42px;
   width: 77px;
   height: 89px;
 
   @media screen and (min-width: ${({ theme }) => theme.breakpoints.desk}px) {
-  top: -70px;
-  right: -98px;
-  width: 122px;
-  height: 139px;
+    top: -59px;
+    right: -85px;
+    width: 98px;
+    height: 114px;
+  }
+
+  @media screen and (max-width: ${({ theme }) =>
+      theme.breakpoints.desk - 1}px) {
+    bottom: -211px;
+    left: 42px;
+  }
 `;
