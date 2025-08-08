@@ -5,7 +5,7 @@ export const TextWrap = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: ${({ theme }) => theme.spacing(30)}px;
+  gap: 18lvh;
 
   @media screen and (min-width: ${({ theme }) => theme.breakpoints.desk}px) {
     gap: ${({ theme }) => theme.spacing(18)}px;
@@ -31,7 +31,7 @@ export const TitleWrap = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: ${({ theme }) => theme.spacing(4)}px;
+  gap: 2.4lvh;
   width: 343px;
 
   @media screen and (min-width: ${({ theme }) => theme.breakpoints.desk}px) {

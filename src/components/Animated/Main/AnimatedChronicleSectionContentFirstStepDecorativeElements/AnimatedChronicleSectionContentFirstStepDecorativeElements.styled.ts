@@ -70,8 +70,8 @@ export const PhotoWrap = styled.div`
   right: -19px;
 
   @media screen and (min-width: ${({ theme }) => theme.breakpoints.desk}px) {
-    top: -36px;
-    right: -273px;
+    top: -100px;
+    right: -373px;
   }
 `;
 

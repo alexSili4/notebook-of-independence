@@ -1,4 +1,4 @@
-import { Func } from './functions.types';
+import { Func, OnBtnClickFunc } from './functions.types';
 import { NumberOrNull, RefDivObject } from './types';
 
 export interface IUseIsFirsRender {
@@ -7,16 +7,22 @@ export interface IUseIsFirsRender {
 }
 
 export interface IUseAboutSectionContentImages {
-  onFifthBtnMouseEnter: Func;
-  onFourthBtnMouseEnter: Func;
-  onThirdBtnMouseEnter: Func;
-  onSecondBtnMouseEnter: Func;
-  onFirstBtnMouseEnter: Func;
+  onFifthBtnClick: OnBtnClickFunc;
+  onFourthBtnClick: OnBtnClickFunc;
+  onThirdBtnClick: OnBtnClickFunc;
+  onSecondBtnClick: OnBtnClickFunc;
+  onFirstBtnClick: OnBtnClickFunc;
+  onBtnMouseEnter: Func;
   isFirstStep: boolean;
   isSecondStep: boolean;
   isThirdStep: boolean;
   isFourthStep: boolean;
   isFifthStep: boolean;
+  firstStepInFocus: boolean;
+  secondStepInFocus: boolean;
+  thirdStepInFocus: boolean;
+  fourthStepInFocus: boolean;
+  fifthStepInFocus: boolean;
 }
 
 export interface IUseModalWinProps {

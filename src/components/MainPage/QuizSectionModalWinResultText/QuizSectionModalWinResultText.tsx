@@ -22,6 +22,7 @@ import { IProps } from './QuizSectionModalWinResultText.types';
 const QuizSectionModalWinResultText: FC<IProps> = ({
   totalQuestions,
   totalScore,
+  characteristic,
 }) => {
   return (
     <Container>
@@ -38,9 +39,7 @@ const QuizSectionModalWinResultText: FC<IProps> = ({
               <TotalScoreTextPart>{totalQuestions}</TotalScoreTextPart>
             </TotalScoreText>
           </TotalScoreWrap>
-          <CharacteristicText>
-            Майже герой національного масштабу!
-          </CharacteristicText>
+          <CharacteristicText>{characteristic}</CharacteristicText>
           <TextLineTop></TextLineTop>
           <TextLineCenter></TextLineCenter>
           <TextLineBottom></TextLineBottom>

@@ -1,9 +1,16 @@
 import { IUseAboutSectionContentImages } from '@/types/hooks.types';
+import { BtnClickEvent } from '@/types/types';
+import { makeBlur } from '@/utils';
 import { useState } from 'react';
 
 export const useAboutSectionContentImages =
   (): IUseAboutSectionContentImages => {
     const [currentStep, setCurrentStep] = useState<number>(1);
+    const [firstStepInFocus, setFirstStepInFocus] = useState<boolean>(false);
+    const [secondStepInFocus, setSecondStepInFocus] = useState<boolean>(false);
+    const [thirdStepInFocus, setThirdStepInFocus] = useState<boolean>(false);
+    const [fourthStepInFocus, setFourthStepInFocus] = useState<boolean>(false);
+    const [fifthStepInFocus, setFifthStepInFocus] = useState<boolean>(false);
 
     const incrementCurrentStep = (isCurrentStep: boolean) => {
       if (!isCurrentStep) {
@@ -19,37 +26,86 @@ export const useAboutSectionContentImages =
     const isFourthStep = currentStep === 4;
     const isFifthStep = currentStep === 5;
 
-    const onFirstBtnMouseEnter = () => {
+    const onFirstBtnClick = (e: BtnClickEvent) => {
+      makeBlur(e.currentTarget);
       incrementCurrentStep(isFirstStep);
+
+      setFirstStepInFocus(true);
+      setSecondStepInFocus(false);
+      setThirdStepInFocus(false);
+      setFourthStepInFocus(false);
+      setFifthStepInFocus(false);
     };
 
-    const onSecondBtnMouseEnter = () => {
+    const onSecondBtnClick = (e: BtnClickEvent) => {
+      makeBlur(e.currentTarget);
       incrementCurrentStep(isSecondStep);
+
+      setFirstStepInFocus(false);
+      setSecondStepInFocus(true);
+      setThirdStepInFocus(false);
+      setFourthStepInFocus(false);
+      setFifthStepInFocus(false);
     };
 
-    const onThirdBtnMouseEnter = () => {
+    const onThirdBtnClick = (e: BtnClickEvent) => {
+      makeBlur(e.currentTarget);
       incrementCurrentStep(isThirdStep);
+
+      setFirstStepInFocus(false);
+      setSecondStepInFocus(false);
+      setThirdStepInFocus(true);
+      setFourthStepInFocus(false);
+      setFifthStepInFocus(false);
     };
 
-    const onFourthBtnMouseEnter = () => {
+    const onFourthBtnClick = (e: BtnClickEvent) => {
+      makeBlur(e.currentTarget);
       incrementCurrentStep(isFourthStep);
+
+      setFirstStepInFocus(false);
+      setSecondStepInFocus(false);
+      setThirdStepInFocus(false);
+      setFourthStepInFocus(true);
+      setFifthStepInFocus(false);
     };
 
-    const onFifthBtnMouseEnter = () => {
+    const onFifthBtnClick = (e: BtnClickEvent) => {
+      makeBlur(e.currentTarget);
       incrementCurrentStep(isFifthStep);
+
+      setFirstStepInFocus(false);
+      setSecondStepInFocus(false);
+      setThirdStepInFocus(false);
+      setFourthStepInFocus(false);
+      setFifthStepInFocus(true);
+    };
+
+    const onBtnMouseEnter = () => {
+      setFirstStepInFocus(false);
+      setSecondStepInFocus(false);
+      setThirdStepInFocus(false);
+      setFourthStepInFocus(false);
+      setFifthStepInFocus(false);
     };
 
     return {
-      onFifthBtnMouseEnter,
-      onFourthBtnMouseEnter,
-      onThirdBtnMouseEnter,
-      onSecondBtnMouseEnter,
-      onFirstBtnMouseEnter,
+      onBtnMouseEnter,
+      onFifthBtnClick,
+      onFourthBtnClick,
+      onThirdBtnClick,
+      onSecondBtnClick,
+      onFirstBtnClick,
       isFirstStep,
       isSecondStep,
       isThirdStep,
       isFourthStep,
       isFifthStep,
+      firstStepInFocus,
+      secondStepInFocus,
+      thirdStepInFocus,
+      fourthStepInFocus,
+      fifthStepInFocus,
     };
   };
 

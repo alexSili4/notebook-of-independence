@@ -1,3 +1,5 @@
+import { Strings } from './types';
+
 export interface IQuestionDetailsVariantDetails {
   text: string;
   isCorrectAnswer: boolean;
@@ -10,6 +12,15 @@ export interface IQuestionDetails {
   variants: QuestionDetailsVariants;
 }
 
+export interface IQuestionsData {
+  0: IQuestionDetails;
+  1: IQuestionDetails;
+  2: IQuestionDetails;
+  3: IQuestionDetails;
+  4: IQuestionDetails;
+}
+
 export interface IQuestions {
-  [key: number]: IQuestionDetails;
+  list: IQuestionsData;
+  characteristics: Strings;
 }

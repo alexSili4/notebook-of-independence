@@ -14,7 +14,7 @@ import AnimatedQuizSectionModalWinResult from '@AnimatedMainPageComponents/Anima
 
 const QuizSectionModalWin: FC<IProps> = ({
   onCloseModalWinBtnClick,
-  questions,
+  questions: { list: questions, characteristics },
 }) => {
   const [totalQuestions, setTotalQuestions] = useState<number>(0);
   const [currentQuestion, setCurrentQuestion] = useState<number>(1);
@@ -28,10 +28,13 @@ const QuizSectionModalWin: FC<IProps> = ({
   const firstQuestionInView = currentQuestion >= 1;
   const secondQuestionInView = currentQuestion >= 2;
   const thirdQuestionInView = currentQuestion >= 3;
+  const fourthQuestionInView = currentQuestion >= 4;
+  const fifthQuestionInView = currentQuestion >= 5;
 
   const progress = (100 / totalQuestions) * currentQuestion;
   const currentQuestionValue = currentQuestion.toString().padStart(2, '0');
   const totalQuestionsValue = totalQuestions.toString().padStart(2, '0');
+  const characteristic = characteristics[totalScore];
 
   const updateAnswers = ({ index, isCorrectAnswer }: IUpdateAnswersProps) => {
     setAnswers((prevState) => {
@@ -97,11 +100,14 @@ const QuizSectionModalWin: FC<IProps> = ({
           firstQuestionInView={firstQuestionInView}
           secondQuestionInView={secondQuestionInView}
           thirdQuestionInView={thirdQuestionInView}
+          fourthQuestionInView={fourthQuestionInView}
+          fifthQuestionInView={fifthQuestionInView}
         />
         <AnimatedQuizSectionModalWinResult
           inView={showResult}
           totalQuestions={totalQuestions}
           totalScore={totalScore}
+          characteristic={characteristic}
         />
       </Background>
     </Container>

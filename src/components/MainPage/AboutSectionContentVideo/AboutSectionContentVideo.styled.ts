@@ -1,7 +1,9 @@
 import styled from '@emotion/styled';
 import PlayVideoBtnLine from '@/icons/about/play-video-btn-line.svg?react';
 import videoBg from '@/images/about/video-bg.png';
-import ReactPlayer from 'react-player';
+import { animations } from '@/constants';
+import { IStyledLevkoProps } from './AboutSectionContentVideo.types';
+import { css } from '@emotion/react';
 
 export const Container = styled.div`
   display: flex;
@@ -49,10 +51,28 @@ export const VideoWrap = styled.div`
   }
 `;
 
-export const StyledReactPlayer = styled(ReactPlayer)`
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: cover;
+export const PhotoWrap = styled.div`
+  position: relative;
+  width: 100%;
+  height: 100%;
+`;
+
+export const Photo = styled.img`
+  width: 100%;
+  height: 100%;
+`;
+
+export const Levko = styled.img<IStyledLevkoProps>`
+  position: absolute;
+  top: 10%;
+  left: 17%;
+  width: 62.4%;
+  height: 59.8%;
+  ${({ play }) =>
+    play &&
+    css`
+      animation: ${animations.levko} 1s ease-in-out forwards infinite;
+    `}
 `;
 
 export const VideoBg = styled.img`

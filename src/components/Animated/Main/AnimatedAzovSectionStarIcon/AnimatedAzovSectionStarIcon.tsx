@@ -1,4 +1,4 @@
-import { FC, useEffect } from 'react';
+import { FC } from 'react';
 import {
   Container,
   Element,
@@ -17,10 +17,6 @@ const AnimatedAzovSectionStarIcon: FC<IProps> = ({
     hidden: {},
     visible: {},
   };
-
-  useEffect(() => {
-    console.log('AnimatedAzovSectionStarIcon: ', animationDuration);
-  });
 
   const transition: Transition = {
     type: 'spring',

@@ -1,7 +1,8 @@
-import { Func } from '@/types/functions.types';
+import { Func, OnBtnClickFunc } from '@/types/functions.types';
 import { ReactNode } from 'react';
 
 export interface IProps {
-  onMouseEnter: Func;
+  onClick: OnBtnClickFunc;
   children: ReactNode;
+  onMouseEnter: Func;
 }

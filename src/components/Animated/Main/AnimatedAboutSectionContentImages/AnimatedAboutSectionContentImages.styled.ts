@@ -1,13 +1,14 @@
 import styled from '@emotion/styled';
+import { IStyledTextProps } from './AnimatedAboutSectionContentImages.types';
 
-export const Text = styled.p`
+export const Text = styled.p<IStyledTextProps>`
   position: absolute;
   color: #2f2f2f;
   font-family: ${({ theme }) => theme.fontFamily.gogol};
   font-size: 30px;
   font-weight: 400;
   line-height: 1.08;
-  opacity: 0;
+  opacity: ${({ inFocus }) => (inFocus ? 1 : 0)};
   transition: opacity ${({ theme }) => theme.transitionDurationAndFunc.all};
 
   div:has(button:is(:hover, :focus)) > div > div > & {

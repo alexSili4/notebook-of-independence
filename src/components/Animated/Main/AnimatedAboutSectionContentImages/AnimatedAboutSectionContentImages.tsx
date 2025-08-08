@@ -32,11 +32,17 @@ const AnimatedAboutSectionContentImages: FC<IProps> = ({
     isFourthStep,
     isSecondStep,
     isThirdStep,
-    onFifthBtnMouseEnter,
-    onFirstBtnMouseEnter,
-    onFourthBtnMouseEnter,
-    onSecondBtnMouseEnter,
-    onThirdBtnMouseEnter,
+    onFifthBtnClick,
+    onFirstBtnClick,
+    onFourthBtnClick,
+    onSecondBtnClick,
+    onThirdBtnClick,
+    fifthStepInFocus,
+    firstStepInFocus,
+    fourthStepInFocus,
+    secondStepInFocus,
+    thirdStepInFocus,
+    onBtnMouseEnter,
   } = useAboutSectionContentImages();
 
   const animate: VariantLabels = inView ? 'visible' : 'hidden';
@@ -128,8 +134,9 @@ const AnimatedAboutSectionContentImages: FC<IProps> = ({
       </PhotoWrap>
       <PhotoWrap>
         <AnimatedAboutSectionContentImgPhotoTopLeftBtn
+          onMouseEnter={onBtnMouseEnter}
           isCurrentStep={isThirdStep}
-          onMouseEnter={onThirdBtnMouseEnter}
+          onClick={onThirdBtnClick}
           animate={animate}
           containerVariants={containerVariants}
           elementVariants={toTopLeftExitVariants}
@@ -139,7 +146,7 @@ const AnimatedAboutSectionContentImages: FC<IProps> = ({
           containerVariants={containerVariants}
           elementVariants={toOpacityExitVariants}
         >
-          <PhotoTopLeftText>
+          <PhotoTopLeftText inFocus={thirdStepInFocus}>
             У 1961-му за створення підпільної партії його засудили до розстрілу:
             72 доби провів у камері смертників. Потім вирок замінили на 15 років
             ув’язнення. З
@@ -152,18 +159,20 @@ const AnimatedAboutSectionContentImages: FC<IProps> = ({
       </PhotoWrap>
       <PhotoWrap>
         <AnimatedAboutSectionContentImgPhotoBottomLeftBtn
+          onMouseEnter={onBtnMouseEnter}
           isCurrentStep={isFourthStep}
-          onMouseEnter={onFourthBtnMouseEnter}
+          onClick={onFourthBtnClick}
           animate={animate}
           containerVariants={containerVariants}
           elementVariants={toBottomLeftExitVariants}
+          inFocus={fourthStepInFocus}
         />
         <AnimatedAboutSectionContentImgText
           animate={animate}
           containerVariants={containerVariants}
           elementVariants={toOpacityExitVariants}
         >
-          <PhotoBottomLeftText>
+          <PhotoBottomLeftText inFocus={fourthStepInFocus}>
             У 1990-му став народним депутатом. У серпні 1991 року саме його
             рукою був написаний текст Акта проголошення незалежності України.
             <br />
@@ -177,8 +186,9 @@ const AnimatedAboutSectionContentImages: FC<IProps> = ({
       </PhotoWrap>
       <PhotoWrap>
         <AnimatedAboutSectionContentImgPhotoTopRightBtn
+          onMouseEnter={onBtnMouseEnter}
           isCurrentStep={isFifthStep}
-          onMouseEnter={onFifthBtnMouseEnter}
+          onClick={onFifthBtnClick}
           animate={animate}
           containerVariants={containerVariants}
           elementVariants={toTopRightExitVariants}
@@ -188,7 +198,7 @@ const AnimatedAboutSectionContentImages: FC<IProps> = ({
           containerVariants={containerVariants}
           elementVariants={toOpacityExitVariants}
         >
-          <PhotoTopRightText>
+          <PhotoTopRightText inFocus={fifthStepInFocus}>
             «Якби моє життя закінчилось прямо зараз, я б знав, що прожив його не
             марно», — сказав він в день ухвалення незалежності.
             <br />
@@ -202,8 +212,9 @@ const AnimatedAboutSectionContentImages: FC<IProps> = ({
       </PhotoWrap>
       <PhotoWrap>
         <AnimatedAboutSectionContentImgPhotoBottomCenterBtn
+          onMouseEnter={onBtnMouseEnter}
           isCurrentStep={isFirstStep}
-          onMouseEnter={onFirstBtnMouseEnter}
+          onClick={onFirstBtnClick}
           animate={animate}
           containerVariants={containerVariants}
           elementVariants={toBottomLeftExitVariants}
@@ -213,7 +224,7 @@ const AnimatedAboutSectionContentImages: FC<IProps> = ({
           containerVariants={containerVariants}
           elementVariants={toOpacityExitVariants}
         >
-          <PhotoBottomCenterText>
+          <PhotoBottomCenterText inFocus={firstStepInFocus}>
             Левко Лук’яненко — автор Акта проголошення незалежності України.
             <br />
             <br />
@@ -226,17 +237,18 @@ const AnimatedAboutSectionContentImages: FC<IProps> = ({
       <PhotoWrap>
         <AnimatedAboutSectionContentImgPhotoBottomRightBtn
           isCurrentStep={isSecondStep}
-          onMouseEnter={onSecondBtnMouseEnter}
+          onClick={onSecondBtnClick}
           animate={animate}
           containerVariants={containerVariants}
           elementVariants={toOpacityExitVariants}
+          onMouseEnter={onBtnMouseEnter}
         />
         <AnimatedAboutSectionContentImgText
           animate={animate}
           containerVariants={containerVariants}
           elementVariants={toOpacityExitVariants}
         >
-          <PhotoBottomRightText>
+          <PhotoBottomRightText inFocus={secondStepInFocus}>
             Ще в юності присягнув боротися за незалежну Україну. «Я тоді став і
             поклявся перед небом», — згадував Лук’яненко.
           </PhotoBottomRightText>

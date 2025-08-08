@@ -12,6 +12,7 @@ import { IProps } from './QuizSectionModalWinResult.types';
 const QuizSectionModalWinResult: FC<IProps> = ({
   totalQuestions,
   totalScore,
+  characteristic,
 }) => {
   return (
     <Container>
@@ -20,6 +21,7 @@ const QuizSectionModalWinResult: FC<IProps> = ({
         <QuizSectionModalWinResultText
           totalQuestions={totalQuestions}
           totalScore={totalScore}
+          characteristic={characteristic}
         />
         <QuizSectionModalWinResultShare />
       </Content>

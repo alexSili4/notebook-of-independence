@@ -2,6 +2,7 @@ import styled from '@emotion/styled';
 import wayLink from '@/images/about/way-link.png';
 
 export const Container = styled.span`
+  display: block;
   width: 290px;
   height: 156px;
   background-image: url(${wayLink});

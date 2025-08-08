@@ -11,6 +11,7 @@ const AnimatedAboutSectionContentImgPhotoBottomCenterBtn: FC<IProps> = ({
   containerVariants,
   elementVariants,
   isCurrentStep,
+  onClick,
   onMouseEnter,
 }) => {
   return (
@@ -18,6 +19,7 @@ const AnimatedAboutSectionContentImgPhotoBottomCenterBtn: FC<IProps> = ({
       <Element variants={elementVariants}>
         <AboutSectionContentImgPhotoBottomCenterBtn
           isCurrentStep={isCurrentStep}
+          onClick={onClick}
           onMouseEnter={onMouseEnter}
         />
       </Element>

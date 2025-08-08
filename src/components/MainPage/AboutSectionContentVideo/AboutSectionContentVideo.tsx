@@ -6,13 +6,16 @@ import {
   PlayVideoBtn,
   PlayVideoBtnLineIcon,
   PlayVideoBtnTitle,
-  StyledReactPlayer,
   VideoWrap,
   VideoBg,
+  PhotoWrap,
+  Photo,
+  Levko,
 } from './AboutSectionContentVideo.styled';
 import { BtnClickEvent } from '@/types/types';
 import { makeBlur } from '@/utils';
-import aboutVideo from '@/video/about.mp4';
+import photo from '@/images/about/photo.jpg';
+import levko from '@/images/about/levko.png';
 import videoBgPaper from '@/images/about/video-bg-paper.jpg';
 
 const AboutSectionContentVideo: FC = () => {
@@ -24,21 +27,15 @@ const AboutSectionContentVideo: FC = () => {
     setPlay(true);
   };
 
-  const onVideoEnded = () => {
-    setPlay(false);
-  };
-
   return (
     <Container>
       <Content>
         <VideoBg src={videoBgPaper} alt='' />
         <VideoWrap>
-          <StyledReactPlayer
-            src={aboutVideo}
-            playing={play}
-            onEnded={onVideoEnded}
-            muted
-          />
+          <PhotoWrap>
+            <Photo src={photo} alt='' />
+            <Levko src={levko} alt='' play={play} />
+          </PhotoWrap>
           <Desc>фото: Олександр Клименко</Desc>
         </VideoWrap>
       </Content>

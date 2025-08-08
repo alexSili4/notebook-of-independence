@@ -1,12 +1,14 @@
 import { GoToNextQuestionFunc } from '@/types/functions.types';
-import { IQuestions } from '@/types/questions.types';
+import { IQuestionsData } from '@/types/questions.types';
 
 export interface IProps {
   goToNextQuestion: GoToNextQuestionFunc;
-  questions: IQuestions;
+  questions: IQuestionsData;
   animationBounce: number;
   animationDuration: number;
   firstQuestionInView: boolean;
   secondQuestionInView: boolean;
   thirdQuestionInView: boolean;
+  fourthQuestionInView: boolean;
+  fifthQuestionInView: boolean;
 }

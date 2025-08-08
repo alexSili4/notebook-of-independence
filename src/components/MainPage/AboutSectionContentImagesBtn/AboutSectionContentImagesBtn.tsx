@@ -3,11 +3,12 @@ import { Button } from './AboutSectionContentImagesBtn.styled';
 import { IProps } from './AboutSectionContentImagesBtn.types';
 
 const AboutSectionContentImagesBtn: FC<IProps> = ({
-  onMouseEnter,
+  onClick,
   children,
+  onMouseEnter,
 }) => {
   return (
-    <Button type='button' onMouseEnter={onMouseEnter}>
+    <Button type='button' onClick={onClick} onMouseEnter={onMouseEnter}>
       {children}
     </Button>
   );

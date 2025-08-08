@@ -8,16 +8,18 @@ import {
 
 const AnimatedAboutSectionContentImgPhotoTopLeftBtn: FC<IProps> = ({
   isCurrentStep,
-  onMouseEnter,
+  onClick,
   animate,
   containerVariants,
   elementVariants,
+  onMouseEnter,
 }) => {
   return (
     <Container animate={animate} variants={containerVariants} initial='visible'>
       <Element variants={elementVariants}>
         <AboutSectionContentImgPhotoTopLeftBtn
           isCurrentStep={isCurrentStep}
+          onClick={onClick}
           onMouseEnter={onMouseEnter}
         />
       </Element>

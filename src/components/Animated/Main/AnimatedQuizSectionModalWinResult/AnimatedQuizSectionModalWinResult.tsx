@@ -8,6 +8,7 @@ const AnimatedQuizSectionModalWinResult: FC<IProps> = ({
   inView,
   totalQuestions,
   totalScore,
+  characteristic,
 }) => {
   const animate: VariantLabels = inView ? 'visible' : 'hidden';
 
@@ -39,6 +40,7 @@ const AnimatedQuizSectionModalWinResult: FC<IProps> = ({
         <QuizSectionModalWinResult
           totalQuestions={totalQuestions}
           totalScore={totalScore}
+          characteristic={characteristic}
         />
       </Element>
     </Container>

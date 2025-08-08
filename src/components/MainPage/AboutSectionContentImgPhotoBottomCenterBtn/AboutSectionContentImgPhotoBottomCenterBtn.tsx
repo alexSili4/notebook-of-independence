@@ -10,12 +10,16 @@ import photoBottomCenter from '@/images/about/photo-bottom-center.png';
 import { IProps } from './AboutSectionContentImgPhotoBottomCenterBtn.types';
 
 const AboutSectionContentImgPhotoBottomCenterBtn: FC<IProps> = ({
-  onMouseEnter,
+  onClick,
   isCurrentStep,
+  onMouseEnter,
 }) => {
   return (
     <Container>
-      <AboutSectionContentImagesBtn onMouseEnter={onMouseEnter}>
+      <AboutSectionContentImagesBtn
+        onClick={onClick}
+        onMouseEnter={onMouseEnter}
+      >
         <PhotoBottomCenter src={photoBottomCenter} alt='' />
       </AboutSectionContentImagesBtn>
       <PhotoBottomCenterMarker>

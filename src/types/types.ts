@@ -12,6 +12,8 @@ export type RefDivObject = RefObject<HTMLDivElement>;
 // other
 export type Booleans = boolean[];
 
+export type Strings = string[];
+
 export type StringOrNull = string | null;
 
 export type NumberOrNull = number | null;

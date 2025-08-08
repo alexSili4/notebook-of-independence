@@ -10,12 +10,16 @@ import photoTopLeft from '@/images/about/photo-top-left.png';
 import { IProps } from './AboutSectionContentImgPhotoTopLeftBtn.types';
 
 const AboutSectionContentImgPhotoTopLeftBtn: FC<IProps> = ({
-  onMouseEnter,
+  onClick,
   isCurrentStep,
+  onMouseEnter,
 }) => {
   return (
     <PhotoTopLeftBtnWrap>
-      <AboutSectionContentImagesBtn onMouseEnter={onMouseEnter}>
+      <AboutSectionContentImagesBtn
+        onClick={onClick}
+        onMouseEnter={onMouseEnter}
+      >
         <PhotoTopLeft src={photoTopLeft} alt='' />
       </AboutSectionContentImagesBtn>
       <PhotoTopLeftMarker>

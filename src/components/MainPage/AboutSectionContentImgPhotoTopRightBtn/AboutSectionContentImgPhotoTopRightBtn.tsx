@@ -11,11 +11,15 @@ import { IProps } from './AboutSectionContentImgPhotoTopRightBtn.types';
 
 const AboutSectionContentImgPhotoTopRightBtn: FC<IProps> = ({
   isCurrentStep,
+  onClick,
   onMouseEnter,
 }) => {
   return (
     <Container>
-      <AboutSectionContentImagesBtn onMouseEnter={onMouseEnter}>
+      <AboutSectionContentImagesBtn
+        onClick={onClick}
+        onMouseEnter={onMouseEnter}
+      >
         <PhotoTopRight src={photoTopRight} alt='' />
       </AboutSectionContentImagesBtn>
       <PhotoTopRightMarker>
