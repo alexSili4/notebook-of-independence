@@ -1,9 +1,9 @@
 import styled from '@emotion/styled';
 
 export const Container = styled.div`
-  height: 1600lvh;
+  height: 2000lvh;
 
   @media screen and (min-width: ${({ theme }) => theme.breakpoints.desk}px) {
-    height: 600lvh;
+    height: 1000lvh;
   }
 `;

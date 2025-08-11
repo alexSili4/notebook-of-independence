@@ -8,8 +8,8 @@ import {
   Image,
   Button,
 } from './AnimatedAboutSectionContentSlideFifth.styled';
-import photo from '@/images/about/decorative-photo.png';
-import image from '@/images/about/photo-top-right.png';
+import photo from '@/images/about/decorative-photo-min.png';
+import image from '@/images/about/photo-top-right-min.png';
 import AboutSectionContentImagesMarker from '@MainPageComponents/AboutSectionContentImagesMarker';
 import { Transition, VariantLabels, Variants } from 'framer-motion';
 import { IProps } from './AnimatedAboutSectionContentSlideFifth.types';

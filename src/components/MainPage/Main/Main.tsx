@@ -12,10 +12,13 @@ import AnimatedNotebookSection from '@AnimatedMainPageComponents/AnimatedNoteboo
 import AnimatedBuyNotebookSection from '@AnimatedMainPageComponents/AnimatedBuyNotebookSection';
 import AnimatedQuizSection from '@AnimatedMainPageComponents/AnimatedQuizSection';
 import AnimatedDonationSection from '@AnimatedMainPageComponents/AnimatedDonationSection';
+import { disableScroll, unDisableScroll } from '@/utils';
 
 const Main: FC<IProps> = ({ updateShowFullScreenHeroVideo }) => {
   const [progress, setProgress] = useState<number>(0);
   const containerRef = useRef<HTMLDivElement>(null);
+  const timerId = useRef<NodeJS.Timeout>();
+
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ['start end', 'end start'],
@@ -86,6 +89,36 @@ const Main: FC<IProps> = ({ updateShowFullScreenHeroVideo }) => {
   useEffect(() => {
     updateShowFullScreenHeroVideo(heroSectionVideoInView);
   }, [heroSectionVideoInView, updateShowFullScreenHeroVideo]);
+
+  useEffect(() => {
+    disableScroll();
+
+    timerId.current = setTimeout(() => {
+      unDisableScroll();
+    }, 3000);
+
+    return () => {
+      clearTimeout(timerId.current);
+    };
+  }, [
+    heroSectionVideoInView,
+    newHistorySectionInView,
+    newHistorySectionNotebookInView,
+    aboutSectionInView,
+    aboutSectionContentInView,
+    aboutSectionContentVideoInView,
+    chronicleSectionInView,
+    chronicleSectionFirstStepInView,
+    chronicleSectionSecondStepInView,
+    chronicleSectionThirdStepInView,
+    chronicleSectionFourthStepInView,
+    chronicleSectionFifthStepInView,
+    chronicleSectionContentInView,
+    azovSectionInView,
+    notebookSectionInView,
+    quizSectionInView,
+    donationSectionInView,
+  ]);
 
   return (
     <Container ref={containerRef}>

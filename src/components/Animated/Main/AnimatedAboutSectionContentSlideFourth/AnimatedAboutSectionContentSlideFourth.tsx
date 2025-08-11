@@ -7,7 +7,7 @@ import {
   PhotoWrap,
   Text,
 } from './AnimatedAboutSectionContentSlideFourth.styled';
-import photo from '@/images/about/photo-bottom-left.png';
+import photo from '@/images/about/photo-bottom-left-min.png';
 import AboutSectionContentImagesMarker from '@MainPageComponents/AboutSectionContentImagesMarker';
 import { Transition, VariantLabels, Variants } from 'framer-motion';
 import { IProps } from './AnimatedAboutSectionContentSlideFourth.types';

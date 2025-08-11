@@ -7,8 +7,8 @@ import {
   InfoElement,
   LightElement,
 } from './AnimatedQuizSectionDecorativeElements.styled';
-import info from '@/images/quiz/info.png';
-import light from '@/images/quiz/light.png';
+import info from '@/images/quiz/info-min.png';
+import light from '@/images/quiz/light-min.png';
 import { Transition, VariantLabels, Variants } from 'framer-motion';
 import { IProps } from './AnimatedQuizSectionDecorativeElements.types';
 

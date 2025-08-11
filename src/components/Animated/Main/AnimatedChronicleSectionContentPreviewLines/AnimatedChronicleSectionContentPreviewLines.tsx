@@ -1,8 +1,8 @@
 import { FC } from 'react';
-import leftLineDesk from '@/images/chronicle/left-line-desk.png';
-import leftLineMob from '@/images/chronicle/left-line-mob.png';
-import rightLineDesk from '@/images/chronicle/right-line-desk.png';
-import rightLineMob from '@/images/chronicle/right-line-mob.png';
+import leftLineDesk from '@/images/chronicle/left-line-desk-min.png';
+import leftLineMob from '@/images/chronicle/left-line-mob-min.png';
+import rightLineDesk from '@/images/chronicle/right-line-desk-min.png';
+import rightLineMob from '@/images/chronicle/right-line-mob-min.png';
 import {
   LeftLineContainer,
   LeftLinePicture,

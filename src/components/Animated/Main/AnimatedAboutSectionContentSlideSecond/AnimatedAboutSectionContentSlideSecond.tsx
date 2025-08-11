@@ -11,7 +11,7 @@ import {
   Button,
 } from './AnimatedAboutSectionContentSlideSecond.styled';
 import AboutSectionContentImagesMarker from '@MainPageComponents/AboutSectionContentImagesMarker';
-import light from '@/images/about/photo-bottom-right.png';
+import light from '@/images/about/photo-bottom-right-min.png';
 import { Transition, VariantLabels, Variants } from 'framer-motion';
 import { IProps } from './AnimatedAboutSectionContentSlideSecond.types';
 

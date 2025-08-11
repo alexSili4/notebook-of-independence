@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import textBg from '@/images/chronicle/thirdStep/text-bg.png';
+import textBg from '@/images/chronicle/thirdStep/text-bg-min.png';
 import { motion } from 'framer-motion';
 
 export const Container = styled(motion.div)`

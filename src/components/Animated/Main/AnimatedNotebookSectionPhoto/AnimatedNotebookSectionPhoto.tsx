@@ -1,6 +1,6 @@
 import { FC } from 'react';
-import photoDesk from '@/images/notebook/photo-desk.png';
-import photoMob from '@/images/notebook/photo-mob.png';
+import photoDesk from '@/images/notebook/photo-desk-min.png';
+import photoMob from '@/images/notebook/photo-mob-min.png';
 import { Transition, VariantLabels, Variants } from 'framer-motion';
 import {
   Container,

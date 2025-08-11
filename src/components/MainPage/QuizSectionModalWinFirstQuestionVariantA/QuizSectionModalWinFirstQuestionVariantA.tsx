@@ -2,7 +2,7 @@ import { FC } from 'react';
 import QuizSectionModalWinQuestionRadioBtn from '@MainPageComponents/QuizSectionModalWinQuestionRadioBtn';
 import { IProps } from './QuizSectionModalWinFirstQuestionVariantA.types';
 import { Container } from './QuizSectionModalWinFirstQuestionVariantA.styled';
-import chornovil from '@/images/quiz/questions/chornovil.png';
+import chornovil from '@/images/quiz/questions/chornovil-min.png';
 import QuizSectionModalWinFirstQuestionVariantAnswer from '@MainPageComponents/QuizSectionModalWinFirstQuestionVariantAnswer';
 
 const QuizSectionModalWinFirstQuestionVariantA: FC<IProps> = ({

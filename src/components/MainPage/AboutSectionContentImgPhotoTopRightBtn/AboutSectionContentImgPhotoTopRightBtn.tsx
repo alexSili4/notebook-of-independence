@@ -6,7 +6,7 @@ import {
 } from './AboutSectionContentImgPhotoTopRightBtn.styled';
 import AboutSectionContentImagesBtn from '@MainPageComponents/AboutSectionContentImagesBtn';
 import AboutSectionContentImagesMarker from '@MainPageComponents/AboutSectionContentImagesMarker';
-import photoTopRight from '@/images/about/photo-top-right.png';
+import photoTopRight from '@/images/about/photo-top-right-min.png';
 import { IProps } from './AboutSectionContentImgPhotoTopRightBtn.types';
 
 const AboutSectionContentImgPhotoTopRightBtn: FC<IProps> = ({

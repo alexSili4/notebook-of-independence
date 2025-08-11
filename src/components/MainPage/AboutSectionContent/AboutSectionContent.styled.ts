@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
-import sectionBgDesk from '@/images/about/section-content-bg-desk.jpg';
-import sectionBgMob from '@/images/about/section-content-bg-mob.jpg';
+import sectionBgDesk from '@/images/about/section-content-bg-desk-min.jpg';
+import sectionBgMob from '@/images/about/section-content-bg-mob-min.jpg';
 
 export const Container = styled.div`
   position: relative;

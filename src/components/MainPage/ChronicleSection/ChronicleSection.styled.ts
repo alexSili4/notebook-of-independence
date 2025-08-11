@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
-import sectionBgMob from '@/images/chronicle/section-bg-mob.png';
-import sectionBgDesk from '@/images/chronicle/section-bg-desk.png';
+import sectionBgMob from '@/images/chronicle/section-bg-mob-min.png';
+import sectionBgDesk from '@/images/chronicle/section-bg-desk-min.png';
 import { IStyledBackgroundProps } from './ChronicleSection.types';
 
 export const Section = styled.section`

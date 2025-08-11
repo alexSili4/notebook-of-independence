@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import photoBottomLeft from '@/images/about/photo-bottom-left.png';
+import photoBottomLeft from '@/images/about/photo-bottom-left-min.png';
 import {
   Container,
   PhotoBottomLeft,

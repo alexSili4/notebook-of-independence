@@ -5,7 +5,7 @@ import {
   Text,
   PhotoWrap,
 } from './AnimatedAboutSectionContentSlideFirst.styled';
-import photo from '@/images/about/photo-bottom-center.png';
+import photo from '@/images/about/photo-bottom-center-min.png';
 import { Transition, VariantLabels, Variants } from 'framer-motion';
 import { IProps } from './AnimatedAboutSectionContentSlideFirst.types';
 

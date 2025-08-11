@@ -1,7 +1,7 @@
 import { FC } from 'react';
-import photo from '@/images/chronicle/fourthStep/photo.png';
-import statistics from '@/images/chronicle/fourthStep/statistics.png';
-import ukraine from '@/images/chronicle/fourthStep/ukraine.png';
+import photo from '@/images/chronicle/fourthStep/photo-min.png';
+import statistics from '@/images/chronicle/fourthStep/statistics-min.png';
+import ukraine from '@/images/chronicle/fourthStep/ukraine-min.png';
 import {
   Photo,
   Statistics,

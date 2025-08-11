@@ -1,6 +1,6 @@
 import { FC } from 'react';
-import decorativeImg from '@/images/chronicle/firstStep/decorative-img.png';
-import photo from '@/images/chronicle/firstStep/photo.png';
+import decorativeImg from '@/images/chronicle/firstStep/decorative-img-min.png';
+import photo from '@/images/chronicle/firstStep/photo-min.png';
 import {
   Image,
   Text,

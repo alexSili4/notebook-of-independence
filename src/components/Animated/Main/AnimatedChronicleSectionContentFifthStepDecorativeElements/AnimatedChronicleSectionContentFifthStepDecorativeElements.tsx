@@ -1,8 +1,8 @@
 import { FC } from 'react';
-import yellowColor from '@/images/chronicle/fifthStep/yellow-color.png';
-import photoLeft from '@/images/chronicle/fifthStep/photo-left.png';
-import photoRight from '@/images/chronicle/fifthStep/photo-right.png';
-import blueColor from '@/images/chronicle/fifthStep/blue-color.png';
+import yellowColor from '@/images/chronicle/fifthStep/yellow-color-min.png';
+import photoLeft from '@/images/chronicle/fifthStep/photo-left-min.png';
+import photoRight from '@/images/chronicle/fifthStep/photo-right-min.png';
+import blueColor from '@/images/chronicle/fifthStep/blue-color-min.png';
 import {
   PhotoLeft,
   BlueColor,

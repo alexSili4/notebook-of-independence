@@ -15,8 +15,8 @@ import {
   TextLineBottom,
   StarMobImg,
 } from './QuizSectionModalWinResultText.styled';
-import text from '@/images/quiz/questions/text.png';
-import starMob from '@/images/quiz/questions/star-mob.png';
+import text from '@/images/quiz/questions/text-min.png';
+import starMob from '@/images/quiz/questions/star-mob-min.png';
 import { IProps } from './QuizSectionModalWinResultText.types';
 
 const QuizSectionModalWinResultText: FC<IProps> = ({

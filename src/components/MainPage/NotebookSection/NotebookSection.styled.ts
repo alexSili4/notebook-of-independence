@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
-import sectionBgMob from '@/images/notebook/section-bg-mob.png';
-import sectionBgDesk from '@/images/notebook/section-bg-desk.png';
+import sectionBgMob from '@/images/notebook/section-bg-mob-min.png';
+import sectionBgDesk from '@/images/notebook/section-bg-desk-min.png';
 import Logo from '@/icons/notebook/logo.svg?react';
 
 export const Section = styled.section`

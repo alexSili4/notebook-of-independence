@@ -7,8 +7,8 @@ import {
   BookImg,
   TitleWrap,
 } from './AboutSectionPreview.styled';
-import book from '@/images/about/book.png';
-import star from '@/images/about/star.png';
+import book from '@/images/about/book-min.png';
+import star from '@/images/about/star-min.png';
 import AnimatedAboutSectionPreviewPhoto from '@AnimatedMainPageComponents/AnimatedAboutSectionPreviewPhoto';
 import { IProps } from './AboutSectionPreview.types';
 import AnimatedAboutSectionPreviewTitle from '@AnimatedMainPageComponents/AnimatedAboutSectionPreviewTitle';

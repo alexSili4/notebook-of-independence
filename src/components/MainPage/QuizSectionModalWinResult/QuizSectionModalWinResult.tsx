@@ -6,7 +6,7 @@ import {
 } from './QuizSectionModalWinResult.styled';
 import QuizSectionModalWinResultText from '@MainPageComponents/QuizSectionModalWinResultText';
 import QuizSectionModalWinResultShare from '@MainPageComponents/QuizSectionModalWinResultShare';
-import resultBg from '@/images/quiz/questions/result-bg.png';
+import resultBg from '@/images/quiz/questions/result-bg-min.png';
 import { IProps } from './QuizSectionModalWinResult.types';
 
 const QuizSectionModalWinResult: FC<IProps> = ({

@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
-import sectionBgDesk from '@/images/quiz/section-bg-desk.jpg';
-import sectionBgMob from '@/images/quiz/section-bg-mob.jpg';
+import sectionBgDesk from '@/images/quiz/section-bg-desk-min.jpg';
+import sectionBgMob from '@/images/quiz/section-bg-mob-min.jpg';
 
 export const Section = styled.section`
   position: fixed;

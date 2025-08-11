@@ -5,7 +5,7 @@ import {
   Quote,
 } from './AnimatedAzovSectionTextQuote.styled';
 import { Transition, VariantLabels, Variants } from 'framer-motion';
-import quote from '@/images/azov/quote.png';
+import quote from '@/images/azov/quote-min.png';
 import { IProps } from './AnimatedAzovSectionTextQuote.types';
 
 const AnimatedAzovSectionTextQuote: FC<IProps> = ({

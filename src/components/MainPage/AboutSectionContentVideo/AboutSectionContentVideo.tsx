@@ -14,9 +14,9 @@ import {
 } from './AboutSectionContentVideo.styled';
 import { BtnClickEvent } from '@/types/types';
 import { makeBlur } from '@/utils';
-import photo from '@/images/about/photo.jpg';
-import levko from '@/images/about/levko.png';
-import videoBgPaper from '@/images/about/video-bg-paper.jpg';
+import photo from '@/images/about/photo-min.jpg';
+import levko from '@/images/about/levko-min.png';
+import videoBgPaper from '@/images/about/video-bg-paper-min.jpg';
 
 const AboutSectionContentVideo: FC = () => {
   const [play, setPlay] = useState<boolean>(false);

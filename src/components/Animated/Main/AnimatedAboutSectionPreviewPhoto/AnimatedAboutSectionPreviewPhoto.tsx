@@ -1,6 +1,6 @@
 import { FC } from 'react';
-import photoLeft from '@/images/about/photo-left.png';
-import photoRight from '@/images/about/photo-right.png';
+import photoLeft from '@/images/about/photo-left-min.png';
+import photoRight from '@/images/about/photo-right-min.png';
 import {
   PhotoRightWrap,
   PhotoLeft,

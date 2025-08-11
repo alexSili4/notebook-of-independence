@@ -9,9 +9,9 @@ import {
   CloseImgWrap,
   CloseLightImg,
 } from './QuizSectionModalWinControls.styled';
-import goBack from '@/images/quiz/go-back.png';
-import closeDark from '@/images/quiz/close-dark.png';
-import closeLight from '@/images/quiz/close-light.png';
+import goBack from '@/images/quiz/go-back-min.png';
+import closeDark from '@/images/quiz/close-dark-min.png';
+import closeLight from '@/images/quiz/close-light-min.png';
 import { IProps } from './QuizSectionModalWinControls.types';
 
 const QuizSectionModalWinControls: FC<IProps> = ({

@@ -1,7 +1,7 @@
 import { FC } from 'react';
-import lineLeftDesk from '@/images/quiz/line-left-desk.png';
-import lineLeftMob from '@/images/quiz/line-left-mob.png';
-import lineRight from '@/images/quiz/line-right.png';
+import lineLeftDesk from '@/images/quiz/line-left-desk-min.png';
+import lineLeftMob from '@/images/quiz/line-left-mob-min.png';
+import lineRight from '@/images/quiz/line-right-min.png';
 import { LineLeft, LineRight } from './QuizSectionDecorativeElements.styled';
 import AnimatedQuizSectionDecorativeElements from '@AnimatedMainPageComponents/AnimatedQuizSectionDecorativeElements';
 import { IProps } from './QuizSectionDecorativeElements.types';

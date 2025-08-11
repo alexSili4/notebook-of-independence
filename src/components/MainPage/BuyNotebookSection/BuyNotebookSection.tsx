@@ -5,7 +5,7 @@ import {
   Container,
   Notebook,
 } from './BuyNotebookSection.styled';
-import notebook from '@/images/buyNotebook/notebook.jpg';
+import notebook from '@/images/buyNotebook/notebook-min.jpg';
 import BuyNotebookSectionInfo from '@MainPageComponents/BuyNotebookSectionInfo';
 import { IProps } from './BuyNotebookSection.types';
 

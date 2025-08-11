@@ -5,7 +5,7 @@ import {
   Element,
 } from './AnimatedAboutSectionContentImgDecorativeBg.styled';
 import { IProps } from './AnimatedAboutSectionContentImgDecorativeBg.types';
-import decorativeBackground from '@/images/about/decorative-background.png';
+import decorativeBackground from '@/images/about/decorative-background-min.png';
 
 const AnimatedAboutSectionContentImgDecorativeBg: FC<IProps> = ({
   animate,

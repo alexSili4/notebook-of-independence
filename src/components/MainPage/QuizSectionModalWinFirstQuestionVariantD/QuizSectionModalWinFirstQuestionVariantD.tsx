@@ -3,7 +3,7 @@ import QuizSectionModalWinQuestionRadioBtn from '@MainPageComponents/QuizSection
 import { IProps } from './QuizSectionModalWinFirstQuestionVariantD.types';
 import { Container } from './QuizSectionModalWinFirstQuestionVariantD.styled';
 import QuizSectionModalWinFirstQuestionVariantAnswer from '@MainPageComponents/QuizSectionModalWinFirstQuestionVariantAnswer';
-import sandulyak from '@/images/quiz/questions/sandulyak.png';
+import sandulyak from '@/images/quiz/questions/sandulyak-min.png';
 
 const QuizSectionModalWinFirstQuestionVariantD: FC<IProps> = ({
   variant: { text },

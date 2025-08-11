@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import PlayVideoBtnLine from '@/icons/about/play-video-btn-line.svg?react';
-import videoBg from '@/images/about/video-bg.png';
+import videoBg from '@/images/about/video-bg-min.png';
 import { animations } from '@/constants';
 import { IStyledLevkoProps } from './AboutSectionContentVideo.types';
 import { css } from '@emotion/react';

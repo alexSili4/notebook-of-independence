@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import decorativeStar from '@/images/about/decorative-star.png';
+import decorativeStar from '@/images/about/decorative-star-min.png';
 import {
   Container,
   DecorativeStar,

@@ -1,10 +1,10 @@
 import { FC } from 'react';
-import leftDecorativeImgMob from '@/images/newHistory/left-decorative-img-mob.png';
-import leftDecorativeImgDesk from '@/images/newHistory/left-decorative-img-desk.png';
-import rightDecorativeImgDesk from '@/images/newHistory/right-decorative-img-desk.png';
-import rightDecorativeImgMob from '@/images/newHistory/right-decorative-img-mob.png';
-import sectionBgDesk from '@/images/newHistory/section-bg-desk.png';
-import sectionBgMob from '@/images/newHistory/section-bg-mob.png';
+import leftDecorativeImgMob from '@/images/newHistory/left-decorative-img-mob-min.png';
+import leftDecorativeImgDesk from '@/images/newHistory/left-decorative-img-desk-min.png';
+import rightDecorativeImgDesk from '@/images/newHistory/right-decorative-img-desk-min.png';
+import rightDecorativeImgMob from '@/images/newHistory/right-decorative-img-mob-min.png';
+import sectionBgDesk from '@/images/newHistory/section-bg-desk-min.png';
+import sectionBgMob from '@/images/newHistory/section-bg-mob-min.png';
 import {
   BackgroundPicture,
   LeftDecorativePicture,

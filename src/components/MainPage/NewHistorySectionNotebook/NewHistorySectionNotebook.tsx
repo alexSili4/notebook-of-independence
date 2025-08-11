@@ -5,22 +5,22 @@ import {
   Image,
   NotebookWrap,
 } from './NewHistorySectionNotebook.styled';
-import page1 from '@/images/newHistory/notebook/page-1.jpg';
-import page2 from '@/images/newHistory/notebook/page-2.jpg';
-import page3 from '@/images/newHistory/notebook/page-3.jpg';
-import page4 from '@/images/newHistory/notebook/page-4.jpg';
-import page5 from '@/images/newHistory/notebook/page-5.jpg';
-import page6 from '@/images/newHistory/notebook/page-6.jpg';
-import page7 from '@/images/newHistory/notebook/page-7.jpg';
-import page8 from '@/images/newHistory/notebook/page-8.jpg';
-import page9 from '@/images/newHistory/notebook/page-9.jpg';
-import page10 from '@/images/newHistory/notebook/page-10.jpg';
-import page11 from '@/images/newHistory/notebook/page-11.jpg';
-import page12 from '@/images/newHistory/notebook/page-12.jpg';
-import page13 from '@/images/newHistory/notebook/page-13.jpg';
-import page14 from '@/images/newHistory/notebook/page-14.jpg';
-import page15 from '@/images/newHistory/notebook/page-15.jpg';
-import page16 from '@/images/newHistory/notebook/page-16.jpg';
+import page1 from '@/images/newHistory/notebook/page-1-min.jpg';
+import page2 from '@/images/newHistory/notebook/page-2-min.jpg';
+import page3 from '@/images/newHistory/notebook/page-3-min.jpg';
+import page4 from '@/images/newHistory/notebook/page-4-min.jpg';
+import page5 from '@/images/newHistory/notebook/page-5-min.jpg';
+import page6 from '@/images/newHistory/notebook/page-6-min.jpg';
+import page7 from '@/images/newHistory/notebook/page-7-min.jpg';
+import page8 from '@/images/newHistory/notebook/page-8-min.jpg';
+import page9 from '@/images/newHistory/notebook/page-9-min.jpg';
+import page10 from '@/images/newHistory/notebook/page-10-min.jpg';
+import page11 from '@/images/newHistory/notebook/page-11-min.jpg';
+import page12 from '@/images/newHistory/notebook/page-12-min.jpg';
+import page13 from '@/images/newHistory/notebook/page-13-min.jpg';
+import page14 from '@/images/newHistory/notebook/page-14-min.jpg';
+import page15 from '@/images/newHistory/notebook/page-15-min.jpg';
+import page16 from '@/images/newHistory/notebook/page-16-min.jpg';
 import { BtnClickEvent, PageFlipOrNull } from '@/types/types';
 import NewHistorySectionNotebookControls from '@MainPageComponents/NewHistorySectionNotebookControls';
 import { makeBlur } from '@/utils';

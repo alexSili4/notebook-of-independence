@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
-import sectionBgMob from '@/images/azov/section-bg-mob.png';
-import sectionBgDesk from '@/images/azov/section-bg-desk.png';
+import sectionBgMob from '@/images/azov/section-bg-mob-min.png';
+import sectionBgDesk from '@/images/azov/section-bg-desk-min.png';
 import Logo from '@/icons/azov/logo.svg?react';
 import Line from '@/icons/azov/line.svg?react';
 

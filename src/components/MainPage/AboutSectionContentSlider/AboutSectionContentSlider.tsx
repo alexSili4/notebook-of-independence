@@ -6,7 +6,7 @@ import AnimatedAboutSectionContentSlideThird from '@AnimatedMainPageComponents/A
 import AnimatedAboutSectionContentSlideFourth from '@AnimatedMainPageComponents/AnimatedAboutSectionContentSlideFourth';
 import AnimatedAboutSectionContentSlideFifth from '@AnimatedMainPageComponents/AnimatedAboutSectionContentSlideFifth';
 import { Container, DecorativeLines } from './AboutSectionContentSlider.styled';
-import decorativeLines from '@/images/about/decorative-lines-mob.png';
+import decorativeLines from '@/images/about/decorative-lines-mob-min.png';
 import { IProps } from './AboutSectionContentSlider.types';
 import { useInView } from 'framer-motion';
 import AboutSectionContentSliderPagination from '@MainPageComponents/AboutSectionContentSliderPagination';

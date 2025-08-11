@@ -8,9 +8,9 @@ import {
 } from './DonationSection.styled';
 import GeneralContainer from '@GeneralComponents/GeneralContainer';
 import DonationSectionLinks from '@MainPageComponents/DonationSectionLinks';
-import sectionTexture from '@/images/donation/section-texture.png';
-import sectionBgDesk from '@/images/donation/section-bg-desk.png';
-import sectionBgMob from '@/images/donation/section-bg-mob.png';
+import sectionTexture from '@/images/donation/section-texture-min.png';
+import sectionBgDesk from '@/images/donation/section-bg-desk-min.png';
+import sectionBgMob from '@/images/donation/section-bg-mob-min.png';
 import AnimatedDonationSectionPaymentDetails from '@AnimatedMainPageComponents/AnimatedDonationSectionPaymentDetails';
 import { IProps } from './DonationSection.types';
 import DonationSectionDecorativeElements from '@MainPageComponents/DonationSectionDecorativeElements';

@@ -1,6 +1,6 @@
 import { FC } from 'react';
-import arrowPrev from '@/images/newHistory/arrow-prev.png';
-import arrowNext from '@/images/newHistory/arrow-next.png';
+import arrowPrev from '@/images/newHistory/arrow-prev-min.png';
+import arrowNext from '@/images/newHistory/arrow-next-min.png';
 import {
   Container,
   Button,

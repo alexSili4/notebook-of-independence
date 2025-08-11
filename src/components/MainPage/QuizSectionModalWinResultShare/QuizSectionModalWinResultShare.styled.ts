@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import resultShareBg from '@/images/quiz/questions/result-share-bg.jpg';
+import resultShareBg from '@/images/quiz/questions/result-share-bg-min.jpg';
 import Linkedin from '@/icons/quiz/questions/linkedin.svg?react';
 import Facebook from '@/icons/quiz/questions/facebook.svg?react';
 import Instagram from '@/icons/quiz/questions/instagram.svg?react';

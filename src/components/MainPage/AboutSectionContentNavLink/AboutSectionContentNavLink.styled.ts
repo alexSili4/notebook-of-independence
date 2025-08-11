@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import wayLink from '@/images/about/way-link.png';
+import wayLink from '@/images/about/way-link-min.png';
 
 export const Container = styled.span`
   display: block;

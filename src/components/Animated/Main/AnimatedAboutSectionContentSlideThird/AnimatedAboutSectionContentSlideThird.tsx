@@ -12,9 +12,9 @@ import {
 import { IProps } from './AnimatedAboutSectionContentSlideThird.types';
 import { Transition, VariantLabels, Variants } from 'framer-motion';
 import AboutSectionContentImagesMarker from '@MainPageComponents/AboutSectionContentImagesMarker';
-import photoBg from '@/images/about/decorative-background.png';
-import photo from '@/images/about/photo-top-left.png';
-import star from '@/images/about/decorative-star.png';
+import photoBg from '@/images/about/decorative-background-min.png';
+import photo from '@/images/about/photo-top-left-min.png';
+import star from '@/images/about/decorative-star-min.png';
 
 const AnimatedAboutSectionContentSlideThird: FC<IProps> = ({
   animationDuration,

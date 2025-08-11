@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
-import sectionBgDesk from '@/images/quiz/questions/section-bg-desk.png';
-import sectionBgMob from '@/images/quiz/questions/section-bg-mob.png';
+import sectionBgDesk from '@/images/quiz/questions/section-bg-desk-min.png';
+import sectionBgMob from '@/images/quiz/questions/section-bg-mob-min.png';
 
 export const Container = styled.div`
   height: 100%;

@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
-import sectionBgDesk from '@/images/about/section-preview-bg-desk.jpg';
-import sectionBgMob from '@/images/about/section-preview-bg-mob.jpg';
+import sectionBgDesk from '@/images/about/section-preview-bg-desk-min.jpg';
+import sectionBgMob from '@/images/about/section-preview-bg-mob-min.jpg';
 
 export const Background = styled.div`
   height: 100%;

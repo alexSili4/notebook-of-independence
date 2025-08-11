@@ -6,7 +6,7 @@ import {
   CheckImg,
   CheckWrap,
 } from './QuizSectionModalWinQuestionRadioBtn.styled';
-import check from '@/images/quiz/check.png';
+import check from '@/images/quiz/check-min.png';
 
 const QuizSectionModalWinQuestionRadioBtn: FC<IProps> = ({
   onChange,

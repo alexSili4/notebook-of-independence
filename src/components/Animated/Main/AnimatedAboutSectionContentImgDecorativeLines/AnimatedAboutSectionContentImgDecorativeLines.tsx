@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import decorativeLines from '@/images/about/decorative-lines.png';
+import decorativeLines from '@/images/about/decorative-lines-min.png';
 import {
   Container,
   DecorativeLines,

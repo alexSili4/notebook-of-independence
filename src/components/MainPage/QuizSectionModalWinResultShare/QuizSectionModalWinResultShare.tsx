@@ -14,9 +14,9 @@ import {
   Star,
   Light,
 } from './QuizSectionModalWinResultShare.styled';
-import photo from '@/images/quiz/questions/photo.png';
-import star from '@/images/quiz/questions/star.png';
-import light from '@/images/quiz/questions/light.png';
+import photo from '@/images/quiz/questions/photo-min.png';
+import star from '@/images/quiz/questions/star-min.png';
+import light from '@/images/quiz/questions/light-min.png';
 
 const QuizSectionModalWinResultShare: FC = () => {
   return (

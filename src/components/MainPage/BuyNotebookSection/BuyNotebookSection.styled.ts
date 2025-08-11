@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
-import sectionBgDesk from '@/images/buyNotebook/section-bg-desk.png';
-import sectionBgMob from '@/images/buyNotebook/section-bg-mob.png';
+import sectionBgDesk from '@/images/buyNotebook/section-bg-desk-min.png';
+import sectionBgMob from '@/images/buyNotebook/section-bg-mob-min.png';
 
 export const Section = styled.section`
   width: 100%;

@@ -1,7 +1,7 @@
 import { FC } from 'react';
-import photo from '@/images/chronicle/secondStep/photo.png';
-import pageLight from '@/images/chronicle/secondStep/page-light.png';
-import pageDark from '@/images/chronicle/secondStep/page-dark.png';
+import photo from '@/images/chronicle/secondStep/photo-min.png';
+import pageLight from '@/images/chronicle/secondStep/page-light-min.png';
+import pageDark from '@/images/chronicle/secondStep/page-dark-min.png';
 import {
   Photo,
   PageDark,

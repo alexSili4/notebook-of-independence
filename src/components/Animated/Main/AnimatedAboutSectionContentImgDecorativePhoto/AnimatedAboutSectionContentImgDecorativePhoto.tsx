@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import decorativePhoto from '@/images/about/decorative-photo.png';
+import decorativePhoto from '@/images/about/decorative-photo-min.png';
 import {
   DecorativePhoto,
   Container,
