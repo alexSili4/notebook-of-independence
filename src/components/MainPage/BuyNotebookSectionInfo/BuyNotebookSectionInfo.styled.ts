@@ -143,7 +143,7 @@ export const BuyLink = styled.a`
 
 export const BuyDesc = styled.p`
   color: rgba(0, 0, 0, 0.32);
-  font-family: Inter;
+  font-family: ${({ theme }) => theme.fontFamily.inter};
   font-size: 18.92px;
   font-weight: 900;
   line-height: 1;

@@ -25,7 +25,7 @@ const Main: FC<IProps> = ({ updateShowFullScreenHeroVideo }) => {
   });
   const scrollProgress = useTransform(
     scrollYProgress,
-    [0, 0.2, 0.8, 1],
+    [0, 0.1, 0.9, 1],
     [0, 0, 17, 17],
     {
       clamp: true,

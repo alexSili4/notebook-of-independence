@@ -1,7 +1,15 @@
 import { FC } from 'react';
 import { Global, css } from '@emotion/react';
 import 'modern-normalize';
-import { interBold, interRegular, gogolRegular } from '@/fonts';
+import {
+  interBold,
+  interRegular,
+  gogolRegular,
+  interMedium,
+  interBlack,
+  interSemiBold,
+  interExtraBold,
+} from '@/fonts';
 import { theme } from '@/constants';
 import 'swiper/css';
 
@@ -25,8 +33,36 @@ const GlobalStyles: FC = () => (
       @font-face {
         font-family: ${theme.fontFamily.inter};
         src: local(${theme.fontFamily.inter}),
+          url(${interMedium}) format('truetype');
+        font-weight: 500;
+      }
+
+      @font-face {
+        font-family: ${theme.fontFamily.inter};
+        src: local(${theme.fontFamily.inter}),
+          url(${interSemiBold}) format('truetype');
+        font-weight: 600;
+      }
+
+      @font-face {
+        font-family: ${theme.fontFamily.inter};
+        src: local(${theme.fontFamily.inter}),
           url(${interBold}) format('truetype');
         font-weight: 700;
+      }
+
+      @font-face {
+        font-family: ${theme.fontFamily.inter};
+        src: local(${theme.fontFamily.inter}),
+          url(${interExtraBold}) format('truetype');
+        font-weight: 800;
+      }
+
+      @font-face {
+        font-family: ${theme.fontFamily.inter};
+        src: local(${theme.fontFamily.inter}),
+          url(${interBlack}) format('truetype');
+        font-weight: 900;
       }
 
       body {

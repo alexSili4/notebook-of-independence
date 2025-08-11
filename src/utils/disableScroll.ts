@@ -9,7 +9,6 @@ const disableScroll = () => {
   window.addEventListener('keydown', preventArrowKeys, {
     passive: false,
   });
-  document.body.style.overflow = 'hidden';
 };
 
 export default disableScroll;
