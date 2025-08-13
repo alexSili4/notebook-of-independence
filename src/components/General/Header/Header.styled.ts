@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 import Silpo from '@/icons/header/silpo.svg?react';
 import Logo from '@/icons/header/logo.svg?react';
+import { IStyledSilpoIconProps } from './Header.types';
 
 export const StyledHeader = styled.header``;
 
@@ -18,19 +19,17 @@ export const Container = styled.div`
 export const List = styled.ul`
   display: flex;
   align-items: center;
-  gap: ${({ theme }) => theme.spacing(2)}px;
-
-  @media screen and (min-width: ${({ theme }) => theme.breakpoints.desk}px) {
-    gap: ${({ theme }) => theme.spacing(3)}px;
-  }
+  justify-content: space-between;
+  width: 100%;
 `;
 
 export const ListItem = styled.li``;
 
-export const SilpoIcon = styled(Silpo)`
+export const SilpoIcon = styled(Silpo)<IStyledSilpoIconProps>`
   display: block;
   width: 73px;
   height: 29px;
+  opacity: ${({ isFake }) => (isFake ? 0 : 1)};
 
   @media screen and (min-width: ${({ theme }) => theme.breakpoints.desk}px) {
     width: 101px;
@@ -40,12 +39,12 @@ export const SilpoIcon = styled(Silpo)`
 
 export const LogoIcon = styled(Logo)`
   display: block;
-  width: 128px;
-  height: 44px;
+  width: calc(128px * 1.3);
+  height: calc(44px * 1.3);
 
   @media screen and (min-width: ${({ theme }) => theme.breakpoints.desk}px) {
-    width: 142px;
-    height: 49px;
+    width: calc(142px * 1.5);
+    height: calc(49px * 1.5);
   }
 `;
 

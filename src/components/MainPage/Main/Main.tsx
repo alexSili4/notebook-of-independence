@@ -25,7 +25,7 @@ const Main: FC<IProps> = ({ updateShowFullScreenHeroVideo }) => {
   });
   const scrollProgress = useTransform(
     scrollYProgress,
-    [0, 0.1, 0.9, 1],
+    [0, 0.07, 0.9, 1],
     [0, 0, 17, 17],
     {
       clamp: true,
@@ -91,6 +91,10 @@ const Main: FC<IProps> = ({ updateShowFullScreenHeroVideo }) => {
   }, [heroSectionVideoInView, updateShowFullScreenHeroVideo]);
 
   useEffect(() => {
+    if (!isDesk) {
+      return;
+    }
+
     disableScroll();
 
     timerId.current = setTimeout(() => {

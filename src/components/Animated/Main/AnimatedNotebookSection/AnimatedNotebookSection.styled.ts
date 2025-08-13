@@ -10,5 +10,6 @@ export const Container = styled(motion.div)`
 `;
 
 export const Element = styled(motion.div)`
+  position: relative;
   pointer-events: all;
 `;

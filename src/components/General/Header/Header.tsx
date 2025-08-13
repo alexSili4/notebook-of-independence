@@ -5,20 +5,10 @@ import {
   List,
   ListItem,
   LogoIcon,
-  MenuBtn,
   SilpoIcon,
 } from './Header.styled';
-import { FaGripLines } from 'react-icons/fa';
-import { BtnClickEvent } from '@/types/types';
-import { makeBlur } from '@/utils';
 
 const Header: FC = () => {
-  const onMenuBtnClick = (e: BtnClickEvent) => {
-    makeBlur(e.currentTarget);
-
-    console.log('onMenuBtnClick');
-  };
-
   return (
     <StyledHeader>
       <Container>
@@ -29,10 +19,13 @@ const Header: FC = () => {
           <ListItem>
             <LogoIcon />
           </ListItem>
+          <ListItem>
+            <SilpoIcon isFake />
+          </ListItem>
         </List>
-        <MenuBtn type='button' onClick={onMenuBtnClick}>
+        {/* <MenuBtn type='button' onClick={onMenuBtnClick}>
           <FaGripLines size={19} />
-        </MenuBtn>
+        </MenuBtn> */}
       </Container>
     </StyledHeader>
   );

@@ -4,6 +4,7 @@ import Telegram from '@/icons/notebook/telegram.svg?react';
 import Instagram from '@/icons/notebook/instagram.svg?react';
 import Discord from '@/icons/notebook/discord.svg?react';
 import styled from '@emotion/styled';
+import { FaXTwitter } from 'react-icons/fa6';
 
 export const List = styled.ul`
   display: flex;
@@ -73,5 +74,16 @@ export const TelegramIcon = styled(Telegram)`
 
   @media screen and (min-width: ${({ theme }) => theme.breakpoints.desk}px) {
     width: 27px;
+  }
+`;
+
+export const XIcon = styled(FaXTwitter)`
+  width: 23px;
+  height: 23px;
+  color: ${({ theme }) => theme.colors.white};
+
+  @media screen and (min-width: ${({ theme }) => theme.breakpoints.desk}px) {
+    width: 27px;
+    height: 27px;
   }
 `;

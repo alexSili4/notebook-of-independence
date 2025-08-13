@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 
 export const Container = styled(motion.div)`
   position: absolute;
+  pointer-events: none;
 
   @media screen and (min-width: ${({ theme }) => theme.breakpoints.desk}px) {
     top: 0;

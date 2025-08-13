@@ -34,7 +34,7 @@ const BuyNotebookSectionInfo: FC<IProps> = ({ isDesk }) => {
             <AccentIconDesk />
           </TextWrap>
         </TitleWrap>
-        <Price>50 грн</Price>
+        <Price>49,99 грн</Price>
       </Content>
       <Info>
         <BuyNotebookSectionInfoDelivery isDesk={isDesk} />
