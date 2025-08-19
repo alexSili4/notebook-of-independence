@@ -29,7 +29,7 @@ const AnimatedQuizSectionModalWin: FC<IProps> = ({
     },
     exit: {
       y: '100%',
-      transition,
+      transition: { ...transition, bounce: 0, duration: 2 },
     },
   };
 
@@ -44,7 +44,7 @@ const AnimatedQuizSectionModalWin: FC<IProps> = ({
             exit='exit'
           >
             <QuizSectionModalWin
-              onCloseModalWinBtnClick={setModalWinState}
+              setModalWinState={setModalWinState}
               questions={questions}
             />
           </Container>

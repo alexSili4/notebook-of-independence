@@ -4,7 +4,11 @@ import { IProps } from './AnimatedDonationSection.types';
 import { Element, Container } from './AnimatedDonationSection.styled';
 import { Transition, VariantLabels, Variants } from 'framer-motion';
 
-const AnimatedDonationSection: FC<IProps> = ({ animationDuration, inView }) => {
+const AnimatedDonationSection: FC<IProps> = ({
+  animationDuration,
+  inView,
+  onGoBackBtnClick,
+}) => {
   const animate: VariantLabels = inView ? 'visible' : 'hidden';
 
   const containerVariants: Variants = {
@@ -35,6 +39,7 @@ const AnimatedDonationSection: FC<IProps> = ({ animationDuration, inView }) => {
         <DonationSection
           animationDuration={animationDuration}
           inView={inView}
+          onGoBackBtnClick={onGoBackBtnClick}
         />
       </Element>
     </Container>

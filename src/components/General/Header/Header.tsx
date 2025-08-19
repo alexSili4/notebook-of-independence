@@ -2,27 +2,23 @@ import { FC } from 'react';
 import {
   Container,
   StyledHeader,
-  List,
-  ListItem,
+  Content,
   LogoIcon,
   SilpoIcon,
+  XIcon,
 } from './Header.styled';
 
 const Header: FC = () => {
   return (
     <StyledHeader>
       <Container>
-        <List>
-          <ListItem>
-            <SilpoIcon />
-          </ListItem>
-          <ListItem>
-            <LogoIcon />
-          </ListItem>
-          <ListItem>
-            <SilpoIcon isFake />
-          </ListItem>
-        </List>
+        <Content>
+          <SilpoIcon />
+          <XIcon />
+          <LogoIcon />
+          <XIcon isFake />
+          <SilpoIcon isFake />
+        </Content>
         {/* <MenuBtn type='button' onClick={onMenuBtnClick}>
           <FaGripLines size={19} />
         </MenuBtn> */}

@@ -9,6 +9,7 @@ const AnimatedHeader: FC<IProps> = ({
   animationDelay,
   animationDuration,
   showFullScreenHeroVideo,
+  isDesk,
 }) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const inView = useInView(containerRef);
@@ -30,10 +31,15 @@ const AnimatedHeader: FC<IProps> = ({
   const elementVariants: Variants = {
     hidden: {
       y: '-100%',
-      transition,
+      opacity: isDesk ? 1 : 0,
+      transition: {
+        y: transition,
+        opacity: { ...transition, delay: animationDuration },
+      },
     },
     visible: {
       y: 0,
+      opacity: 1,
       transition: {
         ...transition,
         delay: isFirstRender ? animationDelay : 0,

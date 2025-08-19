@@ -4,6 +4,7 @@ export interface IProps {
   videoInView: boolean;
   animationDuration: number;
   isDesk: boolean;
+  nextSectionInView: boolean;
 }
 
 export interface IStyledElementProps {
@@ -15,4 +16,12 @@ export interface IStyledElementProps {
 
 export interface IStyledVideoWrapProps {
   videoInView: boolean;
+}
+
+export interface IStyledMutedBtnProps {
+  inView: boolean;
+}
+
+export interface IStyledVolumeIconProps {
+  show: boolean;
 }

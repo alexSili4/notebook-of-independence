@@ -118,7 +118,7 @@ export const BuyInfo = styled.div`
   gap: ${({ theme }) => theme.spacing(4)}px;
 
   @media screen and (min-width: ${({ theme }) => theme.breakpoints.desk}px) {
-    gap: ${({ theme }) => theme.spacing(8)}px;
+    gap: ${({ theme }) => theme.spacing(17)}px;
   }
 `;
 
@@ -151,7 +151,6 @@ export const BuyDesc = styled.p`
   text-transform: uppercase;
 
   @media screen and (min-width: ${({ theme }) => theme.breakpoints.desk}px) {
-    font-size: 31.21px;
-    letter-spacing: -1.9px;
+    display: none;
   }
 `;

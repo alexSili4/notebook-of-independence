@@ -15,10 +15,10 @@ export const Element = styled(motion.div)`
 
 export const PhotoLeft = styled.img`
   position: absolute;
-  top: -75px;
+  top: 10px;
   left: -220px;
-  width: 414px;
-  height: 311px;
+  width: 300px;
+  rotate: -10deg;
 
   @media screen and (max-width: ${({ theme }) =>
       theme.breakpoints.desk - 1}px) {

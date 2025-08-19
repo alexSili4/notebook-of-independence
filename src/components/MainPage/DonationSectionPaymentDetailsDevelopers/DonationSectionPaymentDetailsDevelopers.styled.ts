@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 export const Container = styled.div`
   position: absolute;
   z-index: 10;
-  bottom: 0;
+  bottom: 60px;
   left: 0;
   display: flex;
   justify-content: space-between;
@@ -12,6 +12,7 @@ export const Container = styled.div`
   padding-bottom: ${({ theme }) => theme.spacing(4)}px;
 
   @media screen and (min-width: ${({ theme }) => theme.breakpoints.desk}px) {
+    bottom: 0;
     padding-top: ${({ theme }) => theme.spacing(8)}px;
     padding-bottom: ${({ theme }) => theme.spacing(8)}px;
   }

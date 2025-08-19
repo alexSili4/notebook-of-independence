@@ -16,7 +16,11 @@ import { IProps } from './DonationSection.types';
 import DonationSectionDecorativeElements from '@MainPageComponents/DonationSectionDecorativeElements';
 import { theme } from '@/constants';
 
-const DonationSection: FC<IProps> = ({ animationDuration, inView }) => {
+const DonationSection: FC<IProps> = ({
+  animationDuration,
+  inView,
+  onGoBackBtnClick,
+}) => {
   const deskMedia = `(min-width: ${theme.breakpoints.desk}px)`;
 
   return (
@@ -25,7 +29,7 @@ const DonationSection: FC<IProps> = ({ animationDuration, inView }) => {
         <Background>
           <Container>
             <DonationSectionDecorativeElements />
-            <DonationSectionLinks />
+            <DonationSectionLinks onGoBackBtnClick={onGoBackBtnClick} />
             <AnimatedDonationSectionPaymentDetails
               animationDuration={animationDuration}
               inView={inView}

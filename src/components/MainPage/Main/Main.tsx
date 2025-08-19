@@ -1,8 +1,7 @@
-import { FC, useEffect, useRef, useState } from 'react';
+import { FC, useEffect, useRef, useState, WheelEvent } from 'react';
 import { IProps } from './Main.types';
-import { useScroll, useTransform } from 'framer-motion';
 import { Container } from './Main.styled';
-import { useIsDesk, useIsScrollingPageUp } from '@/hooks';
+import { useIsScrollingPageUp } from '@/hooks';
 import HeroSection from '@MainPageComponents/HeroSection';
 import AnimatedChronicleSection from '@AnimatedMainPageComponents/AnimatedChronicleSection';
 import AnimatedAboutSection from '@AnimatedMainPageComponents/AnimatedAboutSection';
@@ -12,26 +11,14 @@ import AnimatedNotebookSection from '@AnimatedMainPageComponents/AnimatedNoteboo
 import AnimatedBuyNotebookSection from '@AnimatedMainPageComponents/AnimatedBuyNotebookSection';
 import AnimatedQuizSection from '@AnimatedMainPageComponents/AnimatedQuizSection';
 import AnimatedDonationSection from '@AnimatedMainPageComponents/AnimatedDonationSection';
-import { disableScroll, unDisableScroll } from '@/utils';
+import { NumberOrNull } from '@/types/types';
 
-const Main: FC<IProps> = ({ updateShowFullScreenHeroVideo }) => {
+const Main: FC<IProps> = ({ updateShowFullScreenHeroVideo, isDesk }) => {
   const [progress, setProgress] = useState<number>(0);
+  const [isScrolling, setIsScrolling] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
-  const timerId = useRef<NodeJS.Timeout>();
+  const touchStartY = useRef<NumberOrNull>(null);
 
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ['start end', 'end start'],
-  });
-  const scrollProgress = useTransform(
-    scrollYProgress,
-    [0, 0.07, 0.9, 1],
-    [0, 0, 17, 17],
-    {
-      clamp: true,
-    }
-  );
-  const isDesk = useIsDesk();
   const isScrollingPageUp = useIsScrollingPageUp();
 
   const heroSectionVideoInView = progress >= 1;
@@ -76,61 +63,101 @@ const Main: FC<IProps> = ({ updateShowFullScreenHeroVideo }) => {
     ? notebookSectionAnimationDuration
     : generalAnimationDuration;
 
-  useEffect(() => {
-    const onProgressChange = (value: number) => {
-      setProgress(value);
-    };
+  const onGoBackBtnClick = () => {
+    setProgress(0);
+  };
 
-    const unsubscribe = scrollProgress.on('change', onProgressChange);
+  const incrementProgress = () => {
+    if (progress === 17) {
+      return;
+    }
 
-    return () => unsubscribe();
-  }, []);
+    setProgress((prevState) => prevState + 1);
+  };
+
+  const decrementProgress = () => {
+    if (progress === 0) {
+      return;
+    }
+
+    setProgress((prevState) => prevState - 1);
+  };
+
+  const onWheel = (e: WheelEvent<HTMLDivElement>) => {
+    if (isScrolling) return;
+
+    if (e.deltaY > 0) {
+      incrementProgress();
+    } else if (e.deltaY < 0) {
+      decrementProgress();
+    }
+
+    setIsScrolling(true);
+    setTimeout(() => setIsScrolling(false), 2000);
+  };
 
   useEffect(() => {
     updateShowFullScreenHeroVideo(heroSectionVideoInView);
   }, [heroSectionVideoInView, updateShowFullScreenHeroVideo]);
 
   useEffect(() => {
-    if (!isDesk) {
-      return;
-    }
+    const incrementProgress = () => {
+      if (progress === 17) {
+        return;
+      }
 
-    disableScroll();
+      setProgress((prevState) => prevState + 1);
+    };
 
-    timerId.current = setTimeout(() => {
-      unDisableScroll();
-    }, 3000);
+    const decrementProgress = () => {
+      if (progress === 0) {
+        return;
+      }
+
+      setProgress((prevState) => prevState - 1);
+    };
+
+    const onTouchend = (e: TouchEvent) => {
+      if (touchStartY.current === null || isScrolling) {
+        return;
+      }
+
+      const diff = touchStartY.current - e.changedTouches[0].clientY;
+
+      if (Math.abs(diff) > 30) {
+        if (diff > 0) {
+          incrementProgress();
+        } else {
+          decrementProgress();
+        }
+      }
+
+      setIsScrolling(true);
+      setTimeout(() => setIsScrolling(false), 2000);
+      touchStartY.current = null;
+    };
+
+    const onTouchstart = (e: TouchEvent) => {
+      touchStartY.current = e.changedTouches[0].clientY;
+    };
+
+    document.body.addEventListener('touchend', onTouchend);
+    document.addEventListener('touchstart', onTouchstart);
 
     return () => {
-      clearTimeout(timerId.current);
+      document.body.removeEventListener('touchend', onTouchend);
+      document.removeEventListener('touchstart', onTouchstart);
     };
-  }, [
-    heroSectionVideoInView,
-    newHistorySectionInView,
-    newHistorySectionNotebookInView,
-    aboutSectionInView,
-    aboutSectionContentInView,
-    aboutSectionContentVideoInView,
-    chronicleSectionInView,
-    chronicleSectionFirstStepInView,
-    chronicleSectionSecondStepInView,
-    chronicleSectionThirdStepInView,
-    chronicleSectionFourthStepInView,
-    chronicleSectionFifthStepInView,
-    chronicleSectionContentInView,
-    azovSectionInView,
-    notebookSectionInView,
-    quizSectionInView,
-    donationSectionInView,
-  ]);
+  }, [isScrolling, progress]);
 
   return (
-    <Container ref={containerRef}>
+    <Container ref={containerRef} onWheel={onWheel}>
       <HeroSection
         animationDuration={generalAnimationDuration}
         animationDelay={1}
         isDesk={isDesk}
         videoInView={heroSectionVideoInView}
+        nextSectionInView={newHistorySectionInView}
       />
       <AnimatedNewHistorySection
         animationDuration={generalAnimationDuration}
@@ -191,6 +218,7 @@ const Main: FC<IProps> = ({ updateShowFullScreenHeroVideo }) => {
       <AnimatedDonationSection
         animationDuration={generalAnimationDuration}
         inView={donationSectionInView}
+        onGoBackBtnClick={onGoBackBtnClick}
       />
     </Container>
   );

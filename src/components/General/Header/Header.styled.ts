@@ -1,7 +1,8 @@
 import styled from '@emotion/styled';
 import Silpo from '@/icons/header/silpo.svg?react';
 import Logo from '@/icons/header/logo.svg?react';
-import { IStyledSilpoIconProps } from './Header.types';
+import { IStyledSilpoIconProps, IStyleXIconProps } from './Header.types';
+import { RxCross1 } from 'react-icons/rx';
 
 export const StyledHeader = styled.header``;
 
@@ -16,14 +17,18 @@ export const Container = styled.div`
   }
 `;
 
-export const List = styled.ul`
+export const Content = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   width: 100%;
-`;
+  gap: ${({ theme }) => theme.spacing(2)}px;
 
-export const ListItem = styled.li``;
+  @media screen and (min-width: ${({ theme }) => theme.breakpoints.desk}px) {
+    justify-content: space-between;
+    gap: 0;
+  }
+`;
 
 export const SilpoIcon = styled(Silpo)<IStyledSilpoIconProps>`
   display: block;
@@ -35,12 +40,33 @@ export const SilpoIcon = styled(Silpo)<IStyledSilpoIconProps>`
     width: 101px;
     height: 39px;
   }
+
+  @media screen and (max-width: ${({ theme }) =>
+      theme.breakpoints.desk - 1}px) {
+    display: ${({ isFake }) => isFake && 'none'};
+  }
+`;
+
+export const XIcon = styled(RxCross1)<IStyleXIconProps>`
+  width: 20px;
+  height: 20px;
+  color: #515151;
+  opacity: ${({ isFake }) => (isFake ? 0 : 1)};
+
+  @media screen and (min-width: ${({ theme }) => theme.breakpoints.desk}px) {
+    display: none;
+  }
+
+  @media screen and (max-width: ${({ theme }) =>
+      theme.breakpoints.desk - 1}px) {
+    display: ${({ isFake }) => isFake && 'none'};
+  }
 `;
 
 export const LogoIcon = styled(Logo)`
   display: block;
-  width: calc(128px * 1.3);
-  height: calc(44px * 1.3);
+  width: 128px;
+  height: 44px;
 
   @media screen and (min-width: ${({ theme }) => theme.breakpoints.desk}px) {
     width: calc(142px * 1.5);

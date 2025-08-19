@@ -57,10 +57,40 @@ export const Container = styled.div`
   }
 `;
 
+export const Content = styled.div`
+  @media screen and (min-width: ${({ theme }) => theme.breakpoints.desk}px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: ${({ theme }) => theme.spacing(5)}px;
+    height: 100%;
+  }
+`;
+
 export const Notebook = styled.img`
-  height: 235px;
+  @media screen and (max-width: ${({ theme }) =>
+      theme.breakpoints.desk - 1}px) {
+    height: 235px;
+  }
 
   @media screen and (min-width: ${({ theme }) => theme.breakpoints.desk}px) {
     height: 100%;
+    aspect-ratio: 2126 / 2516;
+  }
+`;
+
+export const NotebookDesc = styled.p`
+  color: rgba(0, 0, 0, 0.32);
+  font-family: ${({ theme }) => theme.fontFamily.inter};
+  font-weight: 900;
+  font-size: 28.68px;
+  line-height: 1;
+  letter-spacing: -1.74px;
+  text-transform: uppercase;
+
+  @media screen and (max-width: ${({ theme }) =>
+      theme.breakpoints.desk - 1}px) {
+    display: none;
   }
 `;

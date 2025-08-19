@@ -1,13 +1,18 @@
-import { FC } from 'react';
+import { FC, useEffect, useState } from 'react';
 import {
   Container,
   StyledReactPlayer,
   Element,
+  MutedBtn,
+  VolumeHighIcon,
+  VolumeMuteIcon,
 } from './AnimatedHeroSectionFullscreenVideo.styled';
 import heroVideo from '@/video/hero.mp4';
 import { IProps } from './AnimatedHeroSectionFullscreenVideo.types';
 import { Transition, VariantLabels, Variants } from 'framer-motion';
 import { useIsFirsRender } from '@/hooks';
+import { BtnClickEvent } from '@/types/types';
+import { makeBlur } from '@/utils';
 
 const HeroSectionVideo: FC<IProps> = ({
   animationDelay,
@@ -15,7 +20,9 @@ const HeroSectionVideo: FC<IProps> = ({
   animationDuration,
   inView,
   isDesk,
+  nextSectionInView,
 }) => {
+  const [muted, setMuted] = useState<boolean>(true);
   const { isFirstRender, updateIsFirsRender } = useIsFirsRender();
   const animate: VariantLabels = videoInView
     ? 'visible'
@@ -60,6 +67,22 @@ const HeroSectionVideo: FC<IProps> = ({
     },
   };
 
+  const toggleMuted = () => {
+    setMuted((prevState) => !prevState);
+  };
+
+  const onMutedBtnClick = (e: BtnClickEvent) => {
+    makeBlur(e.currentTarget);
+
+    toggleMuted();
+  };
+
+  useEffect(() => {
+    if (nextSectionInView && !muted) {
+      setMuted(true);
+    }
+  }, [nextSectionInView, muted]);
+
   return (
     <Container
       animate={animate}
@@ -68,7 +91,11 @@ const HeroSectionVideo: FC<IProps> = ({
       onAnimationComplete={updateIsFirsRender}
     >
       <Element variants={elementVariants}>
-        <StyledReactPlayer src={heroVideo} muted loop playing />
+        <StyledReactPlayer src={heroVideo} muted={muted} loop playing />
+        <MutedBtn type='button' onClick={onMutedBtnClick} inView={videoInView}>
+          <VolumeHighIcon show={muted} />
+          <VolumeMuteIcon show={!muted} />
+        </MutedBtn>
       </Element>
     </Container>
   );

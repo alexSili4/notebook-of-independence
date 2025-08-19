@@ -13,7 +13,7 @@ import {
 import AnimatedQuizSectionModalWinResult from '@AnimatedMainPageComponents/AnimatedQuizSectionModalWinResult';
 
 const QuizSectionModalWin: FC<IProps> = ({
-  onCloseModalWinBtnClick,
+  setModalWinState,
   questions: { list: questions, characteristics },
 }) => {
   const [totalQuestions, setTotalQuestions] = useState<number>(0);
@@ -77,6 +77,10 @@ const QuizSectionModalWin: FC<IProps> = ({
 
     setTotalQuestions(totalQuestions);
   }, [questions]);
+
+  const onCloseModalWinBtnClick = () => {
+    setModalWinState();
+  };
 
   return (
     <Container>

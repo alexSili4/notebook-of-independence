@@ -10,6 +10,6 @@ export const Container = styled.div`
 
   @media screen and (max-width: ${({ theme }) =>
       theme.breakpoints.desk - 1}px) {
-    padding-bottom: ${({ theme }) => theme.spacing(16)}px;
+    padding-bottom: ${({ theme }) => theme.spacing(30)}px;
   }
 `;

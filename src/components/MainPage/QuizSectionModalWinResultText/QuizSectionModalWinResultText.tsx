@@ -8,14 +8,9 @@ import {
   TotalScoreText,
   TotalScoreTextPart,
   TotalScoreWrap,
-  TextImg,
   HashtagWrap,
-  TextLineTop,
-  TextLineCenter,
-  TextLineBottom,
   StarMobImg,
 } from './QuizSectionModalWinResultText.styled';
-import text from '@/images/quiz/questions/text-min.png';
 import starMob from '@/images/quiz/questions/star-mob-min.png';
 import { IProps } from './QuizSectionModalWinResultText.types';
 
@@ -30,7 +25,6 @@ const QuizSectionModalWinResultText: FC<IProps> = ({
         <Hashtag>#зошитнезалежності</Hashtag>
       </HashtagWrap>
       <Content>
-        <TextImg src={text} alt='' />
         <CharacteristicWrap>
           <TotalScoreWrap>
             <TotalScoreText>
@@ -40,9 +34,6 @@ const QuizSectionModalWinResultText: FC<IProps> = ({
             </TotalScoreText>
           </TotalScoreWrap>
           <CharacteristicText>{characteristic}</CharacteristicText>
-          <TextLineTop></TextLineTop>
-          <TextLineCenter></TextLineCenter>
-          <TextLineBottom></TextLineBottom>
         </CharacteristicWrap>
       </Content>
       <StarMobImg src={starMob} alt='' />

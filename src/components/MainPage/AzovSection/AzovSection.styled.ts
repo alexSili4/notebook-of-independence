@@ -88,7 +88,6 @@ export const Title = styled.h2`
     font-size: 145.57px;
     line-height: 1;
     letter-spacing: -8.84px;
-    text-transform: uppercase;
   }
 `;
 

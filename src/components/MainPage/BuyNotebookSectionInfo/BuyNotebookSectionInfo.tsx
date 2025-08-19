@@ -17,6 +17,7 @@ import {
 import { ExternalLinks } from '@/constants';
 import BuyNotebookSectionInfoDelivery from '@MainPageComponents/BuyNotebookSectionInfoDelivery';
 import { IProps } from './BuyNotebookSectionInfo.types';
+import BuyNotebookSectionQR from '@MainPageComponents/BuyNotebookSectionQR';
 
 const BuyNotebookSectionInfo: FC<IProps> = ({ isDesk }) => {
   return (
@@ -28,7 +29,7 @@ const BuyNotebookSectionInfo: FC<IProps> = ({ isDesk }) => {
             <Text>
               Це — точна копія зошита, в якому Левко Лукʼяненко написав чернетку
               Акта проголошення Незалежності. Увесь прибуток від продажу йде на
-              підтримку родин захисників — Азов.Супровід.
+              підтримку родин захисників — "ГО «Азов.Супровід»".
             </Text>
             <AccentIconMob />
             <AccentIconDesk />
@@ -46,7 +47,8 @@ const BuyNotebookSectionInfo: FC<IProps> = ({ isDesk }) => {
           >
             Замовити НА SILPO.UA
           </BuyLink>
-          <BuyDesc>100% прибутку НА Азов.Супровід</BuyDesc>
+          <BuyNotebookSectionQR />
+          <BuyDesc>Весь прибуток НА "ГО «Азов.Супровід»"</BuyDesc>
         </BuyInfo>
       </Info>
     </Container>

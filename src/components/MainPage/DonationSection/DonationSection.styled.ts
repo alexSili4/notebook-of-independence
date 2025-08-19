@@ -39,19 +39,25 @@ export const Container = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   height: 100%;
   padding-left: ${({ theme }) => theme.spacing(4)}px;
   padding-right: ${({ theme }) => theme.spacing(4)}px;
 
   @media screen and (min-width: ${({ theme }) => theme.breakpoints.desk}px) {
     flex-direction: row;
+    justify-content: space-between;
     padding-left: ${({ theme }) => theme.spacing(20)}px;
     padding-right: ${({ theme }) => theme.spacing(20)}px;
   }
 
   @media screen and (max-width: ${({ theme }) =>
       theme.breakpoints.desk - 1}px) {
+    justify-content: flex-end;
     padding-top: ${({ theme }) => theme.spacing(6)}px;
+  }
+
+  @media screen and (max-width: ${({ theme }) =>
+      theme.breakpoints.desk - 1}px) and (min-height: 700px) {
+    gap: ${({ theme }) => theme.spacing(16)}px;
   }
 `;

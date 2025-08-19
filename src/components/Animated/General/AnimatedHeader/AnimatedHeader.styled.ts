@@ -8,6 +8,4 @@ export const Container = styled(motion.div)`
   pointer-events: none;
 `;
 
-export const Element = styled(motion.div)`
-  pointer-events: all;
-`;
+export const Element = styled(motion.div)``;

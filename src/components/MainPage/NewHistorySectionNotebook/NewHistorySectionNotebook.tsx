@@ -5,22 +5,18 @@ import {
   Image,
   NotebookWrap,
 } from './NewHistorySectionNotebook.styled';
-import page1 from '@/images/newHistory/notebook/page-1-min.jpg';
-import page2 from '@/images/newHistory/notebook/page-2-min.jpg';
-import page3 from '@/images/newHistory/notebook/page-3-min.jpg';
-import page4 from '@/images/newHistory/notebook/page-4-min.jpg';
-import page5 from '@/images/newHistory/notebook/page-5-min.jpg';
-import page6 from '@/images/newHistory/notebook/page-6-min.jpg';
-import page7 from '@/images/newHistory/notebook/page-7-min.jpg';
-import page8 from '@/images/newHistory/notebook/page-8-min.jpg';
-import page9 from '@/images/newHistory/notebook/page-9-min.jpg';
+import page1 from '@/images/newHistory/notebook/page-01-min.jpg';
+import page2 from '@/images/newHistory/notebook/page-02-min.jpg';
+import page3 from '@/images/newHistory/notebook/page-03-min.jpg';
+import page4 from '@/images/newHistory/notebook/page-04-min.jpg';
+import page5 from '@/images/newHistory/notebook/page-05-min.jpg';
+import page6 from '@/images/newHistory/notebook/page-06-min.jpg';
+import page7 from '@/images/newHistory/notebook/page-07-min.jpg';
+import page8 from '@/images/newHistory/notebook/page-08-min.jpg';
+import page9 from '@/images/newHistory/notebook/page-09-min.jpg';
 import page10 from '@/images/newHistory/notebook/page-10-min.jpg';
 import page11 from '@/images/newHistory/notebook/page-11-min.jpg';
 import page12 from '@/images/newHistory/notebook/page-12-min.jpg';
-import page13 from '@/images/newHistory/notebook/page-13-min.jpg';
-import page14 from '@/images/newHistory/notebook/page-14-min.jpg';
-import page15 from '@/images/newHistory/notebook/page-15-min.jpg';
-import page16 from '@/images/newHistory/notebook/page-16-min.jpg';
 import { BtnClickEvent, PageFlipOrNull } from '@/types/types';
 import NewHistorySectionNotebookControls from '@MainPageComponents/NewHistorySectionNotebookControls';
 import { makeBlur } from '@/utils';
@@ -87,10 +83,6 @@ const NewHistorySectionNotebook: FC<IProps> = ({ isDesk }) => {
           <Image src={page10} alt='' />
           <Image src={page11} alt='' />
           <Image src={page12} alt='' />
-          <Image src={page13} alt='' />
-          <Image src={page14} alt='' />
-          <Image src={page15} alt='' />
-          <Image src={page16} alt='' />
         </HTMLFlipBook>
       </NotebookWrap>
     </Container>

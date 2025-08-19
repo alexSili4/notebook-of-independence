@@ -50,11 +50,11 @@ const questions: IQuestions = {
       variants: [
         {
           text: 'Утвердження',
-          isCorrectAnswer: true,
+          isCorrectAnswer: false,
         },
         {
           text: 'Відродження',
-          isCorrectAnswer: false,
+          isCorrectAnswer: true,
         },
         {
           text: 'Створення',
@@ -71,11 +71,11 @@ const questions: IQuestions = {
       variants: [
         {
           text: '«Ще не вмерла Україна»',
-          isCorrectAnswer: true,
+          isCorrectAnswer: false,
         },
         {
           text: '«Ой, у лузі червона калина»',
-          isCorrectAnswer: false,
+          isCorrectAnswer: true,
         },
         {
           text: '«Пливе кача»',

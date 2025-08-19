@@ -53,7 +53,9 @@ export const Light = styled.img`
 export const ShareBtnsWrap = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: ${({ theme }) => theme.spacing(6)}px;
+  width: 65%;
 `;
 
 export const Title = styled.p`

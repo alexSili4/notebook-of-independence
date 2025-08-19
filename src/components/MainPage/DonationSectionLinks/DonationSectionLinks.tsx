@@ -7,12 +7,14 @@ import {
   ListItem,
   MonoLink,
   Title,
+  GoBackBtn,
 } from './DonationSectionLinks.styled';
+import { IProps } from './DonationSectionLinks.types';
 
-const DonationSectionLinks: FC = () => {
+const DonationSectionLinks: FC<IProps> = ({ onGoBackBtnClick }) => {
   return (
     <Container>
-      <Title>задонатити на Азов.Супровід</Title>
+      <Title>задонатити на "ГО «Азов.Супровід»"</Title>
       <List>
         <ListItem>
           <MonoLink
@@ -31,6 +33,11 @@ const DonationSectionLinks: FC = () => {
           >
             КРИПТОБАНКА
           </CryptoLink>
+        </ListItem>
+        <ListItem>
+          <GoBackBtn type='button' onClick={onGoBackBtnClick}>
+            повернутися нагору
+          </GoBackBtn>
         </ListItem>
       </List>
     </Container>

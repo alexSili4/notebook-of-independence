@@ -31,11 +31,11 @@ const AzovSection: FC<IProps> = ({ animationDuration, inView }) => {
             </Content>
             <TitleContainer>
               <TitleWrap>
-                <TitleDesk>100% прибутку НА Азов.Супровід</TitleDesk>
+                <TitleDesk>Весь прибуток НА «Азов.Супровід»</TitleDesk>
                 <TitleMob>
-                  100%
+                  Весь
                   <br />
-                  прибутку НА Азов.Супровід
+                  прибуток НА «Азов.Супровід»
                 </TitleMob>
                 <LineIcon />
               </TitleWrap>

@@ -49,16 +49,18 @@ export const PageLight = styled.img`
 export const PageDark = styled.img`
   position: absolute;
   z-index: 10;
-  top: -4px;
-  right: -6px;
-  width: 251px;
-  height: 263px;
+  top: 40px;
+  right: 20px;
+  width: 129px;
+  height: 194px;
+  rotate: 27deg;
 
   @media screen and (min-width: ${({ theme }) => theme.breakpoints.desk}px) {
     top: -36px;
+    right: -6px;
     right: -265px;
-    width: 493px;
-    height: 517px;
+    width: 254px;
+    height: 381px;
   }
 `;
 

@@ -3,20 +3,21 @@ import {
   Container,
   ShareBtnsWrap,
   Title,
-  List,
-  ListItem,
-  Button,
-  FacebookIcon,
-  InstagramIcon,
-  LinkedinIcon,
-  TelegramIcon,
   Photo,
   Star,
   Light,
+  // Button,
+  // FacebookIcon,
+  // InstagramIcon,
+  // LinkedinIcon,
+  // List,
+  // ListItem,
+  // TelegramIcon,
 } from './QuizSectionModalWinResultShare.styled';
 import photo from '@/images/quiz/questions/photo-min.png';
 import star from '@/images/quiz/questions/star-min.png';
 import light from '@/images/quiz/questions/light-min.png';
+import QuizSectionModalWinResultShareBtn from '@MainPageComponents/QuizSectionModalWinResultShareBtn';
 
 const QuizSectionModalWinResultShare: FC = () => {
   return (
@@ -26,7 +27,7 @@ const QuizSectionModalWinResultShare: FC = () => {
       <Light src={light} alt='' />
       <ShareBtnsWrap>
         <Title>Поділитись результатом</Title>
-        <List>
+        {/* <List>
           <ListItem>
             <Button type='button'>
               <LinkedinIcon />
@@ -47,7 +48,8 @@ const QuizSectionModalWinResultShare: FC = () => {
               <FacebookIcon />
             </Button>
           </ListItem>
-        </List>
+        </List> */}
+        <QuizSectionModalWinResultShareBtn />
       </ShareBtnsWrap>
     </Container>
   );

@@ -8,6 +8,7 @@ import QuizSectionModalWinResultText from '@MainPageComponents/QuizSectionModalW
 import QuizSectionModalWinResultShare from '@MainPageComponents/QuizSectionModalWinResultShare';
 import resultBg from '@/images/quiz/questions/result-bg-min.png';
 import { IProps } from './QuizSectionModalWinResult.types';
+import QuizSectionModalWinResultShareBtn from '@MainPageComponents/QuizSectionModalWinResultShareBtn';
 
 const QuizSectionModalWinResult: FC<IProps> = ({
   totalQuestions,
@@ -24,6 +25,7 @@ const QuizSectionModalWinResult: FC<IProps> = ({
           characteristic={characteristic}
         />
         <QuizSectionModalWinResultShare />
+        <QuizSectionModalWinResultShareBtn isHidden />
       </Content>
     </Container>
   );

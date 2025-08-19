@@ -1,6 +1,5 @@
 import { FC } from 'react';
 import { Section, Container } from './NewHistorySection.styled';
-import GeneralContainer from '@GeneralComponents/GeneralContainer';
 import AnimatedNewHistorySectionNotebook from '@AnimatedMainPageComponents/AnimatedNewHistorySectionNotebook';
 import { IProps } from './NewHistorySection.types';
 import AnimatedNewHistorySectionText from '@AnimatedMainPageComponents/AnimatedNewHistorySectionText';
@@ -13,25 +12,23 @@ const NewHistorySection: FC<IProps> = ({
 }) => {
   return (
     <Section>
-      <GeneralContainer>
-        <Container>
-          <AnimatedNewHistorySectionImages
-            animationDuration={animationDuration}
-            inView={!notebookInView}
-            isDesk={isDesk}
-          />
-          <AnimatedNewHistorySectionText
-            animationDuration={animationDuration}
-            inView={!notebookInView}
-            isDesk={isDesk}
-          />
-          <AnimatedNewHistorySectionNotebook
-            animationDuration={animationDuration}
-            inView={notebookInView}
-            isDesk={isDesk}
-          />
-        </Container>
-      </GeneralContainer>
+      <Container>
+        <AnimatedNewHistorySectionImages
+          animationDuration={animationDuration}
+          inView={!notebookInView}
+          isDesk={isDesk}
+        />
+        <AnimatedNewHistorySectionText
+          animationDuration={animationDuration}
+          inView={!notebookInView}
+          isDesk={isDesk}
+        />
+        <AnimatedNewHistorySectionNotebook
+          animationDuration={animationDuration}
+          inView={notebookInView}
+          isDesk={isDesk}
+        />
+      </Container>
     </Section>
   );
 };

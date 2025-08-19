@@ -22,9 +22,16 @@ export const BackgroundImg = styled.img`
   width: 100%;
   height: 100%;
   mix-blend-mode: multiply;
+  pointer-events: none;
 `;
 
 export const Content = styled.div`
   display: flex;
   height: 100%;
+
+  @media screen and (max-width: ${({ theme }) =>
+      theme.breakpoints.desk - 1}px) {
+    flex-direction: column;
+    gap: ${({ theme }) => theme.spacing(6)}px;
+  }
 `;

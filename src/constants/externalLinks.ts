@@ -7,6 +7,7 @@ const enum ExternalLinks {
   crypto = 'https://pay.whitepay.com/crypto-jars/9d867ebd-ecf3-428c-8473-0b9949cad274',
   mono = 'https://send.monobank.ua/jar/9pGGuNXsNy',
   sun = 'https://sun.agency/',
+  silpoBot = 'https://t.me/SilpoB2Bbot',
 }
 
 export default ExternalLinks;

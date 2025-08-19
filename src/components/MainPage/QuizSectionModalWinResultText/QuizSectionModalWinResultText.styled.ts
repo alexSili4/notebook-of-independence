@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import notebook from '@/images/newHistory/notebook/page-05-min.jpg';
 
 export const Container = styled.div`
   position: relative;
@@ -7,7 +8,9 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  background-color: #fffad2;
+  background-image: url(${notebook});
+  background-position: 0 0;
+  background-size: 100% 100%;
   padding-top: 8.2vh;
   padding-bottom: 7.8vh;
 
@@ -51,24 +54,18 @@ export const Content = styled.div`
   height: 100%;
 `;
 
-export const TextImg = styled.img`
-  max-height: 24.4lvh;
-
-  @media screen and (min-width: ${({ theme }) => theme.breakpoints.desk}px) {
-    max-height: 26.9lvh;
-  }
-`;
-
 export const CharacteristicWrap = styled.div`
   flex-shrink: 0;
-  position: relative;
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
   display: flex;
   flex-direction: column-reverse;
   width: 237px;
   min-height: 135px;
-  background-color: ${({ theme }) => theme.colors.white};
   padding: ${({ theme: { spacing } }) =>
     `${spacing(10)}px ${spacing(7)}px ${spacing(9)}px`};
+  translate: -50% 0;
 
   @media screen and (min-width: ${({ theme }) => theme.breakpoints.desk}px) {
     width: 313px;
@@ -127,43 +124,6 @@ export const CharacteristicText = styled.p`
 
   @media screen and (min-width: ${({ theme }) => theme.breakpoints.desk}px) {
     font-size: 34.26px;
-  }
-`;
-
-export const TextLine = styled.div`
-  position: absolute;
-  left: 50%;
-  width: 194px;
-  height: 1px;
-  background-color: #d6d6d6;
-  translate: -50% 0;
-
-  @media screen and (min-width: ${({ theme }) => theme.breakpoints.desk}px) {
-    width: 255px;
-  }
-`;
-
-export const TextLineTop = styled(TextLine)`
-  top: 55px;
-
-  @media screen and (min-width: ${({ theme }) => theme.breakpoints.desk}px) {
-    top: 75px;
-  }
-`;
-
-export const TextLineCenter = styled(TextLine)`
-  top: 75px;
-
-  @media screen and (min-width: ${({ theme }) => theme.breakpoints.desk}px) {
-    top: 100px;
-  }
-`;
-
-export const TextLineBottom = styled(TextLine)`
-  top: 95px;
-
-  @media screen and (min-width: ${({ theme }) => theme.breakpoints.desk}px) {
-    top: 125px;
   }
 `;
 
