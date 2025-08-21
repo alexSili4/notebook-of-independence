@@ -91,7 +91,22 @@ const HeroSectionVideo: FC<IProps> = ({
       onAnimationComplete={updateIsFirsRender}
     >
       <Element variants={elementVariants}>
-        <StyledReactPlayer src={heroVideo} muted={muted} loop playing />
+        <StyledReactPlayer
+          src={heroVideo}
+          muted={muted}
+          loop
+          playing
+          config={
+            {
+              file: {
+                attributes: {
+                  playsInline: true,
+                  webkitPlaysinline: true,
+                },
+              },
+            } as any
+          }
+        />
         <MutedBtn type='button' onClick={onMutedBtnClick} inView={videoInView}>
           <VolumeHighIcon show={muted} />
           <VolumeMuteIcon show={!muted} />

@@ -18,7 +18,6 @@ const MainPage: FC = () => {
         animationDuration={2.5}
         animationDelay={1}
         showFullScreenHeroVideo={showFullScreenHeroVideo}
-        isDesk={isDesk}
       />
       <main>
         <Main

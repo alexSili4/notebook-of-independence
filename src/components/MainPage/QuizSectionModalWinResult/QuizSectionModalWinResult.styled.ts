@@ -32,6 +32,6 @@ export const Content = styled.div`
   @media screen and (max-width: ${({ theme }) =>
       theme.breakpoints.desk - 1}px) {
     flex-direction: column;
-    gap: ${({ theme }) => theme.spacing(6)}px;
+    justify-content: space-between;
   }
 `;

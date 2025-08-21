@@ -14,13 +14,13 @@ const AboutSectionContentText: FC = () => {
     <Container>
       <TextLeftWrap>
         <TextLeft>
-          Все життя я бачив себе однією з ланок у ланцюжку боротьби за
-          незалежність України.
+          "Все життя я бачив себе однією з ланок у ланцюжку боротьби за
+          незалежність України."
         </TextLeft>
         <AccentLineLeftIcon />
       </TextLeftWrap>
       <TextRightWrap>
-        <TextRight>Корені сучасних проблем лежать у минулому.</TextRight>
+        <TextRight>"Корені сучасних проблем лежать у минулому."</TextRight>
         <AccentLineRightIcon />
       </TextRightWrap>
     </Container>

@@ -64,7 +64,7 @@ const AnimatedChronicleSectionContentFirstStepDecorativeElements: FC<
       <Element variants={leftElementVariants}>
         <TextWrap>
           <Text>
-            Частина депутатів навіть не вірила, що це матиме юридичну силу.
+            Деякі депутати навіть не вірили, що Декларація матиме юридичну силу.
           </Text>
         </TextWrap>
         <Image src={decorativeImg} alt='' />

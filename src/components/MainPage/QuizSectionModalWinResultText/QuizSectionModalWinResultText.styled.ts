@@ -3,7 +3,6 @@ import notebook from '@/images/newHistory/notebook/page-05-min.jpg';
 
 export const Container = styled.div`
   position: relative;
-  height: 74.1vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -11,7 +10,7 @@ export const Container = styled.div`
   background-image: url(${notebook});
   background-position: 0 0;
   background-size: 100% 100%;
-  padding-top: 8.2vh;
+  padding-top: 4.5vh;
   padding-bottom: 7.8vh;
 
   @media screen and (min-width: ${({ theme }) => theme.breakpoints.desk}px) {
@@ -19,6 +18,11 @@ export const Container = styled.div`
     height: 100%;
     padding-top: 6.5lvh;
     padding-bottom: 8.5lvh;
+  }
+
+  @media screen and (max-width: ${({ theme }) =>
+      theme.breakpoints.desk - 1}px) {
+    aspect-ratio: 2126 / 2516;
   }
 `;
 

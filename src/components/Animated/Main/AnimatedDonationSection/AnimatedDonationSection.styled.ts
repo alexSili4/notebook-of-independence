@@ -7,8 +7,21 @@ export const Container = styled(motion.div)`
   left: 0;
   width: 100%;
   pointer-events: none;
+
+  @media screen and (max-width: ${({ theme }) =>
+      theme.breakpoints.desk - 1}px) {
+    height: 100lvh;
+  }
 `;
 
 export const Element = styled(motion.div)`
   pointer-events: all;
+
+  @media screen and (max-width: ${({ theme }) =>
+      theme.breakpoints.desk - 1}px) {
+    height: 100%;
+    pointer-events: all;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
 `;

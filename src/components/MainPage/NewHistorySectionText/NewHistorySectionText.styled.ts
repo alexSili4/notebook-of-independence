@@ -29,13 +29,27 @@ export const Title = styled.h2`
   }
 `;
 
-export const DescWrap = styled.div`
+export const Content = styled.div`
   align-self: center;
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: ${({ theme }) => theme.spacing(8)}px;
   width: 343px;
 
   @media screen and (min-width: ${({ theme }) => theme.breakpoints.desk}px) {
+    gap: ${({ theme }) => theme.spacing(10)}px;
     width: 776px;
+  }
+`;
+
+export const DescWrap = styled.div`
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: ${({ theme }) => theme.spacing(4)}px;
+
+  @media screen and (min-width: ${({ theme }) => theme.breakpoints.desk}px) {
+    gap: ${({ theme }) => theme.spacing(5)}px;
   }
 `;
 

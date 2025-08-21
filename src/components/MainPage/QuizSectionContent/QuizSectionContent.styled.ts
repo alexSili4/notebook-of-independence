@@ -32,7 +32,7 @@ export const TextWrap = styled.div`
 export const Title = styled.h2`
   color: #6983d0;
   font-family: ${({ theme }) => theme.fontFamily.inter};
-  font-size: 56px;
+  font-size: 40px;
   font-weight: 600;
   line-height: 1.05;
   letter-spacing: -2px;
@@ -41,7 +41,7 @@ export const Title = styled.h2`
 
   @media screen and (min-width: ${({ theme }) => theme.breakpoints.desk}px) {
     width: 1005px;
-    font-size: 120px;
+    font-size: 100px;
     font-weight: 700;
     letter-spacing: -8px;
   }

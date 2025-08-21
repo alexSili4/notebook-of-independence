@@ -1,7 +1,6 @@
 import { FC } from 'react';
-import { Container } from './DonationSectionPaymentDetails.styled';
+import { Container, Title } from './DonationSectionPaymentDetails.styled';
 import DonationSectionPaymentDetailsList from '@MainPageComponents/DonationSectionPaymentDetailsList';
-import DonationSectionPaymentDetailsDevelopers from '@MainPageComponents/DonationSectionPaymentDetailsDevelopers';
 import DecorativeBg from '@MainPageComponents/DecorativeBg';
 
 const DonationSectionPaymentDetails: FC = () => {
@@ -9,7 +8,7 @@ const DonationSectionPaymentDetails: FC = () => {
     <Container>
       <DecorativeBg />
       <DonationSectionPaymentDetailsList />
-      <DonationSectionPaymentDetailsDevelopers />
+      <Title>Реквізити для донатів надані ГО «Азов.Супровід»</Title>
     </Container>
   );
 };

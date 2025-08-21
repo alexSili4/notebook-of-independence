@@ -11,13 +11,12 @@ import {
   Price,
   Info,
   BuyInfo,
-  BuyLink,
   BuyDesc,
 } from './BuyNotebookSectionInfo.styled';
-import { ExternalLinks } from '@/constants';
 import BuyNotebookSectionInfoDelivery from '@MainPageComponents/BuyNotebookSectionInfoDelivery';
 import { IProps } from './BuyNotebookSectionInfo.types';
 import BuyNotebookSectionQR from '@MainPageComponents/BuyNotebookSectionQR';
+import BuyNotebookLink from '@MainPageComponents/BuyNotebookLink';
 
 const BuyNotebookSectionInfo: FC<IProps> = ({ isDesk }) => {
   return (
@@ -27,9 +26,14 @@ const BuyNotebookSectionInfo: FC<IProps> = ({ isDesk }) => {
           <Title>ЗОШИТ НЕЗАЛЕЖНОСТІ</Title>
           <TextWrap>
             <Text>
-              Це — точна копія зошита, в якому Левко Лукʼяненко написав чернетку
-              Акта проголошення Незалежності. Увесь прибуток від продажу йде на
-              підтримку родин захисників — "ГО «Азов.Супровід»".
+              Ми відтворили легендарний зошит разом із палітуркою та чернеткою
+              Акта проголошення незалежності України на другій сторінці. Все так
+              само, як було 34 роки тому, тільки з чистими сторінками — для
+              ваших ідей, конспектів і текстів, які, можливо, одного дня теж
+              змінять долю країни. Наклад «Зошита Незалежності» обмежений і має
+              благодійну мету: весь прибуток буде переданий ГО «Азов.Супровід»
+              на підтримку звільнених із полону українських військових та їхніх
+              родин.
             </Text>
             <AccentIconMob />
             <AccentIconDesk />
@@ -40,13 +44,7 @@ const BuyNotebookSectionInfo: FC<IProps> = ({ isDesk }) => {
       <Info>
         <BuyNotebookSectionInfoDelivery isDesk={isDesk} />
         <BuyInfo>
-          <BuyLink
-            href={ExternalLinks.buyNotebook}
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            Замовити НА SILPO.UA
-          </BuyLink>
+          <BuyNotebookLink />
           <BuyNotebookSectionQR />
           <BuyDesc>Весь прибуток НА "ГО «Азов.Супровід»"</BuyDesc>
         </BuyInfo>

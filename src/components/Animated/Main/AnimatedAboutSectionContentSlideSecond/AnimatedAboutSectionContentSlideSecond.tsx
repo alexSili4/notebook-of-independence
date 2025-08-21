@@ -67,8 +67,8 @@ const AnimatedAboutSectionContentSlideSecond: FC<IProps> = ({
         </ImageWrap>
         <DescWrap>
           <Desc>
-            Все життя я бачив себе однією з ланок у ланцюжку боротьби за
-            незалежність України.
+            "Все життя я бачив себе однією з ланок у ланцюжку боротьби за
+            незалежність України."
           </Desc>
         </DescWrap>
       </Content>

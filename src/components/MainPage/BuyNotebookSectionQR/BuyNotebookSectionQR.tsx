@@ -17,7 +17,7 @@ const BuyNotebookSectionQR: FC = () => {
   return (
     <Container>
       <Content>
-        <Title>Інформація для B2B замовлень</Title>
+        <Title>Корпоративні замовлення</Title>
         <Link
           href={ExternalLinks.silpoBot}
           target='_blank'

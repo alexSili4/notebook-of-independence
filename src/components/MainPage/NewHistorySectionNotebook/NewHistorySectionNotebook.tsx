@@ -61,7 +61,7 @@ const NewHistorySectionNotebook: FC<IProps> = ({ isDesk }) => {
           startZIndex={0}
           maxShadowOpacity={1}
           swipeDistance={30}
-          showCover
+          showCover={isDesk ? true : false}
           disableFlipByClick={false}
           showPageCorners
           drawShadow

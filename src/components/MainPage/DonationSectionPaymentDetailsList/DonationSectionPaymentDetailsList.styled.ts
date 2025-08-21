@@ -10,7 +10,6 @@ export const List = styled.ul`
   @media screen and (min-width: ${({ theme }) => theme.breakpoints.desk}px) {
     justify-content: center;
     gap: ${({ theme }) => theme.spacing(6)}px;
-    height: 100%;
   }
 `;
 

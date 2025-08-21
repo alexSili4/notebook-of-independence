@@ -122,25 +122,6 @@ export const BuyInfo = styled.div`
   }
 `;
 
-export const BuyLink = styled.a`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 46px;
-  border-radius: 100px;
-  background-color: #6983d0;
-  color: ${({ theme }) => theme.colors.white};
-  font-family: ${({ theme }) => theme.fontFamily.inter};
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 1;
-  text-transform: uppercase;
-
-  @media screen and (min-width: ${({ theme }) => theme.breakpoints.desk}px) {
-    height: 56px;
-  }
-`;
-
 export const BuyDesc = styled.p`
   color: rgba(0, 0, 0, 0.32);
   font-family: ${({ theme }) => theme.fontFamily.inter};

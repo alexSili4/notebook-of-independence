@@ -14,7 +14,7 @@ import { IProps } from './DonationSectionLinks.types';
 const DonationSectionLinks: FC<IProps> = ({ onGoBackBtnClick }) => {
   return (
     <Container>
-      <Title>задонатити на "ГО «Азов.Супровід»"</Title>
+      <Title>Підтримати ГО «Азов.Супровід»</Title>
       <List>
         <ListItem>
           <MonoLink

@@ -6,7 +6,6 @@ import {
   BackgroundImg,
   BackgroundTexture,
 } from './DonationSection.styled';
-import GeneralContainer from '@GeneralComponents/GeneralContainer';
 import DonationSectionLinks from '@MainPageComponents/DonationSectionLinks';
 import sectionTexture from '@/images/donation/section-texture-min.png';
 import sectionBgDesk from '@/images/donation/section-bg-desk-min.png';
@@ -15,6 +14,7 @@ import AnimatedDonationSectionPaymentDetails from '@AnimatedMainPageComponents/A
 import { IProps } from './DonationSection.types';
 import DonationSectionDecorativeElements from '@MainPageComponents/DonationSectionDecorativeElements';
 import { theme } from '@/constants';
+import DonationSectionPaymentDetailsDevelopers from '@MainPageComponents/DonationSectionPaymentDetailsDevelopers';
 
 const DonationSection: FC<IProps> = ({
   animationDuration,
@@ -25,23 +25,22 @@ const DonationSection: FC<IProps> = ({
 
   return (
     <Section>
-      <GeneralContainer>
-        <Background>
-          <Container>
-            <DonationSectionDecorativeElements />
-            <DonationSectionLinks onGoBackBtnClick={onGoBackBtnClick} />
-            <AnimatedDonationSectionPaymentDetails
-              animationDuration={animationDuration}
-              inView={inView}
-            />
-          </Container>
-          <BackgroundImg>
-            <source srcSet={sectionBgDesk} media={deskMedia} />
-            <img src={sectionBgMob} alt='' />
-          </BackgroundImg>
-          <BackgroundTexture src={sectionTexture} alt='' />
-        </Background>
-      </GeneralContainer>
+      <Background>
+        <Container>
+          <DonationSectionDecorativeElements />
+          <DonationSectionLinks onGoBackBtnClick={onGoBackBtnClick} />
+          <AnimatedDonationSectionPaymentDetails
+            animationDuration={animationDuration}
+            inView={inView}
+          />
+        </Container>
+        <BackgroundImg>
+          <source srcSet={sectionBgDesk} media={deskMedia} />
+          <img src={sectionBgMob} alt='' />
+        </BackgroundImg>
+        <BackgroundTexture src={sectionTexture} alt='' />
+      </Background>
+      <DonationSectionPaymentDetailsDevelopers />
     </Section>
   );
 };

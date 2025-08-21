@@ -6,10 +6,7 @@ export const Container = styled.div`
   }
 `;
 
-export const Image = styled.img`
-  width: 40vw;
-  height: 85lvh;
-`;
+export const Image = styled.img``;
 
 export const NotebookWrap = styled.div`
   position: relative;
@@ -18,4 +15,5 @@ export const NotebookWrap = styled.div`
   justify-content: center;
   width: 100%;
   height: 100%;
+  pointer-events: all;
 `;

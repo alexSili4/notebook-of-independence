@@ -57,9 +57,8 @@ const AnimatedChronicleSectionContentPreviewText: FC<IProps> = ({
         </Element>
         <Element variants={textPartVariants}>
           <Text>
-            Незалежність — не була випадковістю. Вона народжувалась з десятиліть
-            боротьби, сміливих рішень і зошита в клітинку. Прокрути цей шлях.
-            Побач, як писалась історія.
+            Незалежність не була випадковістю. Вона народжувалась з десятиліть
+            боротьби та сміливих рішень.
           </Text>
         </Element>
       </TextWrap>

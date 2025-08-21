@@ -44,7 +44,7 @@ const ChronicleSectionProgressBar: FC<IProps> = ({
           <Date contentInView={contentInView}>01.12.1991</Date>
         </DateWrapFourth>
         <DateWrapFifth>
-          <Date contentInView={contentInView}>04.08.1991</Date>
+          <Date contentInView={contentInView}>04.09.1991</Date>
         </DateWrapFifth>
         <Progress>
           <MarkerWrap

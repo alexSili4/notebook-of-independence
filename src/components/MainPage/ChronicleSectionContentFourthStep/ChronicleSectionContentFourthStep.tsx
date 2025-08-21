@@ -28,13 +28,13 @@ const ChronicleSectionContentFourthStep: FC<IProps> = ({
         <Date>01.12</Date>
         <TitleWrap>
           <ChronicleSectionContentStepTitle>
-            Україна сказала «Так»
+            Україна сказала «так»
           </ChronicleSectionContentStepTitle>
           <Text>
             90,32% українців на референдумі підтвердили Незалежність.
             <br />
             Кожна область — від Львова до Луганська, від Києва до Криму —
-            сказала «Так». Це була згода всієї країни. Вперше — і назавжди.
+            сказала «Так».
           </Text>
         </TitleWrap>
       </TextWrap>

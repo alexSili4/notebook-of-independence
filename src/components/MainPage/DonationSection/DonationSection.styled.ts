@@ -1,6 +1,12 @@
 import styled from '@emotion/styled';
 
-export const Section = styled.section``;
+export const Section = styled.section`
+  min-height: 100lvh;
+
+  @media screen and (min-width: ${({ theme }) => theme.breakpoints.desk}px) {
+    height: 100vh;
+  }
+`;
 
 export const Background = styled.div`
   position: relative;
@@ -39,6 +45,7 @@ export const Container = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
+  gap: ${({ theme }) => theme.spacing(12)}px;
   height: 100%;
   padding-left: ${({ theme }) => theme.spacing(4)}px;
   padding-right: ${({ theme }) => theme.spacing(4)}px;
@@ -48,6 +55,7 @@ export const Container = styled.div`
     justify-content: space-between;
     padding-left: ${({ theme }) => theme.spacing(20)}px;
     padding-right: ${({ theme }) => theme.spacing(20)}px;
+    overflow: hidden;
   }
 
   @media screen and (max-width: ${({ theme }) =>
