@@ -9,7 +9,7 @@ const BuyNotebookLink: FC = () => {
       target='_blank'
       rel='noopener noreferrer'
     >
-      Замовити НА SILPO.UA
+      Замовити Зошит Незалежності
     </Link>
   );
 };

@@ -7,6 +7,7 @@ export const Container = styled.div`
   width: 100%;
   background-color: #303030;
   padding: ${({ theme }) => theme.spacing(4)}px;
+  padding-bottom: ${({ theme }) => theme.spacing(24)}px;
 
   @media screen and (max-width: ${({ theme }) =>
       theme.breakpoints.desk - 1}px) {

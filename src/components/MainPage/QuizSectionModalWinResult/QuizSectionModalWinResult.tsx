@@ -17,7 +17,10 @@ const QuizSectionModalWinResult: FC<IProps> = ({
 }) => {
   return (
     <Container>
-      <BackgroundImg src={resultBg} alt='' />
+      <BackgroundImg
+        src={resultBg}
+        alt='Зошит Незалежності – проєкт «Сільпо» спільно з родиною Левка Лук’яненка – Фото 75'
+      />
       <Content>
         <QuizSectionModalWinResultText
           totalQuestions={totalQuestions}

@@ -6,7 +6,6 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
   background-image: url(${notebook});
   background-position: 0 0;
   background-size: 100% 100%;

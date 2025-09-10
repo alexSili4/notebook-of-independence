@@ -66,9 +66,18 @@ const AnimatedAboutSectionContentSlideThird: FC<IProps> = ({
     >
       <PhotoWrap variants={elementVariants}>
         <Button type='button' onClick={onNextBtnClick} disabled={disabledBtn}>
-          <PhotoBg src={photoBg} alt='' />
-          <Photo src={photo} alt='' />
-          <Star src={star} alt='' />
+          <PhotoBg
+            src={photoBg}
+            alt='Зошит Незалежності – проєкт «Сільпо» спільно з родиною Левка Лук’яненка – Фото 27'
+          />
+          <Photo
+            src={photo}
+            alt='Зошит Незалежності – проєкт «Сільпо» спільно з родиною Левка Лук’яненка – Фото 28'
+          />
+          <Star
+            src={star}
+            alt='Зошит Незалежності – проєкт «Сільпо» спільно з родиною Левка Лук’яненка – Фото 29'
+          />
         </Button>
         <MarkerWrap isHidden={disabledBtn}>
           <AboutSectionContentImagesMarker

@@ -1,5 +1,5 @@
 const enum ExternalLinks {
-  buyNotebook = 'https://shop.silpo.ua/rfi/998535/3288/2',
+  buyNotebook = 'https://silpo.ua/product/zoshyt-nezalezhnosti-998535',
   x = 'https://x.com/azov_suprovid',
   instagram = 'https://www.instagram.com/azov_suprovid',
   telegram = 'https://www.t.me/azov_suprovid',

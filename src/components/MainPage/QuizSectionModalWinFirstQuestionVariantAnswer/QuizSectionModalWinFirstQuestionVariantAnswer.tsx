@@ -13,7 +13,10 @@ const QuizSectionModalWinFirstQuestionVariantAnswer: FC<IProps> = ({
 }) => {
   return (
     <Answer isBlueBg={isBlueBg}>
-      <Photo src={photo} alt='' />
+      <Photo
+        src={photo}
+        alt='Зошит Незалежності – проєкт «Сільпо» спільно з родиною Левка Лук’яненка – Фото 69'
+      />
       <Text>{text}</Text>
     </Answer>
   );

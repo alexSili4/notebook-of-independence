@@ -62,12 +62,18 @@ const AnimatedAboutSectionPreviewPhoto: FC<IProps> = ({
         initial='hidden'
       >
         <Element variants={photoRightVariants}>
-          <PhotoRight src={photoRight} alt='' />
+          <PhotoRight
+            src={photoRight}
+            alt='Зошит Незалежності – проєкт «Сільпо» спільно з родиною Левка Лук’яненка – Фото 30'
+          />
         </Element>
       </PhotoRightWrap>
       <PhotoLeftWrap>
         <Element variants={photoLeftVariants}>
-          <PhotoLeft src={photoLeft} alt='' />
+          <PhotoLeft
+            src={photoLeft}
+            alt='Зошит Незалежності – проєкт «Сільпо» спільно з родиною Левка Лук’яненка – Фото 31'
+          />
         </Element>
       </PhotoLeftWrap>
     </>

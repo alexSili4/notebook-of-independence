@@ -36,7 +36,10 @@ const QuizSectionModalWinResultText: FC<IProps> = ({
           <CharacteristicText>{characteristic}</CharacteristicText>
         </CharacteristicWrap>
       </Content>
-      <StarMobImg src={starMob} alt='' />
+      <StarMobImg
+        src={starMob}
+        alt='Зошит Незалежності – проєкт «Сільпо» спільно з родиною Левка Лук’яненка – Фото 71'
+      />
     </Container>
   );
 };

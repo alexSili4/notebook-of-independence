@@ -15,7 +15,10 @@ const AnimatedAboutSectionContentImgDecorativeStar: FC<IProps> = ({
   return (
     <Container animate={animate} variants={containerVariants} initial='visible'>
       <Element variants={elementVariants}>
-        <DecorativeStar src={decorativeStar} alt='' />
+        <DecorativeStar
+          src={decorativeStar}
+          alt='Зошит Незалежності – проєкт «Сільпо» спільно з родиною Левка Лук’яненка – Фото 21'
+        />
       </Element>
     </Container>
   );

@@ -19,15 +19,24 @@ const NewHistorySectionImages: FC = () => {
     <>
       <BackgroundPicture>
         <source srcSet={sectionBgDesk} media={deskMedia} />
-        <img src={sectionBgMob} alt='' />
+        <img
+          src={sectionBgMob}
+          alt='Зошит Незалежності – проєкт «Сільпо» спільно з родиною Левка Лук’яненка – Фото 1'
+        />
       </BackgroundPicture>
       <LeftDecorativePicture>
         <source srcSet={leftDecorativeImgDesk} media={deskMedia} />
-        <img src={leftDecorativeImgMob} alt='' />
+        <img
+          src={leftDecorativeImgMob}
+          alt='Зошит Незалежності – проєкт «Сільпо» спільно з родиною Левка Лук’яненка – Фото 2'
+        />
       </LeftDecorativePicture>
       <RightDecorativePicture>
         <source srcSet={rightDecorativeImgDesk} media={deskMedia} />
-        <img src={rightDecorativeImgMob} alt='' />
+        <img
+          src={rightDecorativeImgMob}
+          alt='Зошит Незалежності – проєкт «Сільпо» спільно з родиною Левка Лук’яненка – Фото 3'
+        />
       </RightDecorativePicture>
     </>
   );

@@ -22,11 +22,16 @@ const AboutSectionContentVideo: FC = () => {
   return (
     <Container>
       <Content>
-        <VideoBg src={videoBgPaper} alt='' />
+        <VideoBg
+          src={videoBgPaper}
+          alt='Зошит Незалежності – проєкт «Сільпо» спільно з родиною Левка Лук’яненка – Фото 36'
+        />
         <VideoWrap>
           <PhotoWrap>
-            <Photo src={photo} alt='' />
-            {/* <Levko src={levko} alt='' play={play} /> */}
+            <Photo
+              src={photo}
+              alt='Зошит Незалежності – проєкт «Сільпо» спільно з родиною Левка Лук’яненка – Фото 37'
+            />
           </PhotoWrap>
           <Desc>фото: Олександр Клименко</Desc>
         </VideoWrap>

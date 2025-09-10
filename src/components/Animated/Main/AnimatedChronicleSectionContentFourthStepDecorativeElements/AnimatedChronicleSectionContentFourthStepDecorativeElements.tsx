@@ -73,16 +73,25 @@ const AnimatedChronicleSectionContentFourthStepDecorativeElements: FC<
   return (
     <Container animate={animate} variants={containerVariants} initial='hidden'>
       <PrimaryElement variants={leftElementVariants}>
-        <Photo src={photo} alt='' />
+        <Photo
+          src={photo}
+          alt='Зошит Незалежності – проєкт «Сільпо» спільно з родиною Левка Лук’яненка – Фото 48'
+        />
         <TextWrap>
           <Text>Найбільша явка виборців за всю історію незалежної України</Text>
         </TextWrap>
       </PrimaryElement>
       <PrimaryElement variants={ukraineElementVariants}>
-        <Ukraine src={ukraine} alt='' />
+        <Ukraine
+          src={ukraine}
+          alt='Зошит Незалежності – проєкт «Сільпо» спільно з родиною Левка Лук’яненка – Фото 49'
+        />
       </PrimaryElement>
       <Element variants={statisticsElementVariants}>
-        <Statistics src={statistics} alt='' />
+        <Statistics
+          src={statistics}
+          alt='Зошит Незалежності – проєкт «Сільпо» спільно з родиною Левка Лук’яненка – Фото 50'
+        />
       </Element>
     </Container>
   );

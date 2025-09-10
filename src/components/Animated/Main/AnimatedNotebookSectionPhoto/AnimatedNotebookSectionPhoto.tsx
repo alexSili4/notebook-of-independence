@@ -45,7 +45,10 @@ const AnimatedNotebookSectionPhoto: FC<IProps> = ({
       <Element variants={elementVariants}>
         <Photo>
           <source srcSet={photoDesk} media={deskMedia} />
-          <img src={photoMob} alt='' />
+          <img
+            src={photoMob}
+            alt='Зошит Незалежності – проєкт «Сільпо» спільно з родиною Левка Лук’яненка – Фото 59'
+          />
         </Photo>
       </Element>
     </Container>

@@ -22,9 +22,18 @@ import QuizSectionModalWinResultShareBtn from '@MainPageComponents/QuizSectionMo
 const QuizSectionModalWinResultShare: FC = () => {
   return (
     <Container>
-      <Photo src={photo} alt='' />
-      <Star src={star} alt='' />
-      <Light src={light} alt='' />
+      <Photo
+        src={photo}
+        alt='Зошит Незалежності – проєкт «Сільпо» спільно з родиною Левка Лук’яненка – Фото 72'
+      />
+      <Star
+        src={star}
+        alt='Зошит Незалежності – проєкт «Сільпо» спільно з родиною Левка Лук’яненка – Фото 73'
+      />
+      <Light
+        src={light}
+        alt='Зошит Незалежності – проєкт «Сільпо» спільно з родиною Левка Лук’яненка – Фото 74'
+      />
       <ShareBtnsWrap>
         <Title>Поділитись результатом</Title>
         {/* <List>

@@ -23,7 +23,10 @@ const QuizSectionModalWinQuestionRadioBtn: FC<IProps> = ({
         checked={isChecked}
       />
       <CheckWrap>
-        <CheckImg src={check} alt='' />
+        <CheckImg
+          src={check}
+          alt='Зошит Незалежності – проєкт «Сільпо» спільно з родиною Левка Лук’яненка – Фото 70'
+        />
       </CheckWrap>
       {children}
     </Container>

@@ -20,7 +20,7 @@ const ChronicleSectionContentFifthStep: FC<IProps> = ({
   return (
     <ChronicleSectionContentStepContainer>
       <TextWrap>
-        <Date>04.08</Date>
+        <Date>04.09</Date>
         <TitleWrap>
           <ChronicleSectionContentStepTitle>
             Прапор на куполі

@@ -8,6 +8,7 @@ export const Answer = styled.span<IStyledAnswerProps>`
   gap: ${({ theme }) => theme.spacing(3)}px;
   width: 100%;
   height: 100%;
+  padding: ${({ theme }) => theme.spacing(3)}px;
   padding-top: ${({ theme }) => theme.spacing(16)}px;
   background-color: ${({ isBlueBg }) => (isBlueBg ? '#6983D0' : '#E4BB60')};
 

@@ -15,10 +15,16 @@ const NewHistorySectionNotebookControls: FC<IProps> = ({
   return (
     <Container>
       <Button type='button' onClick={onPrevPageBtnClick}>
-        <Image src={arrowPrev} alt='' />
+        <Image
+          src={arrowPrev}
+          alt='Зошит Незалежності – проєкт «Сільпо» спільно з родиною Левка Лук’яненка – Фото 16'
+        />
       </Button>
       <Button type='button' onClick={onNextPageBtnClick}>
-        <Image src={arrowNext} alt='' />
+        <Image
+          src={arrowNext}
+          alt='Зошит Незалежності – проєкт «Сільпо» спільно з родиною Левка Лук’яненка – Фото 17'
+        />
       </Button>
     </Container>
   );

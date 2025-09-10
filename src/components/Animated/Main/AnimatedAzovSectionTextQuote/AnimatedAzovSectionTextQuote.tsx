@@ -39,7 +39,10 @@ const AnimatedAzovSectionTextQuote: FC<IProps> = ({
   return (
     <Container animate={animate} variants={containerVariants} initial='hidden'>
       <Element variants={elementVariants}>
-        <Quote src={quote} alt='' />
+        <Quote
+          src={quote}
+          alt='Зошит Незалежності – проєкт «Сільпо» спільно з родиною Левка Лук’яненка – Фото 58'
+        />
       </Element>
     </Container>
   );

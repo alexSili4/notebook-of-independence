@@ -21,7 +21,11 @@ const AboutSectionContentImgPhotoBottomLeftBtn: FC<IProps> = ({
         onClick={onClick}
         onMouseEnter={onMouseEnter}
       >
-        <PhotoBottomLeft src={photoBottomLeft} alt='' inFocus={inFocus} />
+        <PhotoBottomLeft
+          src={photoBottomLeft}
+          alt='Зошит Незалежності – проєкт «Сільпо» спільно з родиною Левка Лук’яненка – Фото 33'
+          inFocus={inFocus}
+        />
       </AboutSectionContentImagesBtn>
       <PhotoBottomLeftMarker>
         <AboutSectionContentImagesMarker isCurrentStep={isCurrentStep} />

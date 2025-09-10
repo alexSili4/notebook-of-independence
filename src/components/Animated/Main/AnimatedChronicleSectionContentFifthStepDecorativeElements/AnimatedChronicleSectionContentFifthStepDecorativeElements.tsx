@@ -68,10 +68,16 @@ const AnimatedChronicleSectionContentFifthStepDecorativeElements: FC<
   return (
     <Container animate={animate} variants={containerVariants} initial='hidden'>
       <Element variants={leftElementVariants}>
-        <PhotoLeft src={photoLeft} alt='' />
+        <PhotoLeft
+          src={photoLeft}
+          alt='Зошит Незалежності – проєкт «Сільпо» спільно з родиною Левка Лук’яненка – Фото 42'
+        />
       </Element>
       <Element variants={rightElementVariants}>
-        <PhotoRight src={photoRight} alt='' />
+        <PhotoRight
+          src={photoRight}
+          alt='Зошит Незалежності – проєкт «Сільпо» спільно з родиною Левка Лук’яненка – Фото 43'
+        />
         <TextWrap>
           <Text>
             Тисячі українців з вигуками "Ганьба!" прорвали кордон міліції і
@@ -80,8 +86,14 @@ const AnimatedChronicleSectionContentFifthStepDecorativeElements: FC<
         </TextWrap>
       </Element>
       <Element variants={colorsElementVariants}>
-        <BlueColor src={blueColor} alt='' />
-        <YellowColor src={yellowColor} alt='' />
+        <BlueColor
+          src={blueColor}
+          alt='Зошит Незалежності – проєкт «Сільпо» спільно з родиною Левка Лук’яненка – Фото 44'
+        />
+        <YellowColor
+          src={yellowColor}
+          alt='Зошит Незалежності – проєкт «Сільпо» спільно з родиною Левка Лук’яненка – Фото 45'
+        />
       </Element>
     </Container>
   );

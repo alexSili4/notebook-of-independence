@@ -55,8 +55,14 @@ const AnimatedAboutSectionContentSlideFifth: FC<IProps> = ({
     >
       <PhotoWrap variants={elementVariants}>
         <Button type='button' onClick={onNextBtnClick} disabled={disabledBtn}>
-          <Photo src={photo} alt='' />
-          <Image src={image} alt='' />
+          <Photo
+            src={photo}
+            alt='Зошит Незалежності – проєкт «Сільпо» спільно з родиною Левка Лук’яненка – Фото 22'
+          />
+          <Image
+            src={image}
+            alt='Зошит Незалежності – проєкт «Сільпо» спільно з родиною Левка Лук’яненка – Фото 23'
+          />
         </Button>
         <MarkerWrap isHidden={disabledBtn}>
           <AboutSectionContentImagesMarker

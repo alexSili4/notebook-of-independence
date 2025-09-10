@@ -30,7 +30,10 @@ const AboutSectionContentSlider: FC<IProps> = ({ animationDuration }) => {
 
   return (
     <Container>
-      <DecorativeLines src={decorativeLines} alt='' />
+      <DecorativeLines
+        src={decorativeLines}
+        alt='Зошит Незалежності – проєкт «Сільпо» спільно з родиною Левка Лук’яненка – Фото 35'
+      />
       <Swiper ref={sliderRef} speed={animationDuration * 1000}>
         <SwiperSlide>
           <AnimatedAboutSectionContentSlideFirst

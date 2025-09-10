@@ -30,8 +30,14 @@ const AboutSectionPreview: FC<IProps> = ({
               animationDuration={animationDuration}
               inView={sectionInView}
             />
-            <StarImg src={star} alt='' />
-            <BookImg src={book} alt='' />
+            <StarImg
+              src={star}
+              alt='Зошит Незалежності – проєкт «Сільпо» спільно з родиною Левка Лук’яненка – Фото 39'
+            />
+            <BookImg
+              src={book}
+              alt='Зошит Незалежності – проєкт «Сільпо» спільно з родиною Левка Лук’яненка – Фото 40'
+            />
           </TitleWrap>
         </Container>
       </Background>

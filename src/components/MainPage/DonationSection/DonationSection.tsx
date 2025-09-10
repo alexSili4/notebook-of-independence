@@ -36,9 +36,15 @@ const DonationSection: FC<IProps> = ({
         </Container>
         <BackgroundImg>
           <source srcSet={sectionBgDesk} media={deskMedia} />
-          <img src={sectionBgMob} alt='' />
+          <img
+            src={sectionBgMob}
+            alt='Зошит Незалежності – проєкт «Сільпо» спільно з родиною Левка Лук’яненка – Фото 76'
+          />
         </BackgroundImg>
-        <BackgroundTexture src={sectionTexture} alt='' />
+        <BackgroundTexture
+          src={sectionTexture}
+          alt='Зошит Незалежності – проєкт «Сільпо» спільно з родиною Левка Лук’яненка – Фото 77'
+        />
       </Background>
       <DonationSectionPaymentDetailsDevelopers />
     </Section>

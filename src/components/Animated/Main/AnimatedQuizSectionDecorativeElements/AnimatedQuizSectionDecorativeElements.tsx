@@ -59,12 +59,18 @@ const AnimatedQuizSectionDecorativeElements: FC<IProps> = ({
         initial='hidden'
       >
         <LightElement variants={lightVariants}>
-          <Light src={light} alt='' />
+          <Light
+            src={light}
+            alt='Зошит Незалежності – проєкт «Сільпо» спільно з родиною Левка Лук’яненка – Фото 62'
+          />
         </LightElement>
       </LightWrap>
       <InfoWrap animate={animate} variants={containerVariants} initial='hidden'>
         <InfoElement variants={infoVariants}>
-          <Info src={info} alt='' />
+          <Info
+            src={info}
+            alt='Зошит Незалежності – проєкт «Сільпо» спільно з родиною Левка Лук’яненка – Фото 63'
+          />
         </InfoElement>
       </InfoWrap>
     </>

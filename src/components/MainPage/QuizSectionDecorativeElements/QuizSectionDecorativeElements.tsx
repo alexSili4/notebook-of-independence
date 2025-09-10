@@ -17,9 +17,15 @@ const QuizSectionDecorativeElements: FC<IProps> = ({
     <>
       <LineLeft>
         <source srcSet={lineLeftDesk} media={deskMedia} />
-        <img src={lineLeftMob} alt='' />
+        <img
+          src={lineLeftMob}
+          alt='Зошит Незалежності – проєкт «Сільпо» спільно з родиною Левка Лук’яненка – Фото 64'
+        />
       </LineLeft>
-      <LineRight src={lineRight} alt='' />
+      <LineRight
+        src={lineRight}
+        alt='Зошит Незалежності – проєкт «Сільпо» спільно з родиною Левка Лук’яненка – Фото 65'
+      />
       <AnimatedQuizSectionDecorativeElements
         animationDuration={animationDuration}
         inView={inView}

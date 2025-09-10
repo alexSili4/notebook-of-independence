@@ -1,7 +1,7 @@
 import { FC, useEffect, useState } from 'react';
 import {
   Container,
-  StyledReactPlayer,
+  Video,
   Element,
   MutedBtn,
   VolumeHighIcon,
@@ -22,7 +22,7 @@ const HeroSectionVideo: FC<IProps> = ({
   isDesk,
   nextSectionInView,
 }) => {
-  const [muted, setMuted] = useState<boolean>(true);
+  const [muted, setMuted] = useState<boolean>(false);
   const { isFirstRender, updateIsFirsRender } = useIsFirsRender();
   const animate: VariantLabels = videoInView
     ? 'visible'
@@ -78,6 +78,10 @@ const HeroSectionVideo: FC<IProps> = ({
   };
 
   useEffect(() => {
+    setMuted(true);
+  }, []);
+
+  useEffect(() => {
     if (nextSectionInView && !muted) {
       setMuted(true);
     }
@@ -91,22 +95,14 @@ const HeroSectionVideo: FC<IProps> = ({
       onAnimationComplete={updateIsFirsRender}
     >
       <Element variants={elementVariants}>
-        <StyledReactPlayer
+        <Video
           src={heroVideo}
           muted={muted}
           loop
-          playing
-          config={
-            {
-              file: {
-                attributes: {
-                  playsInline: true,
-                  webkitPlaysinline: true,
-                },
-              },
-            } as any
-          }
-        />
+          autoPlay
+          playsInline
+          webkit-playsinline='true'
+        ></Video>
         <MutedBtn type='button' onClick={onMutedBtnClick} inView={videoInView}>
           <VolumeHighIcon show={muted} />
           <VolumeMuteIcon show={!muted} />

@@ -46,7 +46,10 @@ const AnimatedAboutSectionContentSlideFirst: FC<IProps> = ({
       initial='visible'
     >
       <PhotoWrap variants={elementVariants}>
-        <Photo src={photo} alt='' />
+        <Photo
+          src={photo}
+          alt='Зошит Незалежності – проєкт «Сільпо» спільно з родиною Левка Лук’яненка – Фото 24'
+        />
       </PhotoWrap>
       <Text>
         Левко Лук’яненко — автор Акта проголошення незалежності України.

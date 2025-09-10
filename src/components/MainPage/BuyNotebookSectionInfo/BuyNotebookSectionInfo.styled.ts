@@ -38,7 +38,7 @@ export const TitleWrap = styled.div`
   }
 `;
 
-export const Title = styled.h2`
+export const Title = styled.h1`
   color: ${({ theme }) => theme.colors.white};
   font-family: ${({ theme }) => theme.fontFamily.inter};
   font-size: 24px;

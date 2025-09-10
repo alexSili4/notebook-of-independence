@@ -67,11 +67,17 @@ const AnimatedChronicleSectionContentFirstStepDecorativeElements: FC<
             Деякі депутати навіть не вірили, що Декларація матиме юридичну силу.
           </Text>
         </TextWrap>
-        <Image src={decorativeImg} alt='' />
+        <Image
+          src={decorativeImg}
+          alt='Зошит Незалежності – проєкт «Сільпо» спільно з родиною Левка Лук’яненка – Фото 46'
+        />
       </Element>
       <Element variants={rightElementVariants}>
         <PhotoWrap>
-          <Photo src={photo} alt='' />
+          <Photo
+            src={photo}
+            alt='Зошит Незалежності – проєкт «Сільпо» спільно з родиною Левка Лук’яненка – Фото 47'
+          />
           <PhotoDescWrap>
             <PhotoDesc>
               Біля стін Верховної Ради проходили мітинги в підтримку ухвалення

@@ -28,7 +28,7 @@ export const Container = styled.div`
   justify-content: space-between;
   height: 100%;
   padding-top: ${({ theme }) => theme.spacing(6)}px;
-  padding-bottom: ${({ theme }) => theme.spacing(4)}px;
+  padding-bottom: ${({ theme }) => theme.spacing(24)}px;
 
   @media screen and (min-width: ${({ theme }) => theme.breakpoints.desk}px) {
     padding-top: ${({ theme }) => theme.spacing(20)}px;

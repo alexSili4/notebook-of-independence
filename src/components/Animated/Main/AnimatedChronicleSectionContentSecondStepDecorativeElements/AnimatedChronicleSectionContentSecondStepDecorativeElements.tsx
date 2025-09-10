@@ -59,7 +59,10 @@ const ChronicleSectionContentSecondStepDecorativeElements: FC<IProps> = ({
   return (
     <Container animate={animate} variants={containerVariants} initial='hidden'>
       <PrimaryElement variants={leftElementVariants}>
-        <Photo src={photo} alt='' />
+        <Photo
+          src={photo}
+          alt='Зошит Незалежності – проєкт «Сільпо» спільно з родиною Левка Лук’яненка – Фото 55'
+        />
         <TextWrap>
           <Text>
             «Давайте напишемо якнайкоротший документ, щоб дати якомога менше
@@ -68,10 +71,16 @@ const ChronicleSectionContentSecondStepDecorativeElements: FC<IProps> = ({
         </TextWrap>
       </PrimaryElement>
       <Element variants={rightElementVariants}>
-        <PageLight src={pageLight} alt='' />
+        <PageLight
+          src={pageLight}
+          alt='Зошит Незалежності – проєкт «Сільпо» спільно з родиною Левка Лук’яненка – Фото 56'
+        />
       </Element>
       <PrimaryElement variants={rightElementVariants}>
-        <PageDark src={pageDark} alt='' />
+        <PageDark
+          src={pageDark}
+          alt='Зошит Незалежності – проєкт «Сільпо» спільно з родиною Левка Лук’яненка – Фото 57'
+        />
       </PrimaryElement>
     </Container>
   );

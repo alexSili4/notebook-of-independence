@@ -68,7 +68,10 @@ const AnimatedChronicleSectionContentPreviewLines: FC<IProps> = ({
         <LeftLineImgWrap variants={leftLineVariants}>
           <LeftLinePicture>
             <source srcSet={leftLineDesk} media={deskMedia} />
-            <img src={leftLineMob} alt='' />
+            <img
+              src={leftLineMob}
+              alt='Зошит Незалежності – проєкт «Сільпо» спільно з родиною Левка Лук’яненка – Фото 53'
+            />
           </LeftLinePicture>
         </LeftLineImgWrap>
       </LeftLineContainer>
@@ -80,7 +83,10 @@ const AnimatedChronicleSectionContentPreviewLines: FC<IProps> = ({
         <RightLineImgWrap variants={rightLineVariants}>
           <RightLinePicture>
             <source srcSet={rightLineDesk} media={deskMedia} />
-            <img src={rightLineMob} alt='' />
+            <img
+              src={rightLineMob}
+              alt='Зошит Незалежності – проєкт «Сільпо» спільно з родиною Левка Лук’яненка – Фото 54'
+            />
           </RightLinePicture>
         </RightLineImgWrap>
       </RightLineContainer>

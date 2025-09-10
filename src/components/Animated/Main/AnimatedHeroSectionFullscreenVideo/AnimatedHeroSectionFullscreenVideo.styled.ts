@@ -29,6 +29,13 @@ export const StyledReactPlayer = styled(ReactPlayer)`
   object-fit: cover;
 `;
 
+export const Video = styled.video`
+  position: relative;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+`;
+
 export const MutedBtn = styled.button<IStyledMutedBtnProps>`
   position: absolute;
   bottom: 50px;
@@ -43,6 +50,10 @@ export const MutedBtn = styled.button<IStyledMutedBtnProps>`
   opacity: ${({ inView }) => (inView ? 1 : 0)};
   pointer-events: ${({ inView }) => (inView ? 'all' : 'none')};
   transition: opacity ${({ theme }) => theme.transitionDurationAndFunc.video};
+
+  @media screen and (min-width: ${({ theme }) => theme.breakpoints.desk}px) {
+    bottom: 130px;
+  }
 `;
 
 export const VolumeMuteIcon = styled(IoVolumeMute)<IStyledVolumeIconProps>`

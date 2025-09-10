@@ -28,15 +28,26 @@ const QuizSectionModalWinControls: FC<IProps> = ({
         onClick={onGoBackBtnClick}
         disabled={hiddenGoBackBtn}
       >
-        <GoBackImg src={goBack} alt='' />
+        <GoBackImg
+          src={goBack}
+          alt='Зошит Незалежності – проєкт «Сільпо» спільно з родиною Левка Лук’яненка – Фото 66'
+        />
       </GoBackBtn>
       <CloseModalWinBtn type='button' onClick={onCloseModalWinBtnClick}>
         <CloseModalWinBtnTitle showResult={showResult}>
           закрити квест
         </CloseModalWinBtnTitle>
         <CloseImgWrap>
-          <CloseDarkImg src={closeDark} alt='' showResult={showResult} />
-          <CloseLightImg src={closeLight} alt='' showResult={showResult} />
+          <CloseDarkImg
+            src={closeDark}
+            alt='Зошит Незалежності – проєкт «Сільпо» спільно з родиною Левка Лук’яненка – Фото 67'
+            showResult={showResult}
+          />
+          <CloseLightImg
+            src={closeLight}
+            alt='Зошит Незалежності – проєкт «Сільпо» спільно з родиною Левка Лук’яненка – Фото 68'
+            showResult={showResult}
+          />
         </CloseImgWrap>
       </CloseModalWinBtn>
     </Container>

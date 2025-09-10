@@ -15,7 +15,10 @@ const AnimatedAboutSectionContentImgDecorativeLines: FC<IProps> = ({
   return (
     <Container animate={animate} variants={containerVariants} initial='visible'>
       <Element variants={elementVariants}>
-        <DecorativeLines src={decorativeLines} alt='' />
+        <DecorativeLines
+          src={decorativeLines}
+          alt='Зошит Незалежності – проєкт «Сільпо» спільно з родиною Левка Лук’яненка – Фото 19'
+        />
       </Element>
     </Container>
   );

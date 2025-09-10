@@ -20,7 +20,7 @@ const AboutSectionContentImgPhotoTopRightBtn: FC<IProps> = ({
         onClick={onClick}
         onMouseEnter={onMouseEnter}
       >
-        <PhotoTopRight src={photoTopRight} alt='' />
+        <PhotoTopRight src={photoTopRight} alt='38' />
       </AboutSectionContentImagesBtn>
       <PhotoTopRightMarker>
         <AboutSectionContentImagesMarker isCurrentStep={isCurrentStep} />

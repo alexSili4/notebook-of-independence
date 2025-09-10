@@ -60,10 +60,16 @@ const ChronicleSectionContentThirdStepDecorativeElements: FC<IProps> = ({
   return (
     <Container animate={animate} variants={containerVariants} initial='hidden'>
       <Element variants={leftElementVariants}>
-        <PhotoLeft src={photoLeft} alt='' />
+        <PhotoLeft
+          src={photoLeft}
+          alt='Зошит Незалежності – проєкт «Сільпо» спільно з родиною Левка Лук’яненка – Фото 51'
+        />
       </Element>
       <Element variants={rightElementVariants}>
-        <PhotoRight src={photoRight} alt='' />
+        <PhotoRight
+          src={photoRight}
+          alt='Зошит Незалежності – проєкт «Сільпо» спільно з родиною Левка Лук’яненка – Фото 52'
+        />
         <TextWrap>
           <Text>
             Частина депутатів навіть не вірила, що це матиме юридичну силу.

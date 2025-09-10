@@ -5,7 +5,7 @@ import AnimatedQuizSectionModalWinFirstQuestion from '@AnimatedMainPageComponent
 import AnimatedQuizSectionModalWinSecondQuestion from '@AnimatedMainPageComponents/AnimatedQuizSectionModalWinSecondQuestion';
 import AnimatedQuizSectionModalWinThirdQuestion from '@AnimatedMainPageComponents/AnimatedQuizSectionModalWinThirdQuestion';
 import AnimatedQuizSectionModalWinFourthQuestion from '@AnimatedMainPageComponents/AnimatedQuizSectionModalWinFourthQuestion';
-import AnimatedQuizSectionModalWinFifthQuestion from '@AnimatedMainPageComponents/AnimatedQuizSectionModalWinFourthQuestion';
+import AnimatedQuizSectionModalWinFifthQuestion from '@AnimatedMainPageComponents/AnimatedQuizSectionModalWinFifthQuestion';
 
 const QuizSectionModalWinQuestions: FC<IProps> = ({
   questions,

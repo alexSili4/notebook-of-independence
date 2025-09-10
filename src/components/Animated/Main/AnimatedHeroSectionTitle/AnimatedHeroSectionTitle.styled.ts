@@ -5,7 +5,7 @@ export const Container = styled(motion.div)``;
 
 export const Element = styled(motion.div)``;
 
-export const Title = styled.h1`
+export const Title = styled.h2`
   color: #6983d0;
   font-family: ${({ theme }) => theme.fontFamily.inter};
   font-size: 43.63px;

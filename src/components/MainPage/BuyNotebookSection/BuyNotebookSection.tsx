@@ -17,7 +17,10 @@ const BuyNotebookSection: FC<IProps> = ({ isDesk }) => {
       <Background>
         <Container>
           <Content>
-            <Notebook src={notebook} alt='' />
+            <Notebook
+              src={notebook}
+              alt='Зошит Незалежності – проєкт «Сільпо» спільно з родиною Левка Лук’яненка – Фото 60'
+            />
             <NotebookDesc>Весь прибуток НА "ГО «Азов.Супровід»"</NotebookDesc>
           </Content>
           <BuyNotebookSectionInfo isDesk={isDesk} />

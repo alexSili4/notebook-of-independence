@@ -30,7 +30,10 @@ const BuyNotebookSectionQR: FC = () => {
         </Link>
       </Content>
       <ImgWrap>
-        <Image src={qr} alt='' />
+        <Image
+          src={qr}
+          alt='Зошит Незалежності – проєкт «Сільпо» спільно з родиною Левка Лук’яненка – Фото 61'
+        />
       </ImgWrap>
     </Container>
   );

@@ -57,7 +57,10 @@ const AnimatedAboutSectionContentSlideSecond: FC<IProps> = ({
       <Content>
         <ImageWrap variants={elementVariants}>
           <Button type='button' onClick={onNextBtnClick} disabled={disabledBtn}>
-            <Image src={light} alt='' />
+            <Image
+              src={light}
+              alt='Зошит Незалежності – проєкт «Сільпо» спільно з родиною Левка Лук’яненка – Фото 26'
+            />
           </Button>
           <MarkerWrap isHidden={disabledBtn}>
             <AboutSectionContentImagesMarker
